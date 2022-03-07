@@ -57,6 +57,16 @@ Site user needs can broadly be split into 4 categories:
 - bookings management
 - other
 
+NAVIGATION
+
+- **As a** unregistered user, **I can** navigate to a page **so that** I can view the services offered by the business
+
+- **As a** unregistered user, **I can** follow a link **so that** I can view the Kennel's social media content
+
+- **As a** unregistered user, **I can** use a sidenav **so that** I can navigate the site on all views
+
+- *AS A* user, **I can** select a link **so that** I can register/ log in to my account
+
 ACCOUNT MANAGEMENT
 
 - **As a** unregistered user, **I can** provide details **so that** I can create a unique account
