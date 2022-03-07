@@ -72,3 +72,15 @@ ACCOUNT MANAGEMENT
 - *AS A* logged in user, **I can** click a button **so that** I can delete my account
 
 - *AS A* logged in user, **I can** request an email **so that** I can reset my account password if I have forgotten it
+
+BOOKINGS MANAGEMENT
+
+- *AS A* logged in user, **I can** provide booking details **so that** I can set up appointment
+
+- *AS A* logged in user, **I can** update details **so that** I can reschedule an appointment with the Kennel
+
+- *AS A* logged in user, **I can** cancel an appointment **so that** I can cancel an appointment with the Kennel
+
+- *AS A* logged in user, **I can** request an email **so that** be reminded of an appointment
+
+- **As a** employee, **I can** view a page **so that** I can see my daily bookings or the current day
