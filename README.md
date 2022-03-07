@@ -94,3 +94,9 @@ BOOKINGS MANAGEMENT
 - *AS A* logged in user, **I can** request an email **so that** be reminded of an appointment
 
 - **As a** employee, **I can** view a page **so that** I can see my daily bookings or the current day
+
+OTHER
+
+- *AS A* user, **I can** view the site on a small screen **so that** I can use it when traveling with a mobile device
+
+- **As a** unregistered user, **I can** view the landing page **so that** I understand the site's purpose
