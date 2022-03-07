@@ -45,3 +45,15 @@ As per assessment criteria, this project must utilise CRUD functionality.  This 
 | **Overall Score**                       | **40**     | **44**      |
 
 The above exercise indicates that overall importance/feasability scores were similar.  Therefore the project should be deliverable.
+
+## User Stories
+
+Following an *Agile* paradigm, *user stories* will target customer needs and reduce embelishments on the part of the developer.  These non technical statements will aid with the incremental changes needed to build the application.
+
+Site user needs can broadly be split into 4 categories:
+
+- navigation
+- account management
+- bookings management
+- other
+
