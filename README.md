@@ -100,3 +100,13 @@ OTHER
 - *AS A* user, **I can** view the site on a small screen **so that** I can use it when traveling with a mobile device
 
 - **As a** unregistered user, **I can** view the landing page **so that** I understand the site's purpose
+
+## Colour Schema
+
+The colour schema was selected from [Adobe Color](https://color.adobe.com/search?q=dog).
+
+The developed site should appear bright to contrast with the negative space.
+
+In keeping with the dog theme, colours are based of the *Mystery Machine* as seen in [Scooby-Doo](https://en.wikipedia.org/wiki/Scooby-Doo).
+
+![colour-schema](docs/readme/colour-schema.png "colour schema")
