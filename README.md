@@ -21,4 +21,27 @@ Another valid concern is that some people prefer to book a service passively usi
 
 Finally, a business with a professionally developed website tends to do better than its peers.  This is because new and existing customers gain a better insight of ethos, facilities and services on offer.  Confidence equals engagement.
 
-With the above in mind, let's help The Kennel!
+With the above in mind, let's build a site to help The Kennel!
+
+## Design Thinking
+
+Applying a *Design Thinking* approach, what *features* would users find most useful on the developed site?  How feasible is it for an inexperienced student developer to deliver prioritised features given the time constraints of a hard deadline?
+
+As per assessment criteria, this project must utilise CRUD functionality.  This provides a broad outline of what is needed.  A brief though shower offered the following:
+
+| Feature                                 | Importance | Feasability |
+|:----------------------------------------|:----------:|:-----------:|
+| View available services                 | 4          | 5           |
+| Create personal account                 | 5          | 5           |
+| Update account information              | 5          | 5           |
+| Able to cancel account                  | 5          | 5           |
+| Make an appoinment                      | 5          | 5           |
+| Review latest appointment date/time     | 3          | 4           |
+| Able to change/cancel an appointment    | 3          | 4           |
+| Send client booking detail via email    | 2          | 4           |
+| View history of all appointments made   | 2          | 3           |
+| View costs of previous appointments     | 2          | 1           |
+| Owner has calendar view of daily clients| 4          | 3           |
+| **Overall Score**                       | **40**     | **44**      |
+
+The above exercise indicates that overall importance/feasability scores were similar.  Therefore the project should be deliverable.
