@@ -57,3 +57,18 @@ Site user needs can broadly be split into 4 categories:
 - bookings management
 - other
 
+ACCOUNT MANAGEMENT
+
+- **As a** unregistered user, **I can** provide details **so that** I can create a unique account
+
+- **As a** registered user, **I can** provide details **so that** I can login to my account
+
+- **As a** unregistered user, **I can** create a unique password **so that** I can protect my personal account
+
+- *AS A* logged in user, **I can** view a page **so that** I can see my personal account details by individual field 
+
+- *AS A* logged in user, **I can** click a button **so that** I can change my personal account details by individual field 
+
+- *AS A* logged in user, **I can** click a button **so that** I can delete my account
+
+- *AS A* logged in user, **I can** request an email **so that** I can reset my account password if I have forgotten it
