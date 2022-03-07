@@ -1,1 +1,1 @@
-web: gunicorn kennel39.wsgi:application
+web: gunicorn kennel39.wsgi
