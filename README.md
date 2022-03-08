@@ -101,6 +101,24 @@ OTHER
 
 - **As a** unregistered user, **I can** view the landing page **so that** I understand the site's purpose
 
+## Wireframes
+
+Several wireframes were created to target user requirements. This provided an overall feel of the project before starting to code. Some alterations will likely take place as the project develops.
+
+![index-desktop](docs/wireframes/00-index-desktop.png "index-desktop")
+
+![our-services-desktop](docs/wireframes/01-our-services-desktop.png "our-services-desktop")
+
+![join-us-desktop](docs/wireframes/02-join-us-desktop.png "join-us-desktop")
+
+![my-account-desktop](docs/wireframes/03-my-account-desktop.png "my-account-desktop")
+
+![04](docs/wireframes/04-book-now-desktop.png "04")
+
+![book-now-desktop](docs/wireframes/05-my-appointments-desktop.png "book-now-desktop")
+
+![daily-calendar-desktop](docs/wireframes/06-daily-calendar-desktop.png "daily-calendar-desktop")
+
 ## Colour Schema
 
 The colour schema was selected from [Adobe Color](https://color.adobe.com/search?q=dog).
