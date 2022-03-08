@@ -116,3 +116,9 @@ In keeping with the dog theme, colours are based of the *Mystery Machine* as see
 Entity Relationship Diagrams help to visualise database architecture before creating models in Django.  Understanding the relationships between different tables can save time recoding later in the project.  Fortunately this system is quite simple so only 4 tables are required.
 
 ![the-kennel-erd](docs/readme/the-kennel-erd.png "the-kennel-erd")
+
+## Deployment
+
+The site has been deployed early.  More dependancies may be added at a later time.
+
+This process has been documented separately in [DEPLOYMENT.md](DEPLOYMENT.md)
