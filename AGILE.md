@@ -23,4 +23,9 @@
 
 Several false starts.
 Got more comfortable using an Agile tool to plan functionality.  Applied retrospectively to 1st week objectives to practice how it works.
+
 This was effectively the first iteration for the project before any real coding took place.
+
+In a way I'll already started categorising user stories by area such as navigation or account management.  This gives an idea to the separate apps what will need to be created.
+
+I found I was jumping from one task to the next with no real direction.  Best to plan each future iteration to make it easier to track what still needs to be done.
