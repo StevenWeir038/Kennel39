@@ -122,3 +122,19 @@ Entity Relationship Diagrams help to visualise database architecture before crea
 The site has been deployed early.  More dependancies may be added at a later time.
 
 This process has been documented separately in [DEPLOYMENT.md](DEPLOYMENT.md)
+
+## Technologies Used
+
+- [Balsamiq](https://balsamiq.com/)
+- [Lucidchart](https://lucid.co/)
+- [Adobe Color](https://color.adobe.com/)
+- [GitHub](https://github.com/)
+- [Heroku](https://id.heroku.com/)
+- HTML
+- CSS
+- Python
+- [Bootstrap](https://getbootstrap.com/)
+- [JQuery](https://jquery.com/) 
+- [Django](https://www.djangoproject.com/)
+- [PostgreSQL](https://www.postgresql.org/)
+- [Cloudinary](https://cloudinary.com/)
