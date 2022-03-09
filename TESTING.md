@@ -71,6 +71,13 @@ The test is successful as the `body` has a greenyellow background colour and `Ho
 ![check-css-js-links-to-base-template](docs/readme/testing/02-check-css-js-links-to-base-template.png "check-css-js-links-to-base-template")
 
 
+#4. In the plate above you'll also notice a favicon present.  Test test was successful as you can see it.
+
+``` html
+<link rel="icon" href="{% static 'img/dog-favicon.png' %}" type="image/x-icon" sizes="32x32">
+```
+
+
 ## Automated Testing
 
 Return to [README.md](README.md)
