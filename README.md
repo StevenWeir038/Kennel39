@@ -160,3 +160,8 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [Django](https://www.djangoproject.com/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Cloudinary](https://cloudinary.com/)
+
+
+## Credits
+
+- Favicon by [Icons8](https://icons8.com/icons/set/favicon-dog)
