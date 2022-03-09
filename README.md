@@ -141,6 +141,10 @@ The site has been deployed early.  More dependancies may be added at a later tim
 
 This process has been documented separately in [DEPLOYMENT.md](DEPLOYMENT.md)
 
+## Testing
+
+Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
+
 ## Technologies Used
 
 - [Balsamiq](https://balsamiq.com/)
