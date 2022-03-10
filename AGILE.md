@@ -61,3 +61,11 @@ Use bootstrap for speed.  Copy their [code](https://getbootstrap.com/docs/5.0/co
 Start to tailor the bootstrap code to something more site specific.
 
 ![basic-menu-setup](docs/readme/agile/week-2-basic-menu-setup.png "basic-menu-setup")
+
+With a basic navbar in place, this will have to be updated as new views/respective templates are created to deliver user story functionality.
+
+*Register*, *Login* and *Appointments* in the menu have been purposefully disabled for now.
+
+Focus on finishing the landing page and creating an *Our Services* page. Link up as necessary.
+
+Technically services are a different function.  Time for a new *services* app!
