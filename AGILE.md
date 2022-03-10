@@ -57,3 +57,7 @@ TWIL (This week I learned) after creating a new project, cards can be dragged ac
 Use bootstrap for speed.  Copy their [code](https://getbootstrap.com/docs/5.0/components/navs-tabs/) rather than start from scratch.
 
 ![03](docs/readme/agile/03-week-2-bootstrap-use.png "03")
+
+Start to tailor the bootstrap code to something more site specific.
+
+![basic-menu-setup](docs/readme/agile/week-2-basic-menu-setup.png "basic-menu-setup")
