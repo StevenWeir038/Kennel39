@@ -101,6 +101,8 @@ OTHER
 
 - **As a** unregistered user, **I can** view the landing page **so that** I understand the site's purpose
 
+Use of [Agile](AGILE.md) can be found in a separate file.
+
 ## Wireframes
 
 Several wireframes were created to target user requirements. This provided an overall feel of the project before starting to code. Some alterations will likely take place as the project develops.
@@ -166,3 +168,4 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 
 - Favicon by [Icons8](https://icons8.com/icons/set/favicon-dog)
 - Facebook and LinkedIn icons by [Font Awesome](https://fontawesome.com/search?s=solid%2Cbrands)
+- Inspiration for navbar design from [Vandelay Design](https://www.vandelaydesign.com/inspirationalnavigation-menus/)
