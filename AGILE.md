@@ -49,7 +49,11 @@ Also it's useful to have some templates to link to models via views when the tim
 
 TWIL (This week I learned) after creating a new project, cards can be dragged across from the add card area.  Also helps to use checkboxes to tick off smaller tasks relating to a larger one.
 
+
 ![01](docs/readme/agile/week-2-subtasks.png "01")
 
 ![02](docs/readme/agile/week-2-kanban-use.png "02")
 
+Use bootstrap for speed.  Copy their [code](https://getbootstrap.com/docs/5.0/components/navs-tabs/) rather than start from scratch.
+
+![03](docs/readme/agile/03-week-2-bootstrap-use.png "03")
