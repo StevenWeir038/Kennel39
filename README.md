@@ -165,3 +165,4 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 ## Credits
 
 - Favicon by [Icons8](https://icons8.com/icons/set/favicon-dog)
+- Facebook and LinkedIn icons by [Font Awesome](https://fontawesome.com/search?s=solid%2Cbrands)
