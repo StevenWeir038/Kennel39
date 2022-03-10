@@ -11,8 +11,12 @@
         {% include 'includes/navbar.html' %}
     </header>
 
-    <!-- content -->
+    <p>base.html</p>
 
+    {% block content %}
+    <!-- content goes here -->
+    {% endblock %}
+    
     <!-- footer -->
     <footer>
         {% include 'includes/footer.html' %}
