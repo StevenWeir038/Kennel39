@@ -47,7 +47,9 @@ In the background I continued researching models as I want to try to get these r
 
 Also it's useful to have some templates to link to models via views when the time comes.
 
-TWIL (This week I learned) after creating a new project, cards can be dragged across from the add card area.  Also, adding an tailoring you own notes helps create useful checkboxes to tick off smaller tasks relating to a larger one.
+TWIL (This week I learned) after creating a new project, cards can be dragged across from the add card area.  Also helps to use checkboxes to tick off smaller tasks relating to a larger one.
 
 ![01](docs/readme/agile/week-2-subtasks.png "01")
+
+![02](docs/readme/agile/week-2-kanban-use.png "02")
 
