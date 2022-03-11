@@ -66,6 +66,23 @@ With a basic navbar in place, this will have to be updated as new views/respecti
 
 *Register*, *Login* and *Appointments* in the menu have been purposefully disabled for now.
 
+Update - change navbar to an offcanvas type.  Closer to wireframe design.  
+
+Update - use 5 list items in menu, home, our services, register, login, Book Appointment.
+
 Focus on finishing the landing page and creating an *Our Services* page. Link up as necessary.
 
-Technically services are a different function.  Time for a new *services* app!
+Update - leave homepage bare bones. Can change the aesthetics toward the tail end of the project.
+
+Removed User Story #17 from week 2 project - As a site user I can view the site on a small screen so that I can use it when traveling with a mobile
+
+Removed User Story #18 from week 2 project - As a unregistered user I can view the landing page so that I understand the site's purpose
+
+Technically services are a different function.  Time for a new *services* app!  #18 can drop into a future project week.  I feel it's best to get authenication working next as this affects the navbar.  Next logical step to complete that.
+
+I want to fix [issue #5](https://github.com/StevenWeir038/Kennel39/projects/2#card-78901276) to wrap up this week.
+
+
+
+
+
