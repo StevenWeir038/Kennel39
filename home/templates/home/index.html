@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+
 {% block content %}
 
 <img src={% static 'img/hero-dog.jpg' %} alt="Homepage image">
+
 <h1>Kennel 39</h1>
 <h3>Superior Dog Grooming</h3>
-<h4>Est. 2022</h4>
+<h5>Est. 2022</h5>
 
 <!-- code 3 buttons, Our Services, Join Us, Book Now -->
 <button>Our Services</button>
