@@ -137,7 +137,8 @@ The h1 heading containing text *Homepage* only exists in `index.html`.
 ![check-base-injecting-to-index-view](docs/readme/testing/06-check-base-injecting-to-index-view.png "check-base-injecting-to-index-view")
 
 **#8** Correct `settings.py` and `.env` file setup.
-After resolving [issue #25](https://github.com/StevenWeir038/Kennel39/projects/2#card-78901276), i found I lost my database connection when working in the the development ennvironment.  Great learning exercise on setting up enviroinment variables and referencing them corrrectly.
+After resolving [issue #25](https://github.com/StevenWeir038/Kennel39/projects/2#card-78901276), i found I lost my database connection when working in the the development ennvironment.  Great learning exercise on setting up [environment variables](https://github.com/StevenWeir038/Kennel39/commit/a55b3abca2dbb5fe24304ec0273901f3c7c34ccd) and referencing them corrrectly.
+
 
 ## Automated Testing
 
