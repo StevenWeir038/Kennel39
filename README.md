@@ -170,3 +170,4 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - Facebook and LinkedIn icons by [Font Awesome](https://fontawesome.com/search?s=solid%2Cbrands)
 - Inspiration for navbar design from [Vandelay Design](https://www.vandelaydesign.com/inspirationalnavigation-menus/)
 - Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette)
+- Thanks to [Guillermo Brachetta](https://code-institute-room.slack.com/files/UQG5DAG7K/F01RH23KDV4/django-env.pdf) for his Environment Variable setup guide

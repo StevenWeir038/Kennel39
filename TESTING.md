@@ -85,9 +85,6 @@ In the plate above you'll also notice a favicon present.  The test was successfu
 <link rel="icon" href="{% static 'img/dog-favicon.png' %}" type="image/x-icon" sizes="32x32">
 ```
 
-
-**TODO** - review issue #25 in GitHub project `Week-2-create-basic-front-end`
-
 **#5. Checking static folder is working on deployed site**
 
 Any images stored in `static/img/` folder should display when deployed.  Remember to delete the DISABLE_COLLECTSTATIC config var in Heroku Settings by clicking on the X.
@@ -139,7 +136,8 @@ The h1 heading containing text *Homepage* only exists in `index.html`.
 
 ![check-base-injecting-to-index-view](docs/readme/testing/06-check-base-injecting-to-index-view.png "check-base-injecting-to-index-view")
 
-
+**#8** Correct `settings.py` and `.env` file setup.
+After resolving [issue #25](https://github.com/StevenWeir038/Kennel39/projects/2#card-78901276), i found I lost my database connection when working in the the development ennvironment.  Great learning exercise on setting up enviroinment variables and referencing them corrrectly.
 
 ## Automated Testing
 
