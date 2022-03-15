@@ -6,20 +6,23 @@
     {% include 'includes/head.html' %}
 </head>
 <body>
-    <!-- header -->
+    <!-- Header -->
     <header>
+    <!-- Navigation -->
         {% include 'includes/navbar.html' %}
     </header>
 
+    <section class="container-fluid h-100 d-inline-block">
     {% block content %}
-    <!-- content goes here -->
+    <!-- Content -->
     {% endblock %}
-    
-    <!-- footer -->
+    </section>
+
+    <!-- Footer -->
     <footer>
         {% include 'includes/footer.html' %}
     </footer>
-    <!-- scripts -->
+    <!-- Scripts -->
     {% include 'includes/scripts.html' %}
 </body>
 </html>
