@@ -6,18 +6,23 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Mystery Machine Colours*/
 /* Hex # to RGB conversion using https://www.rapidtables.com/convert/color/hex-to-rgb.html*/
 :root {
-    --theme-one: 80, 196, 242;  /* blue 50C4F2 */
-    --theme-two: 149, 217, 4;  /* bright green 95D904 */
-    --theme-three: 151, 191, 4;  /* dark green 97BF04 */
-    --theme-four: 217, 208, 191;  /* dark cream D9D0BF*/
-    --theme-five: 242, 44, 5;  /* bright orange F22C05 */
-    }
+    /* blue 50C4F2 */
+    --theme-one: 80, 196, 242;
+    /* bright green 95D904 */
+    --theme-two: 149, 217, 4;
+    /* dark green 97BF04 */
+    --theme-three: 151, 191, 4;
+    /* dark cream D9D0BF*/
+    --theme-four: 217, 208, 191;
+    /* bright orange F22C05 */
+    --theme-five: 242, 44, 5;
+}
 
 /* Body */
 html {
@@ -26,22 +31,22 @@ html {
 }
 
 body {
-    padding-bottom: 100px;  /* Footer height */
+    padding-bottom: 100px;
+    /* Footer height */
     height: 100vh;
     width: 100vw;
-  }
-  
-  /* Header */
-  header {
+}
+
+/* Header */
+header {
     top: 0;
     left: 0;
-  }
-  
-  
-  /* Footer */
-  footer {
+}
+
+/* Footer */
+footer {
     height: 100px;
     width: 100vw;
     bottom: 0;
     left: 0;
-  }
+}
