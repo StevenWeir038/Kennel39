@@ -162,6 +162,7 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [Django](https://www.djangoproject.com/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Cloudinary](https://cloudinary.com/)
+- [Allauth](https://django-allauth.readthedocs.io/en/latest/)
 
 
 ## Credits
@@ -171,3 +172,4 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - Inspiration for navbar design from [Vandelay Design](https://www.vandelaydesign.com/inspirationalnavigation-menus/)
 - Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette)
 - Thanks to [Guillermo Brachetta](https://code-institute-room.slack.com/files/UQG5DAG7K/F01RH23KDV4/django-env.pdf) for his Environment Variable setup guide
+- For his useful Bootstra revision sheet, [Alexander Rechsteiner](https://hackerthemes.com/bootstrap-cheatsheet/)
