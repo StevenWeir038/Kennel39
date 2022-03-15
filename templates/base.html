@@ -8,20 +8,18 @@
 <body>
     <!-- Header -->
     <header>
-    <!-- Navigation -->
+        <!-- Navigation -->
         {% include 'includes/navbar.html' %}
     </header>
 
     <section class="container-fluid h-100 d-inline-block">
-    {% block content %}
-    <!-- Content -->
-    {% endblock %}
+        {% block content %}
+        <!-- Content -->
+        {% endblock %}
     </section>
 
     <!-- Footer -->
-    <footer>
-        {% include 'includes/footer.html' %}
-    </footer>
+    {% include 'includes/footer.html' %}
     <!-- Scripts -->
     {% include 'includes/scripts.html' %}
 </body>
