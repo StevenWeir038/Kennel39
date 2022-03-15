@@ -94,3 +94,7 @@ Fixed [issue #5](https://github.com/StevenWeir038/Kennel39/projects/2#card-78901
 ### Reflections
 This week it wanted to focus on user accounts and authentication as that alters the navbar options through use of django templates.
 Also, I realised I had to revise my use of Bootstrap as much of this knowledge hasn't been used in a few months.  By developing a generic landing page using Bootstrap I can speed up the creation of future templates.  Bespoke css/js/jquery can be added at a later time for a less derivative site.
+
+Seven user stories satisfied this week.
+
+![01](docs/readme/agile/week-3-kanban-use.png "01")
