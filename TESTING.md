@@ -139,6 +139,57 @@ The h1 heading containing text *Homepage* only exists in `index.html`.
 **#8** Correct `settings.py` and `.env` file setup.
 After resolving [issue #25](https://github.com/StevenWeir038/Kennel39/projects/2#card-78901276), I found I lost my database connection when working in the development environment.  Great learning exercise on setting up [environment variables](https://github.com/StevenWeir038/Kennel39/commit/a55b3abca2dbb5fe24304ec0273901f3c7c34ccd) correctly.
 
+**#9** Check `allauth` working with nav links.
+Allauth did the hard work for signup/login/logout.  Just had to configure `navbar.html` with Django templates to check authentication. 
+
+A test account was created to check it worked.
+
+``` html
+<ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+    <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#">Our Services</a>
+    </li>
+    {% if user.is_authenticated %}
+    <li class="nav-item">
+    <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="#">Book Appointment</a>
+    </li>
+    {% else %}
+    <li class="nav-item">
+    <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+    </li>
+    {% endif %}
+</ul>
+```
+
+*Unregistered/Logged out menu*
+
+![check-logged-out-menu](docs/readme/testing/07-check-logged-out-menu.png "check-logged-out-menu")
+
+*Login page*
+
+![allauth-login-page](docs/readme/testing/08-allauth-login-page.png "allauth-login-page")
+
+*Registered/Logged in menu*
+
+![check-logged-in-menu](docs/readme/testing/09-check-logged-in-menu.png "check-logged-in-menu")
+
+*Logout page*
+
+![allauth-logout-page](docs/readme/testing/10-allauth-logout-page.png "allauth-logout-page")
+
+*Proof of Registration in site admin*
+
+![reg-users-site-admin-page](docs/readme/testing/11-reg-users-site-admin-page.png "reg-users-site-admin-page")
+
 ## Automated Testing
 
 Return to [README.md](README.md)
