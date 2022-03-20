@@ -4,7 +4,7 @@
       aria-controls="offcanvasNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <!-- <a class="navbar-brand" href="#">Kennel39</a> -->
+    <!-- <a class="navbar-brand" href="{% url 'index' %}">Kennel39</a> -->
     
     <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
@@ -14,10 +14,10 @@
       <div class="offcanvas-body">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Our Services</a>
+            <a class="nav-link" href="{% url 'services' %}">Our Services</a>
           </li>
           {% if user.is_authenticated %}
           <li class="nav-item">
