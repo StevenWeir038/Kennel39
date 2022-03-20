@@ -173,3 +173,4 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette)
 - Thanks to [Guillermo Brachetta](https://code-institute-room.slack.com/files/UQG5DAG7K/F01RH23KDV4/django-env.pdf) for his Environment Variable setup guide
 - For his useful Bootstra revision sheet, [Alexander Rechsteiner](https://hackerthemes.com/bootstrap-cheatsheet/)
+- For dog breed [images](https://www.purina.co.nz/find-a-pet/dog-breeds) used in the carousel element.
