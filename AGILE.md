@@ -107,3 +107,5 @@ Seven user stories satisfied this week.
 ### Reflections
 This week I wanted to take the allauth package and style it to suit myu website.  Much of the instructed can from the relevant CI unit presented by Matt Rudge.  Towards the later part of the week I want to extend the alluth user class to suit my project.
 A second outcome was getting comfortable wiring up a new page/template with Django.  The template must be set up correctly in a directory which must then be rendered by the view.  That view must then be referenced in the app url which in turn is referenced in the main project folder urls file.  In future I must remember to add the app to the installed apps list in main/settings.py!
+
+![01](docs/readme/agile/week-4-kanban-use.png "01")
