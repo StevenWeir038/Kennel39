@@ -108,4 +108,8 @@ Seven user stories satisfied this week.
 This week I wanted to take the allauth package and style it to suit myu website.  Much of the instructed can from the relevant CI unit presented by Matt Rudge.  Towards the later part of the week I want to extend the alluth user class to suit my project.
 A second outcome was getting comfortable wiring up a new page/template with Django.  The template must be set up correctly in a directory which must then be rendered by the view.  That view must then be referenced in the app url which in turn is referenced in the main project folder urls file.  In future I must remember to add the app to the installed apps list in main/settings.py!
 
+1 unfixed [bug](https://github.com/StevenWeir038/Kennel39/issues/27) were the carousel image resizes when transitioning despite being of similar/size dimension to other images.  It produces an unwanted jumping effect.  Come back to this as I really need to makle a start on models.
+
+Allauth sped up development of an authentication system for the site.  However a few extra custom fields were desired for the project including user `address` and `contact number`.  As I already performed migrations I choose not to extend the AbstractUser model.  Rather I created a new model with a one-to-one relationship to the existing User Model through a OneToOneField.  This was suitable as the extra information was desirable but not related to the authentication process.  Note, a bit of extra work will likely be needed to display the custom model but its a safer overall option.
+
 ![01](docs/readme/agile/week-4-kanban-use.png "01")

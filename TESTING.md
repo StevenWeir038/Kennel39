@@ -190,6 +190,22 @@ A test account was created to check it worked.
 
 ![reg-users-site-admin-page](docs/readme/testing/11-reg-users-site-admin-page.png "reg-users-site-admin-page")
 
+**#10** Check 1st model has successfully migrated. (same checks to be applied to all subsequent models after creation or update)
+
+In CLI, type `python3 manage.py makemigrations --dry-run` to view unexecuted effect. This tells Django to create instructions that build a new database table in the `home` app.
+
+Remove the ` --dry-run` flag to perform the action.
+
+Use the `python3 manage.py showmigrations` command to see a list of existing migrations.  The absence of an `X` in the home app 0001_initial tells us we have yet to migrate this particular model to build the database table in the backend.
+
+![makemigrations-profile-model](docs/readme/testing/12-makemigrations-profile-model.png "makemigrations-profile-model")
+
+To create the database table in the backend type `python3 manage.py migrate` into the terminal. Similar to the --dry-run tag in makemigrations, the ` --plan` flag can be used to preview the effects of migrating before applying.
+
+![migrate-profile-model](docs/readme/testing/13-migrate-profile-model.png "migrate-profile-model")
+
+To reiterate, `makemigrations` are the instructions to build a table, the `migrate` command actually to builds it. 
+
 ## Automated Testing
 
 Return to [README.md](README.md)
