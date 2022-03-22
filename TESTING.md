@@ -206,6 +206,23 @@ To create the database table in the backend type `python3 manage.py migrate` int
 
 To reiterate, `makemigrations` are the instructions to build a table, the `migrate` command actually to builds it. 
 
+It is now possible to create profiles programatically though I wanted to test with the Django admin utility.
+
+To do so the model must be registered within the apps `admin` file.
+
+``` python
+from django.contrib import admin
+
+from .models import Profile  # from current directory model file import Profile model
+
+# Register your models here
+admin.site.register(Profile)
+```
+
+In Django admin, the `OneToOneField` is shown to work as users can be selected from the dropdown list.  Remember how these users were created using `Allauth`...
+
+![profile-model-in-django-admin](docs/readme/testing/14-profile-model-in-django-admin.png "profile-model-in-django-admin")
+
 ## Automated Testing
 
 Return to [README.md](README.md)
