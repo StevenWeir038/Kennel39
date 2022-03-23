@@ -163,9 +163,12 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [PostgreSQL](https://www.postgresql.org/)
 - [Cloudinary](https://cloudinary.com/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
+- Extending allauth [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone)
 
 
 ## Credits
+
+### Content
 
 - Favicon by [Icons8](https://icons8.com/icons/set/favicon-dog)
 - Facebook and LinkedIn icons by [Font Awesome](https://fontawesome.com/search?s=solid%2Cbrands)
@@ -174,3 +177,6 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - Thanks to [Guillermo Brachetta](https://code-institute-room.slack.com/files/UQG5DAG7K/F01RH23KDV4/django-env.pdf) for his Environment Variable setup guide
 - For his useful Bootstra revision sheet, [Alexander Rechsteiner](https://hackerthemes.com/bootstrap-cheatsheet/)
 - For dog breed [images](https://www.purina.co.nz/find-a-pet/dog-breeds) used in the carousel element.
+- [Tutorials Point](https://www.tutorialspoint.com/python_data_access/python_postgresql_drop_table.htm) for guidance working directly with Postgres tables.
+
+### People

@@ -223,6 +223,33 @@ In Django admin, the `OneToOneField` is shown to work as users can be selected f
 
 ![profile-model-in-django-admin](docs/readme/testing/14-profile-model-in-django-admin.png "profile-model-in-django-admin")
 
+Next problem, *Profile* is a different table to *User*.  How do I get *Profile* to update each time a *User* is created/updated.
+
+Answer, define signals and make new methods for when a save event occurs.  So, in the models file import `post_save` and `reciever` as below.
+
+Thanks to [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) for his insights.
+
+``` python
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+```
+
+2 extra methods are required when creating and updating.
+
+The standard signup form will need two additional fields to accomodate phone and address fields in the linked Profile table. Upon correct setup the Profile fields should automatically update.
+
+Revised location of *Profile* as this isn't related to the *home* app.  Created another app called *profiles* and put the model there before updating forms.
+
+To fix this oversite I deleted the postgres table from the CLI by typing:
+
+- `python manage.py dbshell` to access postgres
+- `\dt` to display a list of tables
+- `DROP TABLE home_profile`to remove the table from the database
+- `\dt` to check *home_profile* was removed
+- created a new app called *profiles* and added it to *settings* installed apps, created the model in that directory and registered with admin.
+
+Thanks to [Tutorials Point](https://www.tutorialspoint.com/python_data_access/python_postgresql_drop_table.htm) for the guidance.
+
 ## Automated Testing
 
 Return to [README.md](README.md)
