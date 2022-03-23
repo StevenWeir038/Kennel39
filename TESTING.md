@@ -250,6 +250,10 @@ To fix this oversite I deleted the postgres table from the CLI by typing:
 
 Thanks to [Tutorials Point](https://www.tutorialspoint.com/python_data_access/python_postgresql_drop_table.htm) for the guidance.
 
+**#11** Extend allauth signup to include request for phone and address fields set up in Profile table. (This table has a one to one link to default allauth User)
+
+Still to resolve issue [#28](https://github.com/StevenWeir038/Kennel39/issues/28) 
+
 ## Automated Testing
 
 Return to [README.md](README.md)
