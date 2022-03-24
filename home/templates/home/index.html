@@ -17,7 +17,9 @@
         <a class="btn btn-primary" href="{% url 'services' %}" role="button">Our Services</a>
         <a class="btn btn-primary" href="{% url 'account_signup' %}" role="button">Join Us</a>
         <a class="btn btn-primary" href="{% url 'account_login' %}" role="button">Members</a>
-        <a class="btn btn-primary" href="#" role="button">Book Now</a> 
+        {% if user.is_authenticated %}
+        <a class="btn btn-primary" href="{% url 'bookings' %}" role="button">Book Now</a>
+        {% endif %}
     </div>
 </section>
 
