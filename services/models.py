@@ -1,9 +1,9 @@
 from django.db import models
 
 
-class Services(models.Model):
+class Service(models.Model):
     """
-    Services model
+    Service model
     """
     service_id = models.AutoField(primary_key=True)
     service_name = models.CharField(max_length=20, null=False, blank=False)
