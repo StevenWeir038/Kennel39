@@ -110,6 +110,22 @@ A second outcome was getting comfortable wiring up a new page/template with Djan
 
 1 unfixed [bug](https://github.com/StevenWeir038/Kennel39/issues/27) were the carousel image resizes when transitioning despite being of similar/size dimension to other images.  It produces an unwanted jumping effect.  Come back to this as I really need to makle a start on models.
 
-Allauth sped up development of an authentication system for the site.  However a few extra custom fields were desired for the project including user `address` and `contact number`.  As I already performed migrations I choose not to extend the AbstractUser model.  Rather I created a new model with a one-to-one relationship to the existing User Model through a OneToOneField.  This was suitable as the extra information was desirable but not related to the authentication process.  Note, a bit of extra work will likely be needed to display the custom model but its a safer overall option.
+Allauth sped up development of an authentication system for the site.  However a few extra custom fields were desired for the project including user `address` and `contact number`.  As I already performed migrations I choose not to extend the AbstractUser model.  Rather I created a new model with a one-to-one relationship to the existing User Model through a OneToOneField.  This was suitable as the extra information was desirable but not related to the authentication process.  Note, a bit of extra work will likely be needed to display the custom model but its a safer overall option. Still to resolve [bug](https://github.com/StevenWeir038/Kennel39/issues/28).
 
 ![01](docs/readme/agile/week-4-kanban-use.png "01")
+
+## Sprint 5
+- Create bookings app, view and templates
+- Link booking template to nav menu and homepage link buttons
+- Show `Book Now` button only if user is logged in
+- Create services model
+- Create calendar model
+- Become familiarised with creating records in Django admin. 
+
+### Reflections
+I went into a bit less detail this week on page creating and links.  Process is becoming more familiar.
+
+When naming classes to create models, use a singular name.  For example I created a `Services` model which shows up on the Django as `Servicess`.
+Minor but annoying.  I redid my migrations as I can be pedantic.
+Take future care, be careful to synonymously reference my code for easier reading and debugging.
+

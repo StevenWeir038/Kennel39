@@ -244,7 +244,7 @@ To fix this oversite I deleted the postgres table from the CLI by typing:
 
 - `python manage.py dbshell` to access postgres
 - `\dt` to display a list of tables
-- `DROP TABLE home_profile`to remove the table from the database
+- `DROP TABLE home_profile` to remove the table from the database
 - `\dt` to check *home_profile* was removed
 - created a new app called *profiles* and added it to *settings* installed apps, created the model in that directory and registered with admin.
 
