@@ -120,12 +120,26 @@ Allauth sped up development of an authentication system for the site.  However a
 - Show `Book Now` button only if user is logged in
 - Create services model
 - Create calendar model
-- Become familiarised with creating records in Django admin. 
+- Become familiarised with creating records in Django admin.
+- Addressed Postgres database bug which prevented service and booking tables working correctly.
 
 ### Reflections
-I went into a bit less detail this week on page creating and links.  Process is becoming more familiar.
+I went into a bit less detail this week on template creation and links for bookings.  No need as the process is becoming more familiar.
+
+There's not much in the way of crossing off user stories this weeek.  We are very much in the architecture stage or just getting things to work.
 
 When naming classes to create models, use a singular name.  For example I created a `Services` model which shows up on the Django as `Servicess`.
 Minor but annoying.  I redid my migrations as I can be pedantic.
 Take future care, be careful to synonymously reference my code for easier reading and debugging.
 
+When re-reading the assignment brief, I started to think how my models affected site features.  The original `booking` model was too simple. To make business sense:
+
+- Appointments were to be restricted to 8am-5pm business hours, not in the middle of the night!
+- Appointment times should be standardised to specific time and duration.  Ie. 45 minutes from 8am to 4pm.  9 hour day with 15 minute downtime between appointments (This will prevent appointment overlaps and the logic to do this must be supplied to the view)
+
+Considering the above point, the booking model **will** have to be updated.  First thoughts are to separate the booking time (date/time) to day and hour fields where the hour field can only be selected from a pre-defined list.   
+To help administer database behaviour, it would be beneficial to tailor how Django admin displays each model.  These will be built in the admin file in each app.
+
+The calendar model in the ERD isn't required.  It's pointless replication.  A calendar is a way to display database objects so I can create one using a library such as `calendar.py` or take a premade one from a useful site such as [Colorlib](https://colorlib.com/wp/template/calendar-20/).  I will still build in my own even logic as that is what the project demands.  A bit of Jquery on individual calendar elements can trigger events as needed...
+
+Final thought of the week.  You can follow instructions to the letter.  Things you assume will work because you are told don't always.  To be a better developer, assume nothing.

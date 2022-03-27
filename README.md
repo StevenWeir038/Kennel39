@@ -180,3 +180,5 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [Tutorials Point](https://www.tutorialspoint.com/python_data_access/python_postgresql_drop_table.htm) for guidance working directly with Postgres tables.
 
 ### People
+
+My thanks to Ger Tobin at the [Code Institute](https://codeinstitute.net/) for his assistance troubleshooting Postgres.
