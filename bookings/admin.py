@@ -1,8 +1,10 @@
 from django.contrib import admin
-from .models import Booking  # from current directory model file import Booking model
+from .models import Booking
 
 
 # Register your models here
 @admin.register(Booking)
 class BookingsAdmin(admin.ModelAdmin):
-    list_display = ('user', 'pet_name', 'service_type', 'booking_time')
+    search_fields = ['pet_name']
+    list_display = ('user', 'pet_name', 'date', 'start_time', 'service_type')
+    list_filter = ('date', 'service_type')
