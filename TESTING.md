@@ -254,6 +254,33 @@ Thanks to [Tutorials Point](https://www.tutorialspoint.com/python_data_access/py
 
 Still to resolve issue [#28](https://github.com/StevenWeir038/Kennel39/issues/28) 
 
+**#12** Booking Model update
+
+As mentioned in the AGILE file the original `booking` model was too simple.  Appointments needed to:
+
+-  be restricted to 8am-5pm business hours, not in the middle of the night!
+-  be standardised to specific time and duration.  Ie. 45 minutes from 8am to 4pm.  9 hour day with 15 minute interlude between appointments.
+
+``` python
+class Booking(models.Model):
+    """
+    Booking model
+    """
+
+    class AppointmentTime(datetime.time, models.Choices):
+        """
+        Subclass appointment times for start_time field
+        """
+        AM_0800 = 8, 0, 0, '08:00'
+        AM_0900 = 9, 0, 0, '09:00'
+        ...
+
+    start_time = models.TimeField(choices=AppointmentTime.choices, null=False, blank=False, default=AppointmentTime.AM_0800)
+    ...
+```
+
+Be subclassing a list within the booking model I was able to use a time format for the appointments though this doesn't allow the `timedelta` method to be used to calcuate duration. I'll change this approach in furure projects.
+
 ## Automated Testing
 
 Return to [README.md](README.md)

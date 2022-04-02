@@ -126,20 +126,29 @@ Allauth sped up development of an authentication system for the site.  However a
 ### Reflections
 I went into a bit less detail this week on template creation and links for bookings.  No need as the process is becoming more familiar.
 
-There's not much in the way of crossing off user stories this weeek.  We are very much in the architecture stage or just getting things to work.
+There's not much in the way of crossing off user stories this week.  We are very much in the architecture stage or just getting things to work.
 
 When naming classes to create models, use a singular name.  For example I created a `Services` model which shows up on the Django as `Servicess`.
-Minor but annoying.  I redid my migrations as I can be pedantic.
+Minor but annoying.  I redid my migrations as I can be pedantic with naming.
 Take future care, be careful to synonymously reference my code for easier reading and debugging.
 
 When re-reading the assignment brief, I started to think how my models affected site features.  The original `booking` model was too simple. To make business sense:
 
 - Appointments were to be restricted to 8am-5pm business hours, not in the middle of the night!
-- Appointment times should be standardised to specific time and duration.  Ie. 45 minutes from 8am to 4pm.  9 hour day with 15 minute downtime between appointments (This will prevent appointment overlaps and the logic to do this must be supplied to the view)
+- Appointment times should be standardised to specific time and duration.  Ie. 45 minutes each hour starting from 8am to 4pm.  A 9 hour day with 15 minute downtime between appointments (This will prevent appointment overlaps and the logic to do this must be supplied to the view)
 
-Considering the above point, the booking model **will** have to be updated.  First thoughts are to separate the booking time (date/time) to day and hour fields where the hour field can only be selected from a pre-defined list.   
-To help administer database behaviour, it would be beneficial to tailor how Django admin displays each model.  These will be built in the admin file in each app.
+Considering the above, the booking model **will** have to be updated.  First thoughts are to separate the booking time (date/time) to date and hour fields where the hour field can only be selected from a subclassed appointment list.
 
-The calendar model in the ERD isn't required.  It's pointless replication.  A calendar is a way to display database objects so I can create one using a library such as `calendar.py` or take a premade one from a useful site such as [Colorlib](https://colorlib.com/wp/template/calendar-20/).  I will still build in my own even logic as that is what the project demands.  A bit of Jquery on individual calendar elements can trigger events as needed...
+This has a downside. It isn't possible to use the `timedelta` method on the booking model to add an end time for an appointment.  It only works on `datetime` and not `time` datatype.
+
+The calendar model in the ERD isn't required.  It's a pointless replication with hindsight so keep it simple.  A calendar is a way to display database objects so I can create one using a library such as `calendar.py` or take a premade one from a useful site such as [Colorlib](https://colorlib.com/wp/template/calendar-20/).  Event logic is still required.  A bit of Jquery on individual calendar elements can trigger events as needed...
+
+Or do I simply display daily appointments as a list in a django template.  This would be simplier.
 
 Final thought of the week.  You can follow instructions to the letter.  Things you assume will work because you are told don't always.  To be a better developer, assume nothing.
+
+## Sprint 6
+- 
+- 
+
+### Reflections
