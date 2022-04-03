@@ -6,7 +6,28 @@
 <section class="d-flex flex-column justify-content-center align-items-center text-center h-100"> 
     <div class="row">
         <div class="col">
-            <p>VIEW BOOKINGS</p>
+            <p>VIEW BOOKING</p>
+            
+            <table>
+                <th>User</th>
+                <th>Pet's Name</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Service Type</th>
+                {% for booking in bookings %}
+                <tr>
+                    <td>{{ booking.user }}</td>
+                    <td>{{ booking.pet_name }}</td>
+                    <td>{{ booking.date }}</td>
+                    <td>{{ booking.start_time }}</td>
+                    <td>{{ booking.service_type }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td>There are no booked appointments</td>
+                </tr>
+            {% endfor %}
+            </table>
         </div>
     </div>
 

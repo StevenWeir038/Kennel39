@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .models import Booking
 
 
 def create_booking(request):
@@ -12,4 +13,8 @@ def view_booking(request):
     """
     View booking
     """
-    return render(request, 'bookings/view_booking.html')
+    bookings = Booking.objects.all()
+    context = {
+        'bookings': bookings
+    }
+    return render(request, 'bookings/view_booking.html', context)
