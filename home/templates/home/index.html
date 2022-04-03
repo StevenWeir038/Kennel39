@@ -18,7 +18,7 @@
         <a class="btn btn-primary" href="{% url 'account_signup' %}" role="button">Join Us</a>
         <a class="btn btn-primary" href="{% url 'account_login' %}" role="button">Members</a>
         {% if user.is_authenticated %}
-        <a class="btn btn-primary" href="{% url 'bookings' %}" role="button">Book Now</a>
+        <a class="btn btn-primary" href="{% url 'view_booking' %}" role="button">Book Now</a>
         {% endif %}
     </div>
 </section>
