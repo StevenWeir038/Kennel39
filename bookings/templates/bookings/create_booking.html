@@ -8,7 +8,7 @@
         <div class="col">
             <p>CREATE BOOKING</p>
             {% csrf_token %}
-            {{ form }}
+            {{ form.as_p }}
         </div>
     </div>
 
