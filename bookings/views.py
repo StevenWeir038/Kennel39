@@ -1,12 +1,17 @@
 from django.shortcuts import render
 from .models import Booking
+from .forms import BookingForm
 
 
 def create_booking(request):
     """
     Create booking
     """
-    return render(request, 'bookings/create_booking.html')
+    form = BookingForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'bookings/create_booking.html', context)
 
 
 def view_booking(request):
