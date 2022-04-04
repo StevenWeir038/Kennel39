@@ -22,6 +22,10 @@
                     <td>{{ booking.date }}</td>
                     <td>{{ booking.start_time }}</td>
                     <td>{{ booking.service_type }}</td>
+                    <!--apply an edit button to each row-->
+                    <td>
+                        <a href="/edit/{{ booking.id }}">Edit</a>
+                    </td>
                 </tr>
             {% empty %}
                 <tr>
