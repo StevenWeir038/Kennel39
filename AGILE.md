@@ -148,7 +148,9 @@ Or do I simply display daily appointments as a list in a django template.  This 
 Final thought of the week.  You can follow instructions to the letter.  Things you assume will work because you are told don't always.  To be a better developer, assume nothing.
 
 ## Sprint 6
-- 
-- 
+- build view bookings page
+- build create bookings page and add form from BookingForm model 
+- Create view and functionality for basic CRUD operations.
 
 ### Reflections
+Keeping it simple, when the user selects `Book Appointment` they are directed to the `view_booking` template.  Here they can see the bookings already made.  In theory, they can work out what appointments are available. (Not perfect but a starting point. I'd like to show them available appointments only).  Will require a bit of logic with django templates... Continue to research....
