@@ -26,6 +26,10 @@
                     <td>
                         <a href="edit_booking/{{ booking.id }}">Edit</a>
                     </td>
+                    <!--apply an cancel button to each row-->
+                    <td>
+                        <a href="cancel_booking/{{ booking.id }}">Cancel</a>
+                    </td>
                 </tr>
             {% empty %}
                 <tr>
