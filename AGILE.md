@@ -154,3 +154,14 @@ Final thought of the week.  You can follow instructions to the letter.  Things y
 
 ### Reflections
 Keeping it simple, when the user selects `Book Appointment` they are directed to the `view_booking` template.  Here they can see the bookings already made.  In theory, they can work out what appointments are available. (Not perfect but a starting point. I'd like to show them available appointments only).  Will require a bit of logic with django templates... Continue to research....
+
+![01](docs/readme/agile/week-6-kanban-use.png "01")
+
+## Sprint 7
+- Develop a means to display only appointments for a given day using a method like a date picker...
+- All logged in users are able to create, view, edit and delete other users appointments.  Restrict this to view only.  We only want them to see were slots are taken on a given time/day.
+- Staff access will need to see all booking for a given day.  BETTERT TO DO THIS ON A VIEW OF ITS OWN. MORE WORK SETTING UP STAFF AREA/URLS/VIEWS ETC.
+- Write view logic to prevent created and updated bookings from clashing with existing.
+
+### Reflections
+This is were the project goes from closely following tutorials and putting my own take on it.
