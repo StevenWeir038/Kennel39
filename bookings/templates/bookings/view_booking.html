@@ -7,6 +7,7 @@
     <div class="row">
         <div class="col">
             <p>VIEW BOOKING</p>
+            <p>Date: <input type="text" id="datepicker"></p>
             <a class="btn btn-primary" href="{% url 'create_booking' %}" role="button">Book Now</a>
             
             <table>
@@ -35,7 +36,7 @@
                 <tr>
                     <td>There are no booked appointments</td>
                 </tr>
-            {% endfor %}
+                {% endfor %}
             </table>
         </div>
     </div>
