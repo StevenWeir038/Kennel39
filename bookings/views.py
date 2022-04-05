@@ -18,7 +18,7 @@ def create_booking(request):
     """
     Create booking
     """
-    if request.method =='POST':
+    if request.method == 'POST':
         form = BookingForm(request.POST)  # if there is a post request from the BookingForm
         if form.is_valid():  # check if there are no errors in the form fields
             form.save()  # if no errors then save
@@ -28,3 +28,15 @@ def create_booking(request):
         'form': form
     }
     return render(request, 'bookings/create_booking.html', context)
+
+
+def edit_booking(request, booking_id):
+    """
+    Edit booking
+    """
+    form = BookingForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'bookings/edit_booking.html', context)
+
