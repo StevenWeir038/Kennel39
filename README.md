@@ -137,15 +137,23 @@ Entity Relationship Diagrams help to visualise database architecture before crea
 
 ![the-kennel-erd](docs/readme/the-kennel-erd.png "the-kennel-erd")
 
+Update - mid project it was discovered there was no need for a calendar table.  This can be omitted from the ERD.
+
 ## Deployment
 
 The site has been deployed early.  More dependancies may be added at a later time.
 
 This process has been documented separately in [DEPLOYMENT.md](DEPLOYMENT.md)
 
+## Features
+
+**SCREENSHOOTS AND BRIEF SYNOPSIS OF MAIN SITE FEATURES TO GO HERE**
+
+
 ## Testing
 
 Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
+**DONT FORGET TO ADD HTML AND CSS VALIDATOR CHECKS!** 
 
 ## Technologies Used
 
@@ -163,8 +171,7 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [PostgreSQL](https://www.postgresql.org/)
 - [Cloudinary](https://cloudinary.com/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
-- Extending allauth [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone)
-
+- Extending allauth [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) **STILL TO WORK OUT one to one to add address and phone number fields**
 
 ## Credits
 
@@ -174,11 +181,15 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - Facebook and LinkedIn icons by [Font Awesome](https://fontawesome.com/search?s=solid%2Cbrands)
 - Inspiration for navbar design from [Vandelay Design](https://www.vandelaydesign.com/inspirationalnavigation-menus/)
 - Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette)
-- Thanks to [Guillermo Brachetta](https://code-institute-room.slack.com/files/UQG5DAG7K/F01RH23KDV4/django-env.pdf) for his Environment Variable setup guide
+
 - For his useful Bootstra revision sheet, [Alexander Rechsteiner](https://hackerthemes.com/bootstrap-cheatsheet/)
 - For dog breed [images](https://www.purina.co.nz/find-a-pet/dog-breeds) used in the carousel element.
 - [Tutorials Point](https://www.tutorialspoint.com/python_data_access/python_postgresql_drop_table.htm) for guidance working directly with Postgres tables.
+- Youtube tutorial *58 - Django urls, includes, and app name - Python & Django 3.2 Tutorial Series* by [
+CodingEntrepreneurs](https://www.youtube.com/watch?v=icVke1tJ6aI)
 
 ### People
 
-My thanks to Ger Tobin at the [Code Institute](https://codeinstitute.net/) for his assistance troubleshooting Postgres.
+My thanks to: 
+- Ger Tobin at the [Code Institute](https://codeinstitute.net/) for his assistance troubleshooting Postgres.
+- [Guillermo Brachetta](https://code-institute-room.slack.com/files/UQG5DAG7K/F01RH23KDV4/django-env.pdf) for his Environment Variable setup guide.  In the end I choose an alternative method but it could be useful for future development.
