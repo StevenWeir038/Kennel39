@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Booking
 from .forms import BookingForm
 
@@ -34,7 +34,8 @@ def edit_booking(request, booking_id):
     """
     Edit booking
     """
-    form = BookingForm()
+    booking = get_object_or_404(Booking, id=booking_id)  # get instance of the record or retur 404 error if nothing found
+    form = BookingForm(instance=booking)
     context = {
         'form': form
     }
