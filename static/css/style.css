@@ -142,9 +142,9 @@ footer {
 }
 
 .btn:hover {
-    background: rgba(var(--theme-two), 1);
-    border: 3px solid black;
-    color: rgba(var(--theme-five), 1);
+    background: rgba(var(--theme-five), 1);
+    border: 3px solid white;
+    color: white;
 }
 
 td a {
