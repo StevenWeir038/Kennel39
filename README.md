@@ -187,9 +187,11 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [Tutorials Point](https://www.tutorialspoint.com/python_data_access/python_postgresql_drop_table.htm) for guidance working directly with Postgres tables.
 - Youtube tutorial *58 - Django urls, includes, and app name - Python & Django 3.2 Tutorial Series* by [
 CodingEntrepreneurs](https://www.youtube.com/watch?v=icVke1tJ6aI)
+- Datepicker customisation from [Jquery](https://jqueryui.com/datepicker/)
 
 ### People
 
-My thanks to: 
+My thanks to:
+- My Mentor [Tim Nelson](https://tim.2bn.dev/) for his seemingly endless wealth of knowledge and patience.
 - Ger Tobin at the [Code Institute](https://codeinstitute.net/) for his assistance troubleshooting Postgres.
 - [Guillermo Brachetta](https://code-institute-room.slack.com/files/UQG5DAG7K/F01RH23KDV4/django-env.pdf) for his Environment Variable setup guide.  In the end I choose an alternative method but it could be useful for future development.
