@@ -1,9 +1,9 @@
 [
     {
         "model":"bookings.booking",
-        "pk":2,
+        "pk":1,
         "fields":{
-            "user":3,
+            "user":1,
             "pet_name":"The Bark",
             "date":"2022-03-27",
             "start_time":"09:00:00",
@@ -12,9 +12,9 @@
     },
     {
         "model":"bookings.booking",
-        "pk":3,
+        "pk":2,
         "fields":{
-            "user":3,
+            "user":1,
             "pet_name":"Kingsley",
             "date":"2022-03-27",
             "start_time":"08:00:00",
@@ -23,9 +23,9 @@
     },
     {
         "model":"bookings.booking",
-        "pk":4,
+        "pk":3,
         "fields":{
-            "user":3,
+            "user":1,
             "pet_name":"Giles",
             "date":"2022-03-27",
             "start_time":"10:00:00",
@@ -34,9 +34,9 @@
     },
     {
         "model":"bookings.booking",
-        "pk":8,
+        "pk":4,
         "fields":{
-            "user":3,
+            "user":1,
             "pet_name":"Reuben",
             "date":"2022-03-27",
             "start_time":"13:00:00",
@@ -45,9 +45,9 @@
     },
     {
         "model":"bookings.booking",
-        "pk":9,
+        "pk":5,
         "fields":{
-            "user":3,
+            "user":1,
             "pet_name":"Pedro",
             "date":"2022-03-27",
             "start_time":"15:00:00",
@@ -56,9 +56,9 @@
     },
     {
         "model":"bookings.booking",
-        "pk":11,
+        "pk":6,
         "fields":{
-            "user":4,
+            "user":1,
             "pet_name":"Mr Pink",
             "date":"2022-04-04",
             "start_time":"11:00:00",
@@ -67,9 +67,9 @@
     },
     {
         "model":"bookings.booking",
-        "pk":12,
+        "pk":7,
         "fields":{
-            "user":3,
+            "user":1,
             "pet_name":"Mr Wolf",
             "date":"2022-04-04",
             "start_time":"15:00:00",
@@ -78,9 +78,9 @@
     },
     {
         "model":"bookings.booking",
-        "pk":13,
+        "pk":8,
         "fields":{
-            "user":4,
+            "user":1,
             "pet_name":"Mr Blond",
             "date":"2022-04-04",
             "start_time":"09:00:00",
