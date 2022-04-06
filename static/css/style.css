@@ -51,6 +51,33 @@ footer {
     left: 0;
 }
 
+/* Tables */
+#view-booking-table {
+margin-top: 1em;
+}
+
+#view-booking-table th {
+    background-color: rgba(var(--theme-one), 1);
+    color: white;
+}
+
+#view-booking-table th,
+#view-booking-table td {
+    border: 1px solid black;
+    padding: 3px;
+}
+
+#view-booking-table tr:nth-child(odd) {
+    background-color: rgba(var(--theme-three), 1);
+    color: black;
+}
+
+#view-booking-table tr:hover {
+    background-color: rgba(var(--theme-five), 1);
+    color: white;
+}
+
+
 /* Carousel images */
 .carousel-item {
     height: 630px;
@@ -100,7 +127,7 @@ color: white;
 .btn {
 background: rgba(var(--theme-one), 1);
 border: 3px solid black;
-color: white; 
+color: white;
 }
 
 .btn:hover {
