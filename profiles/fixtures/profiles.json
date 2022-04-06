@@ -1,20 +1,11 @@
 [
     {
         "model":"profiles.profile",
-        "pk":3,
+        "pk":1,
         "fields":{
-            "user":3,
+            "user":1,
             "phone":"012345654321",
             "address":"17 Kennel Way"
-        }
-    },
-    {
-        "model":"profiles.profile",
-        "pk":4,
-        "fields":{
-            "user":4,
-            "phone":"",
-            "address":""
         }
     }
 ]
