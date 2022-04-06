@@ -4,10 +4,13 @@
 console.log("Connection to static/js/script.js - OK")
 
 /**
- * Datepicker widget in view_booking.html template
- * Long date format.  Limit date range from today to 12 months in advance
+ * Datepicker widget
+ * Long date format
+ * Limit date range from today to 12 months hence
+ * 
 */
-$( function() {
-  $( "#datepicker" ).datepicker({ dateFormat: "DD, d MM, yy", minDate: +0, maxDate: "+12M +0D" });
-  $("#datepicker").datepicker("option", "showAnim", "fold");
+$(document).ready(function() {
+    $( "#datepicker" ).datepicker({ dateFormat: "DD, d MM, yy", minDate: +0, maxDate: "+12M +0D" });
+    $( "#datepicker" ).datepicker("option", "showAnim", "fold");
+    $( "#datepicker" ).datepicker("setDate", '0');
 });
