@@ -12,16 +12,16 @@
 /* Mystery Machine Colours*/
 /* Hex # to RGB conversion using https://www.rapidtables.com/convert/color/hex-to-rgb.html*/
 :root {
-    /* blue 50C4F2 */
-    --theme-one: 80, 196, 242;
-    /* bright green 95D904 */
-    --theme-two: 149, 217, 4;
-    /* dark green 97BF04 */
-    --theme-three: 151, 191, 4;
-    /* dark cream D9D0BF*/
-    --theme-four: 217, 208, 191;
-    /* bright orange F22C05 */
-    --theme-five: 242, 44, 5;
+/* blue 50C4F2 */
+--theme-one: 80, 196, 242;
+/* bright green 95D904 */
+--theme-two: 149, 217, 4;
+/* dark green 97BF04 */
+--theme-three: 151, 191, 4;
+/* dark cream D9D0BF*/
+--theme-four: 217, 208, 191;
+/* bright orange F25C05 */
+--theme-five: 242, 44, 5;
 }
 
 /* Body */
@@ -51,8 +51,47 @@ footer {
     left: 0;
 }
 
-/* carousel images */
+/* Carousel images */
 .carousel-item {
     height: 630px;
     overflow: hidden;
+}
+
+/* Datepicker */
+.ui-datepicker {
+background-color: rgba(var(--theme-two), 1);
+}
+
+.ui-datepicker-header {
+background-color: rgba(var(--theme-one), 1);
+}
+
+.ui-datepicker-title {
+color: white;
+}
+
+.ui-datepicker-calendar{
+    color: white;
+}
+
+.ui-widget-content .ui-state-default {
+border: 1px;
+text-align: center;
+background: rgba(var(--theme-four), 1);
+font-weight: normal;
+color: black;
+}
+
+.ui-widget-content .ui-state-default:hover {
+border: 1px ;
+text-align: center;
+background: rgba(var(--theme-five), 1);
+font-weight: normal;
+color: white;
+}
+
+.ui-widget-content .ui-state-active {
+border: 0px;
+background: rgba(var(--theme-three), 1);
+color: white;
 }
