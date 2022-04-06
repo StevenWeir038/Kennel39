@@ -1,0 +1,26 @@
+[
+    {
+        "model":"services.service",
+        "pk":4,
+        "fields":{
+            "service_name":"Small",
+            "service_desc":"Our standard service for all breeds including a brush, dip, clip and blow dry."
+        }
+    },
+    {
+        "model":"services.service",
+        "pk":5,
+        "fields":{
+            "service_name":"Medium",
+            "service_desc":"A brush dip, clip, blow dry and nail trim and dematting."
+        }
+    },
+    {
+        "model":"services.service",
+        "pk":6,
+        "fields":{
+            "service_name":"Large",
+            "service_desc":"A brush dip, clip, blow dry, nail trim, dematting, scissor styling and gland expression."
+        }
+    }
+]
