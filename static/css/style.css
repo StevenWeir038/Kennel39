@@ -57,17 +57,15 @@ margin-top: 1em;
 }
 
 #view-booking-table th {
-    background-color: rgba(var(--theme-one), 1);
-    color: white;
+color: black;
 }
 
-#view-booking-table th,
 #view-booking-table td {
     border: 1px solid black;
     padding: 3px;
 }
 
-#view-booking-table tr:nth-child(odd) {
+#view-booking-table tr:nth-child(even) {
     background-color: rgba(var(--theme-three), 1);
     color: black;
 }
@@ -76,7 +74,6 @@ margin-top: 1em;
     background-color: rgba(var(--theme-five), 1);
     color: white;
 }
-
 
 /* Carousel images */
 .carousel-item {
@@ -134,4 +131,13 @@ color: white;
 background: rgba(var(--theme-two), 1);
 border: 3px solid black;
 color: rgba(var(--theme-five), 1);
+}
+
+td a {
+text-decoration: none;
+}
+
+td a:hover {
+text-decoration: none;
+color: white;
 }
