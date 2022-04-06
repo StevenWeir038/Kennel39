@@ -12,16 +12,16 @@
 /* Mystery Machine Colours*/
 /* Hex # to RGB conversion using https://www.rapidtables.com/convert/color/hex-to-rgb.html*/
 :root {
-/* blue 50C4F2 */
---theme-one: 80, 196, 242;
-/* bright green 95D904 */
---theme-two: 149, 217, 4;
-/* dark green 97BF04 */
---theme-three: 151, 191, 4;
-/* dark cream D9D0BF*/
---theme-four: 217, 208, 191;
-/* bright orange F25C05 */
---theme-five: 242, 44, 5;
+    /* blue 50C4F2 */
+    --theme-one: 80, 196, 242;
+    /* bright green 95D904 */
+    --theme-two: 149, 217, 4;
+    /* dark green 97BF04 */
+    --theme-three: 151, 191, 4;
+    /* dark cream D9D0BF*/
+    --theme-four: 217, 208, 191;
+    /* bright orange F25C05 */
+    --theme-five: 242, 44, 5;
 }
 
 /* Body */
@@ -45,30 +45,33 @@ header {
 
 /* Footer */
 footer {
-position:fixed;
-height: 100px;
-width: 100vw;
-bottom: 0;
-left: 0;
+    padding-top: 50px;
+    position: fixed;
+    height: 100px;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-content {
-display: flex;
-flex-direction: column;
-justify-content: center;
-text-align: center;
-background: white;
-border-radius: 10px;
-padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    padding: 0 8px;
 }
 
 /* Tables */
 #view-booking-table {
-margin-top: 1em;
+    margin-top: 1em;
+    text-decoration: none;
+    color: black;
 }
 
 #view-booking-table th {
-color: black;
+    color: black;
 }
 
 #view-booking-table td {
@@ -94,61 +97,61 @@ color: black;
 
 /* Datepicker */
 .ui-datepicker {
-background-color: rgba(var(--theme-three), 1);
+    background-color: rgba(var(--theme-three), 1);
 }
 
 .ui-datepicker-header {
-background-color: rgba(var(--theme-one), 1);
+    background-color: rgba(var(--theme-one), 1);
 }
 
 .ui-datepicker-title {
-color: white;
+    color: white;
 }
 
-.ui-datepicker-calendar{
+.ui-datepicker-calendar {
     color: white;
 }
 
 .ui-widget-content .ui-state-default {
-border: 1px;
-text-align: center;
-background: rgba(var(--theme-four), 1);
-font-weight: normal;
-color: black;
+    border: 1px;
+    text-align: center;
+    background: rgba(var(--theme-four), 1);
+    font-weight: normal;
+    color: black;
 }
 
 .ui-widget-content .ui-state-default:hover {
-border: 1px ;
-text-align: center;
-background: rgba(var(--theme-five), 1);
-font-weight: normal;
-color: white;
+    border: 1px;
+    text-align: center;
+    background: rgba(var(--theme-five), 1);
+    font-weight: normal;
+    color: white;
 }
 
 .ui-widget-content .ui-state-active {
-border: 0px;
-background: rgba(var(--theme-three), 1);
-color: white;
+    border: 0px;
+    background: rgba(var(--theme-three), 1);
+    color: white;
 }
 
 /* Buttons */
 .btn {
-background: rgba(var(--theme-one), 1);
-border: 3px solid black;
-color: white;
+    background: rgba(var(--theme-one), 1);
+    border: 3px solid black;
+    color: white;
 }
 
 .btn:hover {
-background: rgba(var(--theme-two), 1);
-border: 3px solid black;
-color: rgba(var(--theme-five), 1);
+    background: rgba(var(--theme-two), 1);
+    border: 3px solid black;
+    color: rgba(var(--theme-five), 1);
 }
 
 td a {
-text-decoration: none;
+    text-decoration: none;
 }
 
 td a:hover {
-text-decoration: none;
-color: white;
+    text-decoration: none;
+    color: white;
 }
