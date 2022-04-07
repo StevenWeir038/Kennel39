@@ -66,7 +66,7 @@ footer {
 /* Tables */
 #view-booking-table {
     margin-top: 1em;
-    text-decoration: none;
+    /* text-decoration: none; */
     color: black;
 }
 
@@ -77,11 +77,11 @@ footer {
 #view-booking-table td {
     border: 1px solid black;
     padding: 3px;
+    color: black;
 }
 
 #view-booking-table tr:nth-child(even) {
     background-color: rgba(var(--theme-three), 1);
-    color: black;
 }
 
 #view-booking-table tr:hover {
@@ -118,19 +118,20 @@ footer {
     background: rgba(var(--theme-four), 1);
     font-weight: normal;
     color: black;
+    border-radius: 10%;
 }
 
 .ui-widget-content .ui-state-default:hover {
-    border: 1px;
+    border: 1px solid rgba(var(--theme-four), 1);
     text-align: center;
     background: rgba(var(--theme-five), 1);
-    font-weight: normal;
     color: white;
 }
 
 .ui-widget-content .ui-state-active {
-    border: 0px;
-    background: rgba(var(--theme-three), 1);
+    border: 1px solid black;
+    background: rgba(var(--theme-one), 1);
+    font-weight: bold;
     color: white;
 }
 
@@ -143,15 +144,15 @@ footer {
 
 .btn:hover {
     background: rgba(var(--theme-five), 1);
-    border: 3px solid white;
+    border: 3px solid rgba(var(--theme-two), 1);
     color: white;
 }
 
 td a {
+    color: black;
     text-decoration: none;
 }
 
 td a:hover {
-    text-decoration: none;
     color: white;
 }
