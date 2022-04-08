@@ -21,29 +21,28 @@
 
                 {% for booking in bookings %}
                 <tr>
-                    <td>{{ booking.user }}</td>
+                    <td>{{ booking.user }}</td>  <!-- mask user name for privacy or simply remove this filed from rendered template... -->
                     <td>{{ booking.pet_name }}</td>
                     <td>{{ booking.date }}</td>
                     <td>{{ booking.start_time }}</td>
                     <td>{{ booking.service_type }}</td>
                     <!--apply an edit button to each row-->
                     <td>
-                        <button>
-                            <a href="{% url 'edit_booking' booking.id %}">Edit</a>
-                        </button>
+                        <a href="{% url 'edit_booking' booking.id %}">Edit</a>
                     </td>
-                    <!--apply an cancel button to each row-->
+                    <!--apply a cancel button to each row-->
                     <td>
-                        <button>
-                            <a href="{% url 'cancel_booking' booking.id %}">Cancel</a>
-                        </button>
+                        <!-- <a href="{% url 'cancel_booking' booking.id %}">Cancel</a> -->
+                        <a data-bs-toggle="modal" data-bs-target="#modal-cancel-{{ forloop.counter }}">
+                            Cancel
+                        </a>
                     </td>
                 </tr>
             {% empty %}
                 <tr>
                     <td>There are no booked appointments</td>
                 </tr>
-                {% endfor %}
+            {% endfor %}
             </table>
         </div>
     </div>
