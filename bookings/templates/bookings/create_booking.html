@@ -7,13 +7,12 @@
     <div class="row">
         <div class="col">
             <p>CREATE BOOKING</p>
-            <form method="POST" action="create_booking">
+            <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-            <div>
-                <p>
-                    <button class="btn btn-primary" type="submit" role="button">Submit</button>
-                </p>
+            <p>
+                <button class="btn btn-primary" type="submit" role="button">Submit</button>
+            </p>
             </form>
         </div>
     </div>
