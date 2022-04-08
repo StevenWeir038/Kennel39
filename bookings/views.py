@@ -56,7 +56,10 @@ def edit_booking(request, booking_id):
     return render(request, 'bookings/edit_booking.html', context)
 
 
+@login_required()
 def cancel_booking(request, booking_id):
     booking = get_object_or_404(Booking, id=booking_id)
+    if booking.user != request.user:
+        return redirect('view_booking')
     booking.delete()
     return redirect('view_booking')
