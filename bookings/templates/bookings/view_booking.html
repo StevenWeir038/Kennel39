@@ -16,6 +16,9 @@
                 <th>Date</th>
                 <th>Time</th>
                 <th>Service Type</th>
+                <th>Edit</th>
+                <th>Cancel</th>
+
                 {% for booking in bookings %}
                 <tr>
                     <td>{{ booking.user }}</td>
@@ -25,11 +28,15 @@
                     <td>{{ booking.service_type }}</td>
                     <!--apply an edit button to each row-->
                     <td>
-                        <a href="edit_booking/{{ booking.id }}">Edit</a>
+                        <button>
+                            <a href="{% url 'edit_booking' booking.id %}">Edit</a>
+                        </button>
                     </td>
                     <!--apply an cancel button to each row-->
                     <td>
-                        <a href="cancel_booking/{{ booking.id }}">Cancel</a>
+                        <button>
+                            <a href="{% url 'cancel_booking' booking.id %}">Cancel</a>
+                        </button>
                     </td>
                 </tr>
             {% empty %}
