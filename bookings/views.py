@@ -14,15 +14,18 @@ def view_booking(request):
     return render(request, 'bookings/view_booking.html', context)
 
 
+@login_required()
 def create_booking(request):
     """
     Create booking
     """
+    user = get_object_or_404(User, username=request.user)
     if request.method == 'POST':
-        form = BookingForm(request.POST)  # if there is a post request from the BookingForm
-        if form.is_valid():  # check if there are no errors in the form fields
-            form.save()  # if no errors then save
-            return redirect('view_booking')  # WHY IS IT ADDING a second /create_booking to url instead of returning to view_booking url!!! INVALID 'date' DATA IN FORM??
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.instance.user = user
+            form.save()
+            return redirect('view_booking')
     form = BookingForm()
     context = {
         'form': form
