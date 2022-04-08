@@ -35,11 +35,15 @@ def create_booking(request):
     return render(request, 'bookings/create_booking.html', context)
 
 
+@login_required()
 def edit_booking(request, booking_id):
     """
     Edit booking
     """
-    booking = get_object_or_404(Booking, id=booking_id)  # get instance of the record or retur 404 error if nothing found
+    user = get_object_or_404(User, username=request.user)
+    booking = get_object_or_404(Booking, id=booking_id)
+    if booking.user != user:
+        return redirect('view_booking')
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
