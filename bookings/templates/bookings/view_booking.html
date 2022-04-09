@@ -27,6 +27,7 @@
                     <td>{{ booking.start_time }}</td>
                     <td>{{ booking.service_type }}</td>
                     <!--apply an edit button to each row-->
+                    {% if booking.user == request.user %}
                     <td>
                         <a href="{% url 'edit_booking' booking.id %}">Edit</a>
                     </td>
@@ -52,13 +53,16 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn" data-bs-dismiss="modal">No</button>
-                                            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
                                             <a href="{% url 'cancel_booking' booking.id %}" class="btn btn-primary">Yes</a>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                     </td>
+                    {% else %}
+                    <td></td>
+                    <td></td>
+                {% endif %}
                 </tr>
                 {% empty %}
                 <tr>

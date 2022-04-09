@@ -91,6 +91,10 @@ footer {
     color: white;
 }
 
+.modal-content {
+    color: black;
+}
+
 /* Carousel images */
 .carousel-item {
     height: 630px;
