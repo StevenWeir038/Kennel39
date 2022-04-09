@@ -27,7 +27,6 @@
 /* Body */
 html {
     scroll-behavior: smooth;
-
 }
 
 body {
@@ -46,7 +45,6 @@ header {
 /* Footer */
 footer {
     padding-top: 50px;
-    position: fixed;
     height: 100px;
     width: 100vw;
     bottom: 0;
@@ -66,18 +64,13 @@ footer {
 /* Tables */
 #view-booking-table {
     margin-top: 1em;
-    /* text-decoration: none; */
-    color: black;
-}
-
-#view-booking-table th {
-    color: black;
+    text-align-last: left;
 }
 
 #view-booking-table td {
-    border: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
     padding: 3px;
-    color: black;
 }
 
 #view-booking-table tr:nth-child(even) {
@@ -86,6 +79,15 @@ footer {
 
 #view-booking-table tr:hover {
     background-color: rgba(var(--theme-five), 1);
+    color: white;
+}
+
+#view-booking-table td a {
+    text-decoration: none;
+    color: black;
+}
+
+#view-booking-table td a:hover {
     color: white;
 }
 
