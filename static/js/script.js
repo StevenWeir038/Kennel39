@@ -1,16 +1,13 @@
-/* jshint esversion: 8 */
+/* jshint esversion: 8, jquery: true */
 
-// Test connection
-console.log("Connection to static/js/script.js - OK")
 
 /**
  * Datepicker widget
  * Long date format
- * Limit date range from today to 12 months hence
- * 
+ * Limit date range from today + 12 months
 */
 $(document).ready(function() {
-    $( "#datepicker" ).datepicker({ dateFormat: "DD, d MM, yy", minDate: +0, maxDate: "+12M +0D" });
+    $( "#datepicker" ).datepicker({ dateFormat: "MM d, yy", minDate: +0, maxDate: "+12M +0D" });
     $( "#datepicker" ).datepicker("option", "showAnim", "fold");
     $( "#datepicker" ).datepicker("setDate", '0');
 });
