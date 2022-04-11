@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<section class="d-flex flex-column justify-content-center align-items-center text-center h-100"> 
+<section class="d-flex flex-column justify-content-between align-items-center text-center h-100"> 
     <div class="row">
         <div class="col">
             <p>VIEW BOOKING</p>
@@ -16,8 +16,6 @@
                 <th>Date</th>
                 <th>Time</th>
                 <th>Service Type</th>
-                <th>Edit</th>
-                <th>Cancel</th>
 
                 {% for booking in bookings %}
                 <tr class="booking-row">
