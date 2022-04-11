@@ -26,4 +26,17 @@ const filterResults = (e) => {
         }
     });
 }
+
 $(datepicker).on("change", filterResults);
+
+
+// remove d-none class to unfilter table data
+const refreshBtn = document.getElementById("refresh-table");
+const removeFilter = (e) => {
+    let resultRows = document.querySelectorAll(".booking-row");
+    resultRows.forEach(row => {
+        row.classList.remove("d-none");
+        });
+}
+
+$(refreshBtn).on("click", removeFilter);

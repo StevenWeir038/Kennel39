@@ -7,8 +7,9 @@
     <div class="row">
         <div class="col">
             <p>VIEW BOOKING</p>
-            <p>Date: <input type="text" id="datepicker"></p>
+            <p>Filter by date: <input type="text" id="datepicker"></p>
             <a class="btn" href="{% url 'create_booking' %}" role="button">Book Now</a>
+            <button id="refresh-table" class="btn" role="button">Show all</button>
             
             <table id="view-booking-table">
                 <th>User</th>
