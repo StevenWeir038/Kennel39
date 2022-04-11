@@ -1,12 +1,24 @@
+from datetime import date
 from django import forms
 from .models import Booking
+
+
+class DateInput(forms.DateInput):
+    """Datefield widget in form
+    """
+    input_type = 'date'
 
 
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = ['pet_name', 'date', 'start_time', 'service_type']
-        # Apply date picker direct to a rendered modelForm https://code-examples.net/en/q/f993c1
         widgets = {
-            'date': forms.DateInput(attrs={'class':'datepicker'})
-            }
+            'date': DateInput()
+        }
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['date'].widget.attrs.update({
+            'min': date.today()
+        })
