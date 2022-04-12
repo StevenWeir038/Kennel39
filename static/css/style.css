@@ -88,6 +88,8 @@ footer {
 
 #view-booking-table tr:hover {
     background-color: rgba(var(--theme-five), 1);
+    border-top: 3px solid rgba(var(--theme-two), 1);
+    border-bottom: 3px solid rgba(var(--theme-two), 1);
     color: white;
 }
 
