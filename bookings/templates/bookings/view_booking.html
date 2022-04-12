@@ -19,18 +19,30 @@
                 <th>Service Type</th>
 
                 {% for booking in bookings %}
+
                 <tr class="booking-row">
-                    <td>{{ booking.user }}</td>  <!-- mask user name for privacy or simply remove this filed from rendered template... -->
+                <!--if user is superuser or staff show all booking fields-->
+                    {% if request.user.is_superuser or request.user.is_staff %}
+                    <td>{{ booking.user }}</td>
+                    {% else %}
+                    <!-- if standard user is authenticated show their username but anonymize other usernames names. Staff and superusers can still see everything -->
+                        {% if booking.user == request.user %}
+                            <td>{{ booking.user }}</td>
+                        {% else %}
+                            <td>****</td>
+                        {% endif %}
+                    {% endif %}
+                    
+                    <!-- always show these fields -->
                     <td>{{ booking.pet_name }}</td>
                     <td>{{ booking.date }}</td>
                     <td>{{ booking.start_time }}</td>
                     <td>{{ booking.service_type }}</td>
-                    <!--apply an edit button to each row-->
-                    {% if booking.user == request.user %}
+                    <!--apply an edit & cancel button/link to each row if the user has staff or superuser access or a standard user created the record-->
+                    {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %}
                     <td>
                         <a href="{% url 'edit_booking' booking.id %}">Edit</a>
                     </td>
-                    <!--apply a cancel button to each row-->
                     <td>
                         <!-- <a href="{% url 'cancel_booking' booking.id %}">Cancel</a> -->
                         <a data-bs-toggle="modal" data-bs-target="#modal-cancel-{{ forloop.counter }}">
@@ -42,7 +54,7 @@
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="modal-cancel-label-{{ forloop.counter }}">
-                                                Cancel Booking for {{ booking.pet_name }}
+                                                Cancel Booking for {{ booking.pet_name }}?
                                             </h5>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                         </div>
@@ -61,10 +73,10 @@
                     {% else %}
                     <td></td>
                     <td></td>
-                {% endif %}
-                </tr>
-                {% empty %}
-                <tr>
+                    {% endif %}
+                    </tr>
+                    {% empty %}
+                    <tr>
                     <td>There are no booked appointments</td>
                 </tr>
                 {% endfor %}
