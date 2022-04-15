@@ -30,24 +30,16 @@ html {
 }
 
 body {
-    /* padding-bottom: 100px; */
-    /* Footer height */
-    height: 100vh;
     width: 100vw;
-}
-
-/* Header */
-header {
-    top: 0;
-    left: 0;
 }
 
 /* Footer */
 footer {
     height: 100px;
-    width: 100vw;
-    bottom: 0;
-    left: 0;
+    width: 100%;
+    position: fixed;
+    bottom:0;
+    text-align: center;
 }
 
 .footer-content {
@@ -107,6 +99,8 @@ footer {
 #view-booking-table tr:first-child {
     background-color: white;
     color: black;
+    border-top: none;
+    border-bottom: none;
 }
 
 .modal-content {
