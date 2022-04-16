@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<section class="d-flex flex-column justify-content-center align-items-center text-center h-100"> 
+<section class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100"> 
     <div class="row">
         <div class="col">
             <p>EDIT BOOKING</p>
@@ -12,12 +12,11 @@
             {{ form.as_p }}
             <div>
                 <p>
-                    <button class="btn btn-primary" type="submit" role="button">Update</button>
+                    <button class="btn" type="submit" role="button">Update</button>
                 </p>
             </form>
         </div>
     </div>
-        
 </section>
 
 {% endblock %}
