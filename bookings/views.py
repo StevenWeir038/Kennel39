@@ -3,13 +3,15 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Booking
 from .forms import BookingForm
+from datetime import datetime, timedelta
 
 
 def view_booking(request):
     """
     View booking
     """
-    bookings = Booking.objects.all()
+    date_threshold = datetime.now()
+    bookings = Booking.objects.filter(date__gte=date_threshold)
     context = {
         'bookings': bookings
     }
