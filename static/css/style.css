@@ -40,14 +40,14 @@ footer {
     margin-top: 1em;
     text-align: center;
     background-color: white;
+    position: fixed;
+    bottom: 0;
 }
 
 .footer-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    text-align: center;
-    background: white;
     border-radius: 10px;
 }
 
@@ -60,7 +60,20 @@ footer {
     font-size: large;
 }
 
-/* Tables */
+/* Buttons */
+.btn {
+    background: rgba(var(--theme-one), 1);
+    border: 3px solid black;
+    color: white;
+}
+
+.btn:hover {
+    background: rgba(var(--theme-five), 1);
+    border: 3px solid rgba(var(--theme-two), 1);
+    color: white;
+}
+
+/* View booking tables */
 #view-booking-table {
     margin-top: 1em;
     text-align: center;
@@ -85,7 +98,7 @@ footer {
     color: white;
 }
 
-#view-booking-table td a {
+#view-booking-table td > a {
     text-decoration: none;
     color: black;
     font-style: italic;
@@ -95,7 +108,16 @@ footer {
     color: white;
 }
 
-/* remove hover effects from title row in table */
+#view-booking-table td button a {
+    text-decoration: none;
+    color: white;
+}
+
+.modal-content {
+    color: black;
+}
+
+/* remove hover effects from title row in booking table */
 #view-booking-table tr:first-child {
     background-color: white;
     color: black;
@@ -103,17 +125,7 @@ footer {
     border-bottom: none;
 }
 
-.modal-content {
-    color: black;
-}
-
-/* Carousel images */
-.carousel-item {
-    height: 630px;
-    overflow: hidden;
-}
-
-/* Datepicker */
+/* View booking datepicker */
 .ui-datepicker {
     background-color: rgba(var(--theme-three), 1);
 }
@@ -153,24 +165,13 @@ footer {
     color: white;
 }
 
-/* Buttons */
-.btn {
-    background: rgba(var(--theme-one), 1);
-    border: 3px solid black;
-    color: white;
+
+/* Services carousel images */
+.carousel-item {
+    height: 630px;
+    overflow: hidden;
 }
 
-.btn:hover {
-    background: rgba(var(--theme-five), 1);
-    border: 3px solid rgba(var(--theme-two), 1);
-    color: white;
-}
-
-td a {
-    color: black;
-    text-decoration: none;
-}
-
-td a:hover {
-    color: white;
+.service-info {
+    margin-bottom: 100px;
 }
