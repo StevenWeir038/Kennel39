@@ -156,6 +156,10 @@ It was also much easier to setup.
 **SCREENSHOOTS AND BRIEF SYNOPSIS OF MAIN SITE FEATURES TO GO HERE**
 
 
+
+## Future adaptations
+- Extending allauth [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) **STILL TO WORK OUT one to one to add address and phone number fields**
+
 ## Testing
 
 Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
@@ -163,21 +167,20 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 
 ## Technologies Used
 
-- [Balsamiq](https://balsamiq.com/)
-- [Lucidchart](https://lucid.co/)
-- [Adobe Color](https://color.adobe.com/)
-- [Eightshapes]((https://contrast-grid.eightshapes.com))
-- [GitHub](https://github.com/)
-- [Heroku](https://id.heroku.com/)
-- HTML
-- CSS
-- Python
+- [Balsamiq](https://balsamiq.com/) for wireframing
+- [Lucidchart](https://lucid.co/) to produce ERD's
+- [Adobe Color](https://color.adobe.com/) to rsearch colour schemas.
+- [Eightshapes]((https://contrast-grid.eightshapes.com)) to review colour schema accessibility.
+- [GitHub](https://github.com/) for repo storage and Agile project management using kanban boards/issue tracking.
+- [Heroku](https://id.heroku.com/) for project deployment to the world wide web.
+- [Python](https://docs.python.org/3/)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
 - [Bootstrap](https://getbootstrap.com/)
 - [JQuery](https://jquery.com/) 
 - [Django](https://www.djangoproject.com/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
-- Extending allauth [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) **STILL TO WORK OUT one to one to add address and phone number fields**
 
 ## Credits
 
@@ -202,5 +205,4 @@ CodingEntrepreneurs](https://www.youtube.com/watch?v=icVke1tJ6aI)
 - [AJ Welch](https://chartio.com/resources/tutorials/how-to-filter-for-empty-or-null-values-in-a-django-queryset/) for a bolstering my understanding of Django lookups.
 - [LearnerAndLearn](https://stackoverflow.com/a/65065813) for there explanation on the difference between multiple arguments and chain filtering and how that affects SQL queries.
 - For his useful Bootstrap revision sheet, [Alexander Rechsteiner](https://hackerthemes.com/bootstrap-cheatsheet/)
-- [Guillermo Brachetta](https://code-institute-room.slack.com/files/UQG5DAG7K/F01RH23KDV4/django-env.pdf) for his Environment Variable setup guide.  In the end I choose an alternative method but it could be useful for future development.
 - Fellow students, David Bowers and Helena Johansson for their moral support.  They kept me going during periods of self doubt.
