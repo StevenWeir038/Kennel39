@@ -26,7 +26,16 @@ def create_booking(request):
     user = get_object_or_404(User, username=request.user)
     if request.method == 'POST':
         form = BookingForm(request.POST)
-        if form.is_valid():
+        if form.is_valid():    
+            # check for existing appointments
+            # get and store cleaned data supplied by user from bookingform
+            req_date = form.cleaned_data['date']
+            req_time = form.cleaned_data['start_time']
+            # queryset - filter for multiple arguments (date & time)
+            # SELECT * FROM "Booking" WHERE "Date" = 'req_date' AND "start_time" = 'req_time'
+            check_existing_bookings = Booking.objects.filter(date__date=req_date, start_time__time=req_time)
+            
+
             form.instance.user = user
             form.save()
             return redirect('view_booking')
