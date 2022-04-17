@@ -99,7 +99,9 @@ OTHER
 
 - **As an** unregistered user, **I can** view the landing page **so that** I understand the site's purpose
 
-Use of [Agile](AGILE.md) can be found in a separate file.
+[Agile](AGILE.md) use has been documented in a separate file.
+
+It became something of learning aid/development tracker for this project. 
 
 ## Wireframes
 
@@ -113,21 +115,19 @@ Several wireframes were created to target user requirements. This provided an ov
 
 ![my-account-desktop](docs/wireframes/03-my-account-desktop.png "my-account-desktop")
 
-![04](docs/wireframes/04-book-now-desktop.png "04")
+![book-now-desktop-1](docs/wireframes/04-book-now-desktop.png "book-now-desktop1")
 
-![book-now-desktop](docs/wireframes/05-my-appointments-desktop.png "book-now-desktop")
+![book-now-desktop-2](docs/wireframes/05-my-appointments-desktop.png "book-now-desktop2")
 
 ![daily-calendar-desktop](docs/wireframes/06-daily-calendar-desktop.png "daily-calendar-desktop")
 
 ## Colour Schema
 
-The colour schema was selected from [Adobe Color](https://color.adobe.com/search?q=dog).
+The colour schema was selected from [Adobe Color](https://color.adobe.com/search?q=dog) and the accessibility was checked usin the [contrast grid](https://contrast-grid.eightshapes.com) tool by eightshapes.
 
 The developed site should appear bright to contrast with the negative space.
 
 In keeping with the dog theme, colours are based of the *Mystery Machine* as seen in [Scooby-Doo](https://en.wikipedia.org/wiki/Scooby-Doo).
-
-![colour-schema](docs/readme/colour-schema.png "colour schema")
 
 ![colour-accessibility](docs/readme/colour-accessibility.png "colour accessibility")
 
@@ -160,6 +160,7 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [Balsamiq](https://balsamiq.com/)
 - [Lucidchart](https://lucid.co/)
 - [Adobe Color](https://color.adobe.com/)
+- [Eightshapes]((https://contrast-grid.eightshapes.com))
 - [GitHub](https://github.com/)
 - [Heroku](https://id.heroku.com/)
 - HTML
