@@ -123,7 +123,7 @@ Several wireframes were created to target user requirements. This provided an ov
 
 ## Colour Schema
 
-The colour schema was selected from [Adobe Color](https://color.adobe.com/search?q=dog) and the accessibility was checked usin the [contrast grid](https://contrast-grid.eightshapes.com) tool by eightshapes.
+The colour schema was selected from [Adobe Color](https://color.adobe.com/search?q=dog) and the accessibility was checked using the [contrast grid](https://contrast-grid.eightshapes.com) tool by eightshapes.
 
 The developed site should appear bright to contrast with the negative space.
 
@@ -148,7 +148,7 @@ This process has been documented separately in [DEPLOYMENT.md](DEPLOYMENT.md)
 Update - More dependancies were added after deployment.
 [WhiteNoise](http://whitenoise.evans.io/en/stable/) was used instead of [Cloudinary](https://cloudinary.com/).
 
-For a small site, it's better for the web app to serve its own static files rather than rely on a 3rd part API.
+For a small site, it's better for the web app to serve its own static files rather than rely on a 3rd party API.
 It was also much easier to setup.
 
 ## Features
@@ -171,14 +171,14 @@ Menu options change depending on whether or not the user is logged in.
 
 ![dynamic-menu-options-2](docs/readme/features/02-features-dynamic-menu-options-2.png "dynamic-menu-options-2")
 
-### Fixed footer.
+### Fixed footer
 Links are always available at the bottom of the page for all viewscreen sizes.
 
 To assist user, link elements change style when hovering.
 
 ![fixed-footer](docs/readme/features/03-features-fixed-footer.png "fixed-footer")
 
-### CTA buttons on landing page.
+### CTA buttons on landing page
 If user is logged in, an additional `Book Now` button becomes available.  This is a short cut to the *view booking* template.
 
 To enhance user experience, buttons change style when hovering.
@@ -203,6 +203,53 @@ Standard allauth signup page adapted to the site's theme.
 Standard allauth signup page adapted to the site's theme.
 
 ![login](docs/readme/features/08-features-login.png "login")
+
+### View bookings page
+This shows the user all existing bookings.  It is intended that that they use this information to book an appointment that doesn't overlap with an existing one.
+
+All accounts can:
+- view a page personalised with their username
+- view booking from the current date to one year in the future
+- filter the table using a jquery support datepicker. This has been setup to allow only current date to one year in the future.
+- `Show all` button removes filtering and restores table to default.
+- create a booking by selecting `Book Now`
+- the table itself utilizes a hover effect for a whole row to emphasis the record the user is actively viewing/selecting.
+
+![jquery-datepicker](docs/readme/features/09-features-jquery-datepicker.png "jquery-datepicker")
+
+![view-booking-table](docs/readme/features/10-features-view-booking-table.png "view-booking-table")
+
+Superuser and staff accounts have:
+- full CRUD access to all bookings made.
+- can view all booking information including user names
+
+![view-booking-full-crud-access](docs/readme/features/11-features-view-booking-full-crud-access.png "view-booking-full-crud-access")
+
+Standard user accounts have:
+- CRUD functionality limited to their own records. This is to counter malicious or accidental tampering with the database.
+- To protect identities of clients, a `*****` placeholder is used to anonymize the user field for records created by others.
+
+![view-booking-anonymize-other-users](docs/readme/features/12-features-view-booking-anonymize-other-users.png "view-booking-anonymize-other-users")
+
+### Create booking page
+There is no need to ask the user for their name when they are signed into their account.
+To simplify data entry, the form contains an `html` datepicker and dropdown menus whose options are based on the booking model.
+
+![](docs/readme/features/13-features-.png "")
+
+### Edit booking page
+The edit booking follows the same conventions as the create booking page.
+
+![](docs/readme/features/14-features-.png "")
+
+### Cancel booking modal
+This serves as a defensive programming feature for the user asking if they really wish to cancel their booking.
+
+The title and message body are personalised and the buttons have the same hover effects in keeping with the rest of the site.
+
+![](docs/readme/features/15-features-.png "")
+
+
 
 ## Future adaptations
 - Extending allauth [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) **STILL TO WORK OUT one to one to add address and phone number fields**
