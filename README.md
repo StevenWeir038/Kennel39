@@ -131,6 +131,8 @@ In keeping with the dog theme, colours are based of the *Mystery Machine* as see
 
 ![colour-schema](docs/readme/colour-schema.png "colour schema")
 
+![colour-accessibility](docs/readme/colour-accessibility.png "colour accessibility")
+
 ## Database Design
 
 Entity Relationship Diagrams help to visualise database architecture before creating models in Django.  Understanding the relationships between different tables can save time recoding later in the project.  Fortunately this system is quite simple so only 4 tables are required.
