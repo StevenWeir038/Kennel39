@@ -141,9 +141,15 @@ Update - by mid project, research showed there was no need for a calendar table.
 
 ## Deployment
 
-The site has been deployed early.  More dependancies may be added at a later time.
+The site was deployed early closely following Code Institute guides.
 
 This process has been documented separately in [DEPLOYMENT.md](DEPLOYMENT.md)
+
+Update - More dependancies were added after deployment.
+[WhiteNoise](http://whitenoise.evans.io/en/stable/) was used instead of [Cloudinary](https://cloudinary.com/).
+
+For a small site, it's better for the web app to serve its own static files rather than rely on a 3rd part API.
+It was also much easier to setup.
 
 ## Features
 
@@ -170,7 +176,6 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [JQuery](https://jquery.com/) 
 - [Django](https://www.djangoproject.com/)
 - [PostgreSQL](https://www.postgresql.org/)
-- [Cloudinary](https://cloudinary.com/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
 - Extending allauth [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) **STILL TO WORK OUT one to one to add address and phone number fields**
 
