@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.contrib import messages
 from .models import Booking
 from .forms import BookingForm
 from datetime import datetime
@@ -33,12 +34,17 @@ def create_booking(request):
             req_time = form.cleaned_data['start_time']
             # queryset - filter for multiple arguments (date & time)
             # SELECT * FROM "Booking" WHERE "Date" = 'req_date' AND "start_time" = 'req_time'
-            check_existing_bookings = Booking.objects.filter(date__date=req_date, start_time__time=req_time)
-            
-
+            # count number of returned rows. better this way than looping through all records, especially for large datasets
+            check_existing_bookings = Booking.objects.filter(date__date=req_date, start_time__time=req_time).count()
+            # logic - only 1 appointment can be taken at a given time as only one staff member present
+            if check_existing_bookings >= 1:
+                return redirect('view_booking')
+                messages.add_message(request, messages.ERROR(request, message), "No appointment available for this time")
+            else:
             form.instance.user = user
             form.save()
             return redirect('view_booking')
+            messages.add_message(request, messages.INFO, "Appointment confirmed")
     form = BookingForm()
     context = {
         'form': form
