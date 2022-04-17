@@ -41,10 +41,10 @@ def create_booking(request):
                 return redirect('view_booking')
                 messages.add_message(request, messages.ERROR(request, message), "No appointment available for this time")
             else:
-            form.instance.user = user
-            form.save()
-            return redirect('view_booking')
-            messages.add_message(request, messages.INFO, "Appointment confirmed")
+                form.instance.user = user
+                form.save()
+                return redirect('view_booking')
+                messages.add_message(request, messages.INFO, "Appointment confirmed")
     form = BookingForm()
     context = {
         'form': form
@@ -64,6 +64,7 @@ def edit_booking(request, booking_id):
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
+            # will need same logic here as in create booking to prevent booking clashes.
             form.save()
             return redirect('view_booking')
     form = BookingForm(instance=booking)
