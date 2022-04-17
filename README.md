@@ -154,8 +154,55 @@ It was also much easier to setup.
 ## Features
 
 **SCREENSHOOTS AND BRIEF SYNOPSIS OF MAIN SITE FEATURES TO GO HERE**
+**Useful Hint**
+In *DevTools*, in the Elements tab, right click on the target element and select `Capture node screenshot`.
+Useful for creating image files for readme.
 
+### Landing page
+The user understands the site's purpose on arrival.
 
+![landing](docs/readme/features/00-features-landing.png "landing")
+
+### Minimised navigation 
+The whole site uses a collapsable menu to save screen real estate on all resolutions.
+Menu options change depending on whether or not the user is logged in.
+
+![dynamic-menu-options-1](docs/readme/features/01-features-dynamic-menu-options-1.png "dynamic-menu-options-1")
+
+![dynamic-menu-options-2](docs/readme/features/02-features-dynamic-menu-options-2.png "dynamic-menu-options-2")
+
+### Fixed footer.
+Links are always available at the bottom of the page for all viewscreen sizes.
+
+To assist user, link elements change style when hovering.
+
+![fixed-footer](docs/readme/features/03-features-fixed-footer.png "fixed-footer")
+
+### CTA buttons on landing page.
+If user is logged in, an additional `Book Now` button becomes available.  This is a short cut to the *view booking* template.
+
+To enhance user experience, buttons change style when hovering.
+
+![cta-not-logged-in](docs/readme/features/04-features-cta-not-logged-in.png "cta-not-logged-in")
+
+![cta-logged-in](docs/readme/features/05-features-cta-logged-in.png "cta-logged-in")
+
+### Services page
+Contains a brief synopsis of the services offered, drawn from the backend Services table.
+
+A carousel element with 3 images has been included to make the site feel more dynamic.
+
+![services](docs/readme/features/06-features-services.png "services")
+
+### Registration page
+Standard allauth signup page adapted to the site's theme.
+
+![registration](docs/readme/features/07-features-registration.png "registration")
+
+### Login page
+Standard allauth signup page adapted to the site's theme.
+
+![login](docs/readme/features/08-features-login.png "login")
 
 ## Future adaptations
 - Extending allauth [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) **STILL TO WORK OUT one to one to add address and phone number fields**
@@ -163,13 +210,13 @@ It was also much easier to setup.
 ## Testing
 
 Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
-**DONT FORGET TO ADD HTML AND CSS VALIDATOR CHECKS!** 
+**DONT FORGET TO ADD HTML AND CSS VALIDATOR CHECKS, LIGHTOUSE AND JSHINT use proper ci tool!** 
 
 ## Technologies Used
 
 - [Balsamiq](https://balsamiq.com/) for wireframing
 - [Lucidchart](https://lucid.co/) to produce ERD's
-- [Adobe Color](https://color.adobe.com/) to rsearch colour schemas.
+- [Adobe Color](https://color.adobe.com/) to research colour schemas.
 - [Eightshapes]((https://contrast-grid.eightshapes.com)) to review colour schema accessibility.
 - [GitHub](https://github.com/) for repo storage and Agile project management using kanban boards/issue tracking.
 - [Heroku](https://id.heroku.com/) for project deployment to the world wide web.
@@ -181,6 +228,7 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [Django](https://www.djangoproject.com/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
 
 ## Credits
 
