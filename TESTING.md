@@ -4,6 +4,8 @@ A variety of manual and automated tests were performed throughout the project.
 
 ## Manual Testing
 
+### Setting up Django project
+
 **#1. Getting the live deployed site working**
 
 This is well documented in the latter sections of [DEPLOYMENT.md](DEPLOYMENT.md)
@@ -279,8 +281,67 @@ class Booking(models.Model):
     ...
 ```
 
-Be subclassing a list within the booking model I was able to use a time format for the appointments though this doesn't allow the `timedelta` method to be used to calcuate duration. I'll change this approach in furure projects.
+Be subclassing a list within the booking model I was able to use a time format for the appointments though this doesn't allow the `timedelta` method to be used to calcuate duration. I'll be wary of this approach in future projects.
+
+## Exploratory tests
+
+### Site navigation
+When not logged in the nav menu can direct a user to:
+
+- [x] services
+- [x] registration
+- [x] logon
+
+When logged in the nav menu can direct a user to:
+- [x] services
+- [x] logout
+- [x] book appointment
+
+When not logged in, CTA buttons on the landing page can direct a user to:
+- [x] services
+- [x] registration
+- [x] logon
+
+When logged in, CTA buttons on the landing page can direct a user to:
+- [x] services
+- [x] logout
+- [x] book appointment
+
+### Accounts registration, login and logout
+- [x] A user can register a new account
+- [x] Can login after being registered
+- [x] logout when logged in
+
+### Jquery datepicker
+- [x] Can only select dates from current date to 365 days in advance
+
+### Bookings management
+
+- [x] Filter is applied to table when a valid date is selected
+
+- [x] `Show all` button removes filter and restores view of all table records
+
+#### Functionality for all users:
+- [] create their own bookings
+- [x] view own bookings
+- [x] edit own bookings
+- [x] cancel own bookings
+
+#### Functionality for superusers:
+- [x] view other users bookings
+- [x] edit other users bookings
+- [x] cancel other users bookings
+
+#### Functionality for standard users:
+- [x] sees a `*****` placehoder instead of another users name to protect privacy.
+
+![](docs/readme/testing/15-.png "")
 
 ## Automated Testing
+A major drawback of exploratory testing was having to repeat it when new code was written. The site is small so the task is manageable but unit testing is the next logical step.
+
+One example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.
+
+Time to attempt a few basic tests for the site.
 
 Return to [README.md](README.md)
