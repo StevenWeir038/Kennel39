@@ -10,10 +10,10 @@
             <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
+                <p>
+                    <button class="btn" type="submit" role="button">Submit</button>
+                </p>
             </form>
-            <p>
-                <button class="btn btn-primary" type="submit" role="button">Submit</button>
-            </p>
         </div>
     </div>    
 </section>
