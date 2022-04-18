@@ -286,56 +286,70 @@ Be subclassing a list within the booking model I was able to use a time format f
 ## Exploratory tests
 
 ### Site navigation
-When not logged in the nav menu can direct a user to:
+| Checked | When not logged in, the nav menu can direct a user to the |
+|:-------:|:--------------------------------------------------------- |
+| &check; | services page |
+| &check; | registration page |
+| &check; | logon page |
 
-- [x] services
-- [x] registration
-- [x] logon
+| Checked | When logged in, the nav menu can direct a user to the |
+|:-------:|:----------------------------------------------------- |
+| &check; | services page |
+| &check; | logout page |
+| &check; | book appointment page |
 
-When logged in the nav menu can direct a user to:
-- [x] services
-- [x] logout
-- [x] book appointment
+### Landing page CTA buttons
+| Checked | When not logged in, CTA buttons on the landing page can direct a user to |
+|:-------:|:-------------------------------------------------------------------------|
+| &check; | services page |
+| &check; | registration page |
+| &check; | logon page |
 
-When not logged in, CTA buttons on the landing page can direct a user to:
-- [x] services
-- [x] registration
-- [x] logon
+| Checked | When logged in, CTA buttons on the landing page can direct a user to |
+|:-------:|:---------------------------------------------------------------------|
+| &check; | services page |
+| &check; | book appointment page |
 
-When logged in, CTA buttons on the landing page can direct a user to:
-- [x] services
-- [x] logout
-- [x] book appointment
-
-### Accounts registration, login and logout
-- [x] A user can register a new account
-- [x] Can login after being registered
-- [x] logout when logged in
+### Accounts & site access
+| Checked | Registration, login and logout |
+|:-------:|:-------------------------------|
+| &check; | A user can register a new account |
+| &check; | Can login after being registered |
+| &check; | logout when logged in |
 
 ### Jquery datepicker
-- [x] Can only select dates from current date to 365 days in advance
+| Checked | datepicker behaviour |
+|:-------:|:---------------------|
+| &check; | can only select dates from current date to 365 days in advance |
 
 ### Bookings management
-
-- [x] Filter is applied to table when a valid date is selected
-
-- [x] `Show all` button removes filter and restores view of all table records
+#### Booking table
+| Checked | view booking table behaviours |
+|:-------:|:------------------------------|
+| &check; | Filter is applied to table when a valid date is selected |
+| &check; | `Show all` button removes filter and restores view of all table records |
 
 #### Functionality for all users:
-- [] create their own bookings
-- [x] view own bookings
-- [x] edit own bookings
-- [x] cancel own bookings
+| Checked | all users can |
+|:-------:|:--------------|
+| &cross; | create their own bookings |
+| &check; | view own bookings |
+| &check; | edit own bookings |
+| &check; | cancel own bookings |
 
 #### Functionality for superusers:
-- [x] view other users bookings
-- [x] edit other users bookings
-- [x] cancel other users bookings
+| Checked | superusers can |
+|:-------:|:---------------|
+| &cross; | view other users bookings |
+| &check; | edit other users bookings |
+| &check; | cancel other users bookings |
 
 #### Functionality for standard users:
-- [x] sees a `*****` placehoder instead of another users name to protect privacy.
+| Checked | standard users must only be able to view a |
+|:-------:|:-------------------------------------------|
+| &check; | `*****` placehoder instead of another users names to protect privacy |
 
-![](docs/readme/testing/15-.png "")
+
 
 ## Automated Testing
 A major drawback of exploratory testing was having to repeat it when new code was written. The site is small so the task is manageable but unit testing is the next logical step.
@@ -343,5 +357,7 @@ A major drawback of exploratory testing was having to repeat it when new code wa
 One example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.
 
 Time to attempt a few basic tests for the site.
+
+![](docs/readme/testing/15-.png "")
 
 Return to [README.md](README.md)
