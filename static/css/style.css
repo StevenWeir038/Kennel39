@@ -175,3 +175,18 @@ footer {
 .service-info {
     margin-bottom: 100px;
 }
+
+/* Forms */
+form p {
+    text-align: left;
+}
+
+form p label {
+    text-align: right;
+    width: 150px;
+}
+
+form p input {
+    text-align: left;
+    width: 150px;
+}
