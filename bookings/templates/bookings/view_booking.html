@@ -3,16 +3,16 @@
 
 {% block content %}
 
-<section class="d-flex flex-column justify-content-between align-items-center text-center h-100"> 
+<section class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
     <div class="row">
         <div class="col">
             <p>VIEW BOOKINGS</p>
             <p>Hello <strong>{{ user }}</strong></p>
-            <p>Existing bookings are displayed below.</p>
+            <p>Confirmed bookings for next year are displayed below.</p>
             <p>Filter by date: <input type="text" id="datepicker"></p>
             <a class="btn" href="{% url 'create_booking' %}" role="button">Book Now</a>
             <button id="refresh-table" class="btn" role="button">Show all</button>
-            
+
             <table id="view-booking-table">
                 <th>User</th>
                 <th>Pet's Name</th>
@@ -23,18 +23,18 @@
                 {% for booking in bookings %}
 
                 <tr class="booking-row">
-                <!--if user is superuser or staff show all booking fields-->
+                    <!--if user is superuser or staff show all booking fields-->
                     {% if request.user.is_superuser or request.user.is_staff %}
                     <td>{{ booking.user }}</td>
                     {% else %}
                     <!-- if standard user is authenticated show their username but anonymize other usernames names. Staff and superusers can still see everything -->
-                        {% if booking.user == request.user %}
-                            <td>{{ booking.user }}</td>
-                        {% else %}
-                            <td>****</td>
-                        {% endif %}
+                    {% if booking.user == request.user %}
+                    <td>{{ booking.user }}</td>
+                    {% else %}
+                    <td>*****</td>
                     {% endif %}
-                    
+                    {% endif %}
+
                     <!-- always show these fields -->
                     <td>{{ booking.pet_name }}</td>
                     <td>{{ booking.date }}</td>
@@ -50,35 +50,38 @@
                         <a data-bs-toggle="modal" data-bs-target="#modal-cancel-{{ forloop.counter }}">
                             Cancel
                         </a>
-                            <!-- modal cancellation confirmation -->
-                            <div class="modal fade" id="modal-cancel-{{ forloop.counter }}" tabindex="-1" aria-labelledby="modal-cancel-label-{{ forloop.counter }}" aria-hidden="true">
-                                <div class="modal-dialog">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="modal-cancel-label-{{ forloop.counter }}">
-                                                Cancel Booking for {{ booking.pet_name }}?
-                                            </h5>
-                                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                        </div>
-                                        <div class="modal-body">
-                                            Are you sure you want to cancel the booking for <br>
-                                            {{ booking.pet_name }} on {{ booking.date }} at {{ booking.start_time }}?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn" data-bs-dismiss="modal">No</button>
-                                            <button href="{% url 'cancel_booking' booking.id %}" class="btn">Yes</a></button>
-                                        </div>
+                        <!-- modal cancellation confirmation -->
+                        <div class="modal fade" id="modal-cancel-{{ forloop.counter }}" tabindex="-1"
+                            aria-labelledby="modal-cancel-label-{{ forloop.counter }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="modal-cancel-label-{{ forloop.counter }}">
+                                            Cancel Booking for {{ booking.pet_name }}?
+                                        </h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Are you sure you want to cancel the booking for <br>
+                                        {{ booking.pet_name }} on {{ booking.date }} at {{ booking.start_time }}?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn" data-bs-dismiss="modal">No</button>
+                                        <button type="button" class="btn"><a
+                                                href="{% url 'cancel_booking' booking.id %}">Yes</a></button>
                                     </div>
                                 </div>
                             </div>
+                        </div>
                     </td>
                     {% else %}
                     <td></td>
                     <td></td>
                     {% endif %}
-                    </tr>
-                    {% empty %}
-                    <tr>
+                </tr>
+                {% empty %}
+                <tr>
                     <td>There are no booked appointments</td>
                 </tr>
                 {% endfor %}
@@ -86,4 +89,4 @@
         </div>
     </div>
 
-{% endblock %}
+    {% endblock %}
