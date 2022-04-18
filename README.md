@@ -123,7 +123,7 @@ Several wireframes were created to target user requirements. This provided an ov
 
 ## Colour Schema
 
-The colour schema was selected from [Adobe Color](https://color.adobe.com/search?q=dog) and the accessibility was checked using the [contrast grid](https://contrast-grid.eightshapes.com) tool by eightshapes.
+The colour schema was selected from [Adobe Color](https://color.adobe.com/search?q=dog) and the accessibility was checked using the [contrast grid](https://contrast-grid.eightshapes.com) tool from [Eightshapes](https://contrast-grid.eightshapes.com).
 
 The developed site should appear bright to contrast with the negative space.
 
@@ -150,6 +150,10 @@ Update - More dependancies were added after deployment.
 
 For a small site, it's better for the web app to serve its own static files rather than rely on a 3rd party API.
 It was also much easier to setup.
+
+Update - there was an unforseen deployment issue with [Heroku](https://status.heroku.com/incidents/2413).  As described by the link this was to prevent unauthorised access to gitHub repositories.
+
+This was resolved by deploying to Heroku via the CLI in Gitpod.  **TODO**
 
 ## Features
 
@@ -233,14 +237,15 @@ Standard user accounts have:
 
 ### Create booking page
 There is no need to ask the user for their name when they are signed into their account.
+
 To simplify data entry, the form contains an `html` datepicker and dropdown menus whose options are based on the booking model.
 
-![](docs/readme/features/13-features-.png "")
+![create-booking](docs/readme/features/13-features-create-booking.png "create-booking")
 
 ### Edit booking page
-The edit booking follows the same conventions as the create booking page.
+The edit booking follows the same conventions as the create booking page and is prepopulated with the record the user chose to edit.
 
-![](docs/readme/features/14-features-.png "")
+![edit-booking](docs/readme/features/14-features-edit-booking.png "edit-booking")
 
 ### Cancel booking modal
 This serves as a defensive programming feature for the user asking if they really wish to cancel their booking.
@@ -254,7 +259,11 @@ The title and message body are personalised and the buttons have the same hover 
 
 
 ## Future adaptations
-- Extending allauth [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone) **STILL TO WORK OUT one to one to add address and phone number fields**
+This was the first occasion using allauth which more than met project needs.  It is possible to extend allauth forms though this will have to be an item for the future due to time constraints.  You will notice a Profile table (with address and phone number fileds) set up with a 1-1 relationship with the user table.
+
+Only by addressing this can the user account edit/update/delete functionality be realised in the front-end. (Bookings were the highest priority for this project).
+
+A good source to aid with this expansion is by [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone).
 
 ## Testing
 
@@ -266,7 +275,7 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [Balsamiq](https://balsamiq.com/) for wireframing
 - [Lucidchart](https://lucid.co/) to produce ERD's
 - [Adobe Color](https://color.adobe.com/) to research colour schemas.
-- [Eightshapes]((https://contrast-grid.eightshapes.com)) to review colour schema accessibility.
+- [Eightshapes](https://contrast-grid.eightshapes.com) to review colour schema accessibility.
 - [GitHub](https://github.com/) for repo storage and Agile project management using kanban boards/issue tracking.
 - [Heroku](https://id.heroku.com/) for project deployment to the world wide web.
 - [Python](https://docs.python.org/3/)
