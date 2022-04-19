@@ -332,7 +332,7 @@ Be subclassing a list within the booking model I was able to use a time format f
 #### Functionality for all users:
 | Checked | all users can |
 |:-------:|:--------------|
-| &cross; | create their own bookings |
+| &check; | create their own bookings |
 | &check; | view own bookings |
 | &check; | edit own bookings |
 | &check; | cancel own bookings |
@@ -340,7 +340,7 @@ Be subclassing a list within the booking model I was able to use a time format f
 #### Functionality for superusers:
 | Checked | superusers can |
 |:-------:|:---------------|
-| &cross; | view other users bookings |
+| &check; | view other users bookings |
 | &check; | edit other users bookings |
 | &check; | cancel other users bookings |
 
@@ -354,7 +354,7 @@ Be subclassing a list within the booking model I was able to use a time format f
 ## Automated Testing
 A major drawback of exploratory testing was having to repeat it when new code was written. The site is small so the task is manageable but unit testing is the next logical step.
 
-One example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.
+One example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.  (Accidently commented out `form.instance.user = user`) when debugging.
 
 Time to attempt a few basic tests for the site.
 

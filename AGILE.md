@@ -149,7 +149,7 @@ Final thought of the week.  You can follow instructions to the letter.  Things y
 
 ## Sprint 6
 - build view bookings page
-- build create bookings page and add form from BookingForm model 
+- build create bookings page and add form from BookingForm model
 - Create view and functionality for basic CRUD operations.
 
 ### Reflections
@@ -160,7 +160,8 @@ Keeping it simple, when the user selects `Book Appointment` they are directed to
 ## Sprint 7
 - Develop a means to display only appointments for a given day using a method like a date picker...
 - All logged in users are able to create, view, edit and delete other users appointments.  Restrict this to view only.  We only want them to see were slots are taken on a given time/day.
-- Staff access will need to see all booking for a given day.  BETTERT TO DO THIS ON A VIEW OF ITS OWN. MORE WORK SETTING UP STAFF AREA/URLS/VIEWS ETC.
+- When performing a CRUD operation, give the user a chance to confirm if they want to proceed.
+- Staff access will need to see all booking for a given day.  BETTER TO DO THIS ON A VIEW OF ITS OWN. MORE WORK SETTING UP STAFF AREA/URLS/VIEWS ETC.
 - Write view logic to prevent created and updated bookings from clashing with existing.
 
 ### Reflections
