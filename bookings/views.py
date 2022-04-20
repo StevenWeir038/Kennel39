@@ -6,6 +6,7 @@ from .models import Booking
 from .forms import BookingForm
 from datetime import datetime
 
+num_staff = 2
 
 def view_booking(request):
     """
@@ -31,7 +32,7 @@ def create_booking(request):
             req_date = form.cleaned_data['date']
             req_time = form.cleaned_data['start_time']
             num_same_bookings = Booking.objects.filter(date=req_date, start_time=req_time).count()
-            if num_same_bookings >= 1:
+            if num_same_bookings > num_staff:
                 return redirect('view_booking')
                 messages.add_message(request, messages.error(request, message), "No appointment available for this time")
             else:
