@@ -189,7 +189,10 @@ The user understands the site's purpose on arrival.
 
 ### Minimised navigation 
 The whole site uses a collapsable menu to save screen real estate on all resolutions.
-Menu options change depending on whether or not the user is logged in.
+
+It occupies the whole screen to encourage the user to make a decision where to navigate to.
+
+Menu options also change depending on whether or not the user is logged in.
 
 ![dynamic-menu-options-1](docs/readme/features/01-features-dynamic-menu-options-1.png "dynamic-menu-options-1")
 
@@ -198,6 +201,8 @@ Menu options change depending on whether or not the user is logged in.
 ### Fixed footer
 Links are always available at the bottom of the page for all viewscreen sizes.
 
+It has been intentionally omitted from the landing page for styling purposes.
+
 To assist user, link elements change style when hovering.
 
 ![fixed-footer](docs/readme/features/03-features-fixed-footer.png "fixed-footer")
@@ -205,9 +210,11 @@ To assist user, link elements change style when hovering.
 ### CTA buttons on landing page
 If user is logged in, an additional `Book Now` button becomes available.  This is a short cut to the *view booking* template.
 
-To enhance user experience, buttons change style when hovering.
-
 ![cta-not-logged-in](docs/readme/features/04-features-cta-not-logged-in.png "cta-not-logged-in")
+
+Additionally the registration and logon CTA buttons are hidden when a user is authenticated.  They aren't required in this context.
+
+To enhance user experience, buttons change style when hovering.
 
 ![cta-logged-in](docs/readme/features/05-features-cta-logged-in.png "cta-logged-in")
 
@@ -284,6 +291,12 @@ This was the first occasion using allauth which more than met project needs.  It
 Only by addressing this can the user account edit/update/delete functionality be realised in the front-end. (Bookings were the highest priority for this project).
 
 A good source to aid with this expansion is by [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone).
+
+It would be preferable to give a user their own page to view appointments.
+
+Also why not provide buttons to work in conjucction with a datepicker.  The latter provides a date, each button can represent an appointment time.  These values can be queried against existing Book table entries and let the user know if the appointent is available.
+
+The next logical step with this approach is to change the colour of these buttons based upon that time being available.  For example, taken appointments are greyed out completely or hidden.
 
 ## Testing
 
