@@ -27,10 +27,6 @@
             A trip to <em><strong>The Kennel</strong></em> will be <em><strong>paws-itively</strong></em> satisfying!
         </div>
     </div>
-    <div class="row p-2">
-        <div class="col">
-            <h3>Each 1 hour session includes a brush, dip, clip and blow dry.</h3>
-        </div>
     </div>
     <div class="row">
         <div class="col">
@@ -73,7 +69,7 @@
     <div class="row service-info">
         <div class="col">
             {% for service in services %}
-            <p><strong>{{ service.service_name }} Service</strong></p>
+            <p><i class="fa-solid fa-paw"></i> <strong>{{ service.service_name }} Service</strong></p>
             <p>{{ service.service_desc }}</p>
             <hr>
             {% endfor %}

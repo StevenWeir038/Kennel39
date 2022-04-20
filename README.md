@@ -312,10 +312,11 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 
 ### Content
 
-- Favicon by [Icons8](https://icons8.com/icons/set/favicon-dog)
+- Favicon in pagetab by [Icons8](https://icons8.com/icons/set/favicon-dog)
+- Paw favicons from [Font Awesome](https://fontawesome.com/search?q=paw&c=animals&s=solid%2Cbrands)
 - Facebook and LinkedIn icons by [Font Awesome](https://fontawesome.com/search?s=solid%2Cbrands)
 - Inspiration for navbar design from [Vandelay Design](https://www.vandelaydesign.com/inspirationalnavigation-menus/)
-- Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette)
+- Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette
 - For dog breed [images](https://www.purina.co.nz/find-a-pet/dog-breeds) used in the carousel element.
 
 - Datepicker customisation from [Jquery](https://jqueryui.com/datepicker/)
