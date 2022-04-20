@@ -28,13 +28,9 @@ def create_booking(request):
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
-            req_date = form.cleaned_data['date'] # check for existing appointments
-            req_time = form.cleaned_data['start_time'] # get and store cleaned data supplied by user from bookingform
-            # queryset - filter for multiple arguments (date & time)
-            # SELECT * FROM "Booking" WHERE "Date" = 'req_date' AND "start_time" = 'req_time'
-            # count number of returned rows. better this way than looping through all records, especially for large datasets
+            req_date = form.cleaned_data['date']
+            req_time = form.cleaned_data['start_time']
             num_same_bookings = Booking.objects.filter(date=req_date, start_time=req_time).count()
-            # logic - only 1 appointment can be taken at a given time as only one staff member present
             if num_same_bookings >= 1:
                 return redirect('view_booking')
                 messages.add_message(request, messages.error(request, message), "No appointment available for this time")
