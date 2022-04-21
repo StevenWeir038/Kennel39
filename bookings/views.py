@@ -8,6 +8,7 @@ from datetime import datetime
 
 num_staff = 2
 
+
 def view_booking(request):
     """
     View booking
@@ -31,15 +32,16 @@ def create_booking(request):
         if form.is_valid():
             req_date = form.cleaned_data['date']
             req_time = form.cleaned_data['start_time']
+            pet_name = form.cleaned_data['pet_name']
             num_same_bookings = Booking.objects.filter(date=req_date, start_time=req_time).count()
             if num_same_bookings > num_staff:
+                messages.error(request, 'No appointment is available for this time')
                 return redirect('view_booking')
-                messages.add_message(request, messages.error(request, message), "No appointment available for this time")
             else:
                 form.instance.user = user
                 form.save()
+                messages.success(request, f'Your appointment for {pet_name} has been confirmed for {req_date} at {req_time}.')
                 return redirect('view_booking')
-                messages.add_message(request, messages.info, "Appointment confirmed")
     form = BookingForm()
     context = {
         'form': form
