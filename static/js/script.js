@@ -8,11 +8,10 @@
  * Limit date range from today + 12 months
 */
 $(document).ready(function() {
-    $( "#datepicker" ).datepicker({ dateFormat: "MM d, yy", minDate: +0, maxDate: "+12M +0D" });
+    $( "#datepicker" ).datepicker({ dateFormat: "MM d, yy", minDate: +0, maxDate: "+12M +0D", beforeShowDay: $.datepicker.noWeekends });
     $( "#datepicker" ).datepicker("option", "showAnim", "fold");
     $( "#datepicker" ).datepicker("setDate", '0');
 });
-
 
 // live filter of datepicker
 const datepicker = document.getElementById("datepicker");
