@@ -40,8 +40,6 @@ footer {
     margin-top: 1em;
     text-align: center;
     background-color: white;
-    position: fixed;
-    bottom: 0;
 }
 
 .footer-content {

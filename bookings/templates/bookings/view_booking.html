@@ -3,7 +3,7 @@
 
 {% block content %}
 
-<section class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
+<section class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100 mb-6">
     <div class="row">
         <div class="col">
             <p>VIEW BOOKINGS</p>
@@ -12,7 +12,6 @@
             <p>Filter by date: <input type="text" id="datepicker"></p>
             <a class="btn" href="{% url 'create_booking' %}" role="button">Book Now</a>
             <button id="refresh-table" class="btn" role="button">Show all</button>
-
             <table id="view-booking-table">
                 <th>User</th>
                 <th>Pet's Name</th>
@@ -88,5 +87,5 @@
             </table>
         </div>
     </div>
-
-    {% endblock %}
+</section>
+{% endblock %}
