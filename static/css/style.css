@@ -192,3 +192,11 @@ footer {
 #booking-form button {
     width: 100%;
 }
+
+/* Messages */
+ul.messages {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
