@@ -175,16 +175,20 @@ footer {
 }
 
 /* Forms */
-form p {
+#booking-form p {
     text-align: left;
 }
 
-form p label {
+#booking-form p label {
     text-align: right;
     width: 150px;
 }
 
-form p input {
+#booking-form p input {
     text-align: left;
     width: 150px;
+}
+
+#booking-form button {
+    width: 100%;
 }
