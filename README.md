@@ -279,11 +279,29 @@ This serves as a defensive programming feature for the user asking if they reall
 
 The title and message body are personalised and the buttons have the same hover effects in keeping with the rest of the site.
 
-(*Disclaimer - This clearly isn't the real Elvis. He'd ever get cancelled*)
-
 ![cancel-booking-modal](docs/readme/features/15-features-cancel-booking-modal.png "cancel-booking-modal")
+ 
+ ### Customised alerts
+The Django framework has been used to apply messages throughout the site to give the user useful feedback.
+To do this a `messages.html` template was included in the base.html,
+`Alerts` can be seen at the top of the page for:
 
+- logging in
 
+![sign-in-msg](docs/readme/features/16-features-sign-in-msg.png "sign-in-msg")
+
+- logging out
+
+![sign-out-msg](docs/readme/features/17-features-sign-out-msg.png "sign-out-msg")
+
+- creating/editing a valid booking
+
+![confirm-booking-msg](docs/readme/features/18-features-confirm-booking-msg.png "confirm-booking-msg")
+
+- preventing a booking clash (with time formatting)
+
+![prevent-booking-clash-msg](docs/readme/features/19-features-prevent-booking-clash-msg.png "prevent-booking-clash-msg")
+prevent-booking-clash
 
 ## Future adaptations
 This was the first occasion using allauth which more than met project needs.  It is possible to extend allauth forms though this will have to be an item for the future due to time constraints.  You will notice a Profile table (with address and phone number fileds) set up with a 1-1 relationship with the user table.
@@ -329,10 +347,10 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - Paw favicons from [Font Awesome](https://fontawesome.com/search?q=paw&c=animals&s=solid%2Cbrands)
 - Facebook and LinkedIn icons by [Font Awesome](https://fontawesome.com/search?s=solid%2Cbrands)
 - Inspiration for navbar design from [Vandelay Design](https://www.vandelaydesign.com/inspirationalnavigation-menus/)
-- Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette
+- Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette)
 - For dog breed [images](https://www.purina.co.nz/find-a-pet/dog-breeds) used in the carousel element.
-
 - Datepicker customisation from [Jquery](https://jqueryui.com/datepicker/)
+- [Will McCutchen](https://strftime.org/) for his useful string from time cheatsheet.
 
 ### People
 
@@ -344,5 +362,7 @@ My thanks to:
 CodingEntrepreneurs](https://www.youtube.com/watch?v=icVke1tJ6aI)
 - [AJ Welch](https://chartio.com/resources/tutorials/how-to-filter-for-empty-or-null-values-in-a-django-queryset/) for a bolstering my understanding of Django lookups.
 - [LearnerAndLearn](https://stackoverflow.com/a/65065813) for there explanation on the difference between multiple arguments and chain filtering and how that affects SQL queries.
+- [Jaysha](https://ordinarycoders.com/blog/article/django-messages-framework) at ordinarycoders for her breakdown of django messaging with Bootstrap.
+- [W3schools](https://www.w3schools.com/bootstrap/bootstrap_alerts.asp) for working with bootstrap.
 - For his useful Bootstrap revision sheet, [Alexander Rechsteiner](https://hackerthemes.com/bootstrap-cheatsheet/)
-- Fellow students, David Bowers and Helena Johansson for their moral support.  They kept me going during periods of self doubt.
+- Fellow students, David Bowers and Helena Johansson for their moral support.  They kept me going during periods of self doubt (which were many)
