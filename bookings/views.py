@@ -78,6 +78,7 @@ def edit_booking(request, booking_id):
                 return redirect('view_booking')
             else:
                 form.save()
+                messages.success(request, f'Your appointment for {pet_name} has been changed.')
                 return redirect('view_booking')
     form = BookingForm(instance=booking)
     context = {
