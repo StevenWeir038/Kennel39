@@ -1,6 +1,22 @@
 /* jshint esversion: 8, jquery: true */
 
 
+// filter view-booking-table by current user
+const currentUser = document.getElementById("current-user");
+const myBookingsBtn = document.getElementById("table-filter-user");
+const myBookingsFilter = (e) => {
+    let resultRows = document.querySelectorAll(".booking-row");
+    let filterUser = currentUser.innerText;
+    resultRows.forEach(row => {
+        row.classList.add("d-none");
+        if (row.innerText.includes(filterUser)) {
+            row.classList.remove("d-none");
+        }
+    });
+}
+
+$(myBookingsBtn).on("click", myBookingsFilter);
+
 
 /**
  * Datepicker widget
@@ -12,6 +28,7 @@ $(document).ready(function() {
     $( "#datepicker" ).datepicker("option", "showAnim", "fold");
     $( "#datepicker" ).datepicker("setDate", '0');
 });
+
 
 // live filter of datepicker
 const datepicker = document.getElementById("datepicker");
