@@ -286,25 +286,24 @@ The Django framework has been used to apply messages throughout the site to give
 To do this a `messages.html` template was included in the base.html,
 `Alerts` can be seen at the top of the page for:
 
-- logging in
+#### Logging in
 
 ![sign-in-msg](docs/readme/features/16-features-sign-in-msg.png "sign-in-msg")
 
-- logging out
+#### Logging out
 
 ![sign-out-msg](docs/readme/features/17-features-sign-out-msg.png "sign-out-msg")
 
-- creating/editing a valid booking
+#### Creating/editing a valid booking
 
 ![confirm-booking-msg](docs/readme/features/18-features-confirm-booking-msg.png "confirm-booking-msg")
 
-- preventing a booking clash (with time formatting)
+#### Preventing a booking clash (with time formatting)
 
 ![prevent-booking-clash-msg](docs/readme/features/19-features-prevent-booking-clash-msg.png "prevent-booking-clash-msg")
-prevent-booking-clash
 
 ## Future adaptations
-This was the first occasion using allauth which more than met project needs.  It is possible to extend allauth forms though this will have to be an item for the future due to time constraints.  You will notice a Profile table (with address and phone number fileds) set up with a 1-1 relationship with the user table.
+This was the first occasion using allauth which more than met project needs.  It is possible to extend allauth forms though this will have to be an item for the future due to time constraints.  You will notice a Profile table (with address and phone number fields) set up with a 1-1 relationship with the user table.
 
 Only by addressing this can the user account edit/update/delete functionality be realised in the front-end. (Bookings were the highest priority for this project).
 
@@ -312,9 +311,9 @@ A good source to aid with this expansion is by [Vitor Freitas](https://simpleisb
 
 It would be preferable to give a user their own page to view appointments.
 
-Also why not provide buttons to work in conjucction with a datepicker.  The latter provides a date, each button can represent an appointment time.  These values can be queried against existing Book table entries and let the user know if the appointent is available.
+Also why not provide buttons to work in conjunction with a datepicker?  The latter provides a date, each button can represent an appointment time.  These buttons can be queried against existing Book table entries and let the user know if the appointent is available.  This approach will require some Javascript to manipulate the DOM.
 
-The next logical step with this approach is to change the colour of these buttons based upon that time being available.  For example, taken appointments are greyed out completely or hidden.
+The next logical step with this approach is to change the colour of these buttons based upon that time being available. Taken appointments may be greyed out completely or hidden.
 
 ## Testing
 Refer to [TESTING.md](TESTING.md) for details on: 
@@ -357,7 +356,6 @@ Refer to [TESTING.md](TESTING.md) for details on:
 - Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette)
 - For dog breed [images](https://www.purina.co.nz/find-a-pet/dog-breeds) used in the carousel element.
 - Datepicker customisation from [Jquery](https://jqueryui.com/datepicker/)
-- [Will McCutchen](https://strftime.org/) for his useful string from time cheatsheet.
 
 ### People
 
@@ -371,5 +369,6 @@ CodingEntrepreneurs](https://www.youtube.com/watch?v=icVke1tJ6aI)
 - [LearnerAndLearn](https://stackoverflow.com/a/65065813) for there explanation on the difference between multiple arguments and chain filtering and how that affects SQL queries.
 - [Jaysha](https://ordinarycoders.com/blog/article/django-messages-framework) at ordinarycoders for her breakdown of django messaging with Bootstrap.
 - [W3schools](https://www.w3schools.com/bootstrap/bootstrap_alerts.asp) for working with bootstrap.
-- For his useful Bootstrap revision sheet, [Alexander Rechsteiner](https://hackerthemes.com/bootstrap-cheatsheet/)
+- [Alexander Rechsteiner](https://hackerthemes.com/bootstrap-cheatsheet/) for his useful Bootstrap revision sheet.
+- [Will McCutchen](https://strftime.org/) for his useful string from time cheatsheet.
 - Fellow students, David Bowers and Helena Johansson for their moral support.  They kept me going during periods of self doubt (which were many)

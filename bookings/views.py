@@ -37,14 +37,19 @@ def create_booking(request):
             pet_name = form.cleaned_data['pet_name']
             msg_req_date = req_date.strftime("%A %d, %B, %Y")
             msg_req_time = req_time.strftime("%-I%p")
-            num_same_bookings = Booking.objects.filter(date=req_date, start_time=req_time).count()
+            num_same_bookings = Booking.objects.filter(
+                date=req_date, start_time=req_time).count()
             if num_same_bookings >= num_staff:
-                messages.error(request, f'No appointment is available on {msg_req_date} at {msg_req_time}.')
+                messages.error(
+                    request, f'No appointment is available on {
+                        msg_req_date} at {msg_req_time}.')
                 return redirect('view_booking')
             else:
                 form.instance.user = user
                 form.save()
-                messages.success(request, f'Your appointment for {pet_name} has been confirmed.')
+                messages.success(
+                    request, f'Your appointment for {
+                        pet_name} has been confirmed.')
                 return redirect('view_booking')
     form = BookingForm()
     context = {
@@ -65,20 +70,21 @@ def edit_booking(request, booking_id):
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
-
-            # will need same logic here as in create booking to prevent booking clashes.
             req_date = form.cleaned_data['date']
             req_time = form.cleaned_data['start_time']
             pet_name = form.cleaned_data['pet_name']
             msg_req_date = req_date.strftime("%A, %d %B %Y")
             msg_req_time = req_time.strftime("%-I%p")
-            num_same_bookings = Booking.objects.filter(date=req_date, start_time=req_time).count()
+            num_same_bookings = Booking.objects.filter(
+                date=req_date, start_time=req_time).count()
             if num_same_bookings >= num_staff:
-                messages.error(request, f'No appointment is available on {msg_req_date} at {msg_req_time}.')
+                messages.error(request, f'No appointment is available on {
+                    msg_req_date} at {msg_req_time}.')
                 return redirect('view_booking')
             else:
                 form.save()
-                messages.success(request, f'Your appointment for {pet_name} has been changed.')
+                messages.success(request, f'Your appointment for {
+                    pet_name} has been changed.')
                 return redirect('view_booking')
     form = BookingForm(instance=booking)
     context = {

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Service
 
+
 def services(request):
     """
     Services view
