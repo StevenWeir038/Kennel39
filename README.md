@@ -317,9 +317,12 @@ Also why not provide buttons to work in conjucction with a datepicker.  The latt
 The next logical step with this approach is to change the colour of these buttons based upon that time being available.  For example, taken appointments are greyed out completely or hidden.
 
 ## Testing
+Refer to [TESTING.md](TESTING.md) for details on: 
 
-Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
-**DONT FORGET TO ADD HTML AND CSS VALIDATOR CHECKS, LIGHTOUSE AND JSHINT use proper ci tool!** 
+- manual testing
+- automated testing
+- Lighthouse site performance checks
+- linter checks on html, css, js and python code
 
 ## Technologies Used
 
@@ -338,6 +341,10 @@ Refer to [TESTING.md](TESTING.md) for details on manual and automated testing.
 - [PostgreSQL](https://www.postgresql.org/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+- [W3C Markup Validator](https://validator.w3.org/) HTML linter
+- [Jigsaw](https://jigsaw.w3.org/css-validator/) CSS linter
+- [JSHint](https://jshint.com/) JS linter
+- [PEP8](http://pep8online.com/) Python linter
 
 ## Credits
 

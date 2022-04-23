@@ -317,47 +317,93 @@ Be subclassing a list within the booking model I was able to use a time format f
 | &check; | Can login after being registered |
 | &check; | logout when logged in |
 
+### Services page
+| Checked | When not logged in |
+|:-------:|:-------------------------------|
+| &check; | A user has options to register or login beneath services descriptions |
+
+| Checked | When logged in |
+|:-------:|:-------------------------------|
+| &check; | A user has options to book an appointment beneath services descriptions |
+
 ### Jquery datepicker
 | Checked | datepicker behaviour |
 |:-------:|:---------------------|
 | &check; | can only select dates from current date to 365 days in advance |
 
 ### Bookings management
-#### Booking table
+### Booking table
 | Checked | view booking table behaviours |
 |:-------:|:------------------------------|
+| &check; | `Book now` button directs users to create booking template |
 | &check; | Filter is applied to table when a valid date is selected |
 | &check; | `Show all` button removes filter and restores view of all table records |
+| &check; | `My Bookings` button filters table records by currently logged in user |
 
-#### Functionality for all users:
+### Functionality for all users:
 | Checked | all users can |
 |:-------:|:--------------|
 | &check; | create their own bookings |
 | &check; | view own bookings |
 | &check; | edit own bookings |
 | &check; | cancel own bookings |
+| &check; | prevent booking overlaps when creating booking |
+| &cross; | prevent booking overlaps when editing booking |
 
-#### Functionality for superusers:
+### Functionality for superusers:
 | Checked | superusers can |
 |:-------:|:---------------|
 | &check; | view other users bookings |
 | &check; | edit other users bookings |
 | &check; | cancel other users bookings |
 
-#### Functionality for standard users:
+### Functionality for standard users:
 | Checked | standard users must only be able to view a |
 |:-------:|:-------------------------------------------|
 | &check; | `*****` placehoder instead of another users names to protect privacy |
 
-
+### Messages:
+| Checked | colour coded messages displayed in header when (red=fail, green=success) |
+|:-------:|:--------------|
+| &cross; | a new user registers with the site |
+| &check; | a user logs onto the site |
+| &check; | a user logs out of the site |
+| &check; | a new booking has been successfully made |
+| &check; | a new booking has been unsuccessfully made |
+| &check; | a booking has been successfully edited |
+| &check; | a booking has been unsuccessfully edited |
 
 ## Automated Testing
 A major drawback of exploratory testing was having to repeat it when new code was written. The site is small so the task is manageable but unit testing is the next logical step.
 
-One example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.  (Accidently commented out `form.instance.user = user`) when debugging.
+in one example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.  (Accidently commented out `form.instance.user = user`) when debugging.
 
-Time to attempt a few basic tests for the site.
+Time to attempt at least a few basic tests for the site.
 
 ![](docs/readme/testing/15-.png "")
+
+## HTML Validation
+[W3C Markup Validator](https://validator.w3.org/)
+
+**2** warnings, **0** errors.
+
+![html-w3cvalidator](docs/readme/testing/linter-checks/00-html-w3cvalidator.png "html-w3cvalidator")
+
+## CSS Validation
+[Jigsaw](https://jigsaw.w3.org/css-validator/)
+
+**377** warnings, **6** errors all related to [fontawesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css).
+
+![css-jigsaw](docs/readme/testing/linter-checks/01-css-jigsaw.png "css-jigsaw")
+
+## JS Validation
+[JSHint](https://jshint.com/)
+
+**0** warnings, **0** errors.
+
+![js-jslint](docs/readme/testing/linter-checks/02-js-jslint.png "js-jslint")
+
+## Python Validation
+[PEP8](http://pep8online.com/)
 
 Return to [README.md](README.md)
