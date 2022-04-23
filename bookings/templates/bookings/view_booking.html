@@ -2,7 +2,6 @@
 {% load static %}
 
 {% block content %}
-
 <section class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100 mb-6">
     <div class="row">
         <div class="col">
@@ -13,34 +12,33 @@
             <a class="btn" href="{% url 'create_booking' %}" role="button">Book Now</a>
             <button id="refresh-table" class="btn" role="button">Show all</button>
             <button id="table-filter-user" class="btn" role="button">My Bookings</button>
+            <!-- Booking table -->
             <table id="view-booking-table">
                 <th>User</th>
                 <th>Pet's Name</th>
                 <th>Date</th>
                 <th>Time</th>
                 <th>Service Type</th>
-
                 {% for booking in bookings %}
-
                 <tr class="booking-row">
-                    <!--if user is superuser or staff show all booking fields-->
+                    <!--if superuser or staff user show all booking fields -->
                     {% if request.user.is_superuser or request.user.is_staff %}
                     <td>{{ booking.user }}</td>
                     {% else %}
-                    <!-- if standard user is authenticated show their username but anonymize other usernames names. Staff and superusers can still see everything -->
+                    <!-- if standard user is authenticated show their username but anonymize other usernames names -->
                     {% if booking.user == request.user %}
                     <td>{{ booking.user }}</td>
                     {% else %}
                     <td>*****</td>
                     {% endif %}
                     {% endif %}
-
                     <!-- always show these fields -->
                     <td>{{ booking.pet_name }}</td>
                     <td>{{ booking.date }}</td>
                     <td>{{ booking.start_time }}</td>
                     <td>{{ booking.service_type }}</td>
-                    <!--apply an edit & cancel button/link to each row if the user has staff or superuser access or a standard user created the record-->
+                    <!--apply an edit & cancel link to each row if superuser staff user the user.
+                     or if current standard user created the record-->
                     {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %}
                     <td>
                         <a href="{% url 'edit_booking' booking.id %}">Edit</a>

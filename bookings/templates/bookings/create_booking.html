@@ -2,20 +2,18 @@
 {% load static %}
 
 {% block content %}
-
-<section class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100"> 
+<section class="d-flex flex-column justify-content-center align-items-center text-center min-vh-100">
     <div class="row">
         <div class="col">
             <p>CREATE BOOKING</p>
             <form id="booking-form" method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
+                {% csrf_token %}
+                {{ form.as_p }}
                 <p>
                     <button class="btn" type="submit" role="button">Submit</button>
                 </p>
             </form>
         </div>
-    </div>    
+    </div>
 </section>
-
 {% endblock %}

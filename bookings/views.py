@@ -70,7 +70,7 @@ def edit_booking(request, booking_id):
             req_date = form.cleaned_data['date']
             req_time = form.cleaned_data['start_time']
             pet_name = form.cleaned_data['pet_name']
-            msg_req_date = req_date.strftime("%A %d, %B, %Y")
+            msg_req_date = req_date.strftime("%A, %d %B %Y")
             msg_req_time = req_time.strftime("%-I%p")
             num_same_bookings = Booking.objects.filter(date=req_date, start_time=req_time).count()
             if num_same_bookings >= num_staff:

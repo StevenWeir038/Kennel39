@@ -9,19 +9,16 @@
             <h1>Our Services</h1>
         </div>
     </div>
-
     <div class="row">
         <div class="col">
             Is your pooch having a <em><strong>ruff</strong></em> day?
         </div>
     </div>
-
     <div class="row">
         <div class="col">
             Are you being <em><strong>hounded</strong></em> for a treat?
         </div>
     </div>
-
     <div class="row">
         <div class="col">
             A trip to <em><strong>The Kennel</strong></em> will be <em><strong>paws-itively</strong></em> satisfying!
@@ -71,26 +68,25 @@
         <div class="col-12 col-xl-4 mb-4">
             <div class="card" style="width: 18rem; height: 200px">
                 <div class="card-body">
-                  <h5 class="card-title"><i class="fa-solid fa-paw"></i></h5>
-                  <h6 class="card-subtitle mb-2 text-muted">{{ service.service_name }} Service</h6>
-                  <p class="card-text">{{ service.service_desc }}</p>
+                    <h5 class="card-title"><i class="fa-solid fa-paw"></i></h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ service.service_name }} Service</h6>
+                    <p class="card-text">{{ service.service_desc }}</p>
                 </div>
             </div>
         </div>
         {% endfor %}
     </div>
     {% if user.is_authenticated %}
-        <a class="btn" href="{% url 'view_booking' %}" role="button">Book Now</a>
+    <a class="btn" href="{% url 'view_booking' %}" role="button">Book Now</a>
     {% else %}
-        <div class="row">
-            <div class="col">
-                <a class="btn" href="{% url 'account_signup' %}" role="button">Join Us</a>    
-            </div>
-            <div class="col">
-                <a class="btn" href="{% url 'account_login' %}" role="button">Members</a>
-            </div>
+    <div class="row">
+        <div class="col">
+            <a class="btn" href="{% url 'account_signup' %}" role="button">Join Us</a>
         </div>
+        <div class="col">
+            <a class="btn" href="{% url 'account_login' %}" role="button">Members</a>
+        </div>
+    </div>
     {% endif %}
 </section>
-
 {% endblock %}

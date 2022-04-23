@@ -2,9 +2,11 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     {% include 'includes/head.html' %}
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -13,16 +15,17 @@
         <!-- Navigation -->
         {% include 'includes/navbar.html' %}
     </header>
-    <section class="container-fluid d-inline-block g-0">
+    <section>
         {% block content %}
         <!-- Content -->
         {% endblock %}
     </section>
     <!-- Footer -->
     {% block footer %}
-        {% include 'includes/footer.html' %}
+    {% include 'includes/footer.html' %}
     {% endblock %}
     <!-- Scripts -->
     {% include 'includes/scripts.html' %}
 </body>
+
 </html>

@@ -1,7 +1,7 @@
-/* Fonts */
+/* fonts */
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant:ital,wght@1,300&family=Montserrat&display=swap');
 
-/* General */
+/* general */
 
 *,
 *::before,
@@ -10,7 +10,7 @@
 }
 
 /* Mystery Machine Colours*/
-/* Hex # to RGB conversion using https://www.rapidtables.com/convert/color/hex-to-rgb.html*/
+/* hex # to RGB conversion using https://www.rapidtables.com/convert/color/hex-to-rgb.html*/
 :root {
     /* blue 50C4F2 */
     --theme-one: 80, 196, 242;
@@ -24,16 +24,16 @@
     --theme-five: 242, 44, 5;
 }
 
-/* Body */
 html {
     scroll-behavior: smooth;
 }
 
+/* body */
 body {
     width: 100vw;
 }
 
-/* Footer */
+/* footer */
 footer {
     height: 100px;
     width: 100%;
@@ -49,16 +49,16 @@ footer {
     border-radius: 10px;
 }
 
-.footer-content a{
+.footer-content a {
     color: rgba(var(--theme-one), 1)
 }
 
-.footer-content a:hover{
+.footer-content a:hover {
     color: rgba(var(--theme-five), 1);
     font-size: large;
 }
 
-/* Buttons */
+/* general buttons */
 .btn {
     background: rgba(var(--theme-one), 1);
     border: 3px solid black;
@@ -71,7 +71,7 @@ footer {
     color: white;
 }
 
-/* View booking tables */
+/* booking table */
 #view-booking-table {
     margin-top: 1em;
     text-align: center;
@@ -82,7 +82,7 @@ footer {
     border-bottom: 1px solid black;
     padding: 0.5em 0.25em;
     text-align: left;
-    
+
 }
 
 #view-booking-table tr:nth-child(even) {
@@ -96,7 +96,7 @@ footer {
     color: white;
 }
 
-#view-booking-table td > a {
+#view-booking-table td>a {
     text-decoration: none;
     color: black;
     font-style: italic;
@@ -123,7 +123,7 @@ footer {
     border-bottom: none;
 }
 
-/* View booking datepicker */
+/* view booking datepicker */
 .ui-datepicker {
     background-color: rgba(var(--theme-three), 1);
 }
@@ -163,14 +163,13 @@ footer {
     color: white;
 }
 
-
-/* Services carousel images */
+/* carousel images */
 .carousel-item {
     height: 630px;
     overflow: hidden;
 }
 
-/* Forms */
+/* forms */
 #booking-form p {
     text-align: left;
 }
@@ -189,7 +188,7 @@ footer {
     width: 100%;
 }
 
-/* Messages */
+/* messages */
 ul.messages {
     list-style-type: none;
     margin: 0;
