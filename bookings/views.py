@@ -41,15 +41,15 @@ def create_booking(request):
                 date=req_date, start_time=req_time).count()
             if num_same_bookings >= num_staff:
                 messages.error(
-                    request, f'No appointment is available on {
-                        msg_req_date} at {msg_req_time}.')
+                    request, 'No appointment is available on '
+                    f'{msg_req_date} at {msg_req_time}.')
                 return redirect('view_booking')
             else:
                 form.instance.user = user
                 form.save()
                 messages.success(
-                    request, f'Your appointment for {
-                        pet_name} has been confirmed.')
+                    request, f'Your appointment for {pet_name} '
+                    'has been confirmed.')
                 return redirect('view_booking')
     form = BookingForm()
     context = {
@@ -78,13 +78,13 @@ def edit_booking(request, booking_id):
             num_same_bookings = Booking.objects.filter(
                 date=req_date, start_time=req_time).count()
             if num_same_bookings >= num_staff:
-                messages.error(request, f'No appointment is available on {
-                    msg_req_date} at {msg_req_time}.')
+                messages.error(request, 'No appointment is available on '
+                               f'{msg_req_date} at {msg_req_time}.')
                 return redirect('view_booking')
             else:
                 form.save()
-                messages.success(request, f'Your appointment for {
-                    pet_name} has been changed.')
+                messages.success(request, f'Your appointment for '
+                                 f'{pet_name} has been changed.')
                 return redirect('view_booking')
     form = BookingForm(instance=booking)
     context = {
