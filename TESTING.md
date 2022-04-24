@@ -283,6 +283,21 @@ class Booking(models.Model):
 
 Be subclassing a list within the booking model I was able to use a time format for the appointments though this doesn't allow the `timedelta` method to be used to calcuate duration. I'll be wary of this approach in future projects.
 
+
+**#13** Registration Errno 111
+I encountered this late into the project.  A new account was registered but an error was thrown as an email couldn't be sent.
+After reviewing Django [Allauth docs](https://django-allauth.readthedocs.io/en/latest/configuration.html), the solution was to disable `email verification`.
+
+![sign-up](docs/readme/testing/15-sign-up.png "sign-up")
+
+1![errno111](docs/readme/testing/16-errno111.png "errno111")
+
+![django-admin-check](docs/readme/testing/17-django-admin-check.png "django-admin-check")
+
+``` python
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+```
+
 ## Exploratory tests
 
 ### Site navigation
@@ -376,11 +391,9 @@ Be subclassing a list within the booking model I was able to use a time format f
 ## Automated Testing
 A major drawback of exploratory testing was having to repeat it when new code was written. The site is small so the task is manageable but unit testing is the next logical step.
 
-in one example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.  (Accidently commented out `form.instance.user = user`) when debugging.
+In one example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.  (Accidently commented out `form.instance.user = user`) when debugging.
 
 Time to attempt at least a few basic tests for the site.
-
-![](docs/readme/testing/15-.png "")
 
 ## Validation
 
@@ -394,7 +407,7 @@ Time to attempt at least a few basic tests for the site.
 ### CSS Validation
 [Jigsaw](https://jigsaw.w3.org/css-validator/)
 
-**377** warnings, **6** errors all related to [fontawesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css).
+**377** warnings, **6** errors all related to [fontawesome](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css) third party.
 
 ![css-jigsaw](docs/readme/testing/linter-checks/01-css-jigsaw.png "css-jigsaw")
 
@@ -408,7 +421,13 @@ Time to attempt at least a few basic tests for the site.
 ### Python Validation
 [PEP8](http://pep8online.com/)
 
+Tool was useful for removing lines > 79 characters, particulary when working with multiline f strings. 
+
+**0** warnings, **0** errors.
+
 #### services/views.py
+
+**0** warnings, **0** errors.
 
 ![services-python-pep-services-views](docs/readme/testing/linter-checks/03-python-pep8-services-views.png "services-python-pep8-services-views")
 
