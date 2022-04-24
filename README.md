@@ -286,7 +286,7 @@ The Django framework has been used to apply messages throughout the site to give
 To do this a `messages.html` template was included in the base.html,
 `Alerts` can be seen at the top of the page for:
 
-#### Logging in
+#### Post Registration / Logging in
 
 ![sign-in-msg](docs/readme/features/16-features-sign-in-msg.png "sign-in-msg")
 
@@ -303,25 +303,31 @@ To do this a `messages.html` template was included in the base.html,
 ![prevent-booking-clash-msg](docs/readme/features/19-features-prevent-booking-clash-msg.png "prevent-booking-clash-msg")
 
 ## Future adaptations
-This was the first occasion using allauth which more than met project needs.  It is possible to extend allauth forms though this will have to be an item for the future due to time constraints.  You will notice a Profile table (with address and phone number fields) set up with a 1-1 relationship with the user table.
+This was the first occasion using allauth which more than met most of the project needs.  
 
-Only by addressing this can the user account edit/update/delete functionality be realised in the front-end. (Bookings were the highest priority for this project).
+It is possible to extend allauth forms to include the Profile model though this will have to be an item for the future due to time constraints.
+
+The Profile model has(with address and phone number fields) a 1-1 relationship with the user table.  They are not crucial for the process of logging in/out but can serve other business needs such as marketing.
+
+CRUD functionality for the full user account including address and phone number fields cannot be realised in the front-end without the above.
 
 A good source to aid with this expansion is by [Vitor Freitas](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html#onetoone).
 
-It would be preferable to give a user their own page to view appointments.
+It would be preferable to give a user their own page to view appointments to replace the filter workaround solution in `view bookings`.
 
-Also why not provide buttons to work in conjunction with a datepicker?  The latter provides a date, each button can represent an appointment time.  These buttons can be queried against existing Book table entries and let the user know if the appointent is available.  This approach will require some Javascript to manipulate the DOM.
+Within that area, discrete option buttons representing a time could to work in conjunction with a datepicker.
 
-The next logical step with this approach is to change the colour of these buttons based upon that time being available. Taken appointments may be greyed out completely or hidden.
+Javascript would be needed to manipulate the DOM dependent on the result of a queryset of existing Booking table records.
+
+The state of these buttons may be changed by adding a class to give a muted style or even hide.
 
 ## Testing
 Refer to [TESTING.md](TESTING.md) for details on: 
 
 - manual testing
 - automated testing
-- Lighthouse site performance checks
 - linter checks on html, css, js and python code
+- Lighthouse site performance checks
 
 ## Technologies Used
 
@@ -331,12 +337,26 @@ Refer to [TESTING.md](TESTING.md) for details on:
 - [Eightshapes](https://contrast-grid.eightshapes.com) to review colour schema accessibility.
 - [GitHub](https://github.com/) for repo storage and Agile project management using kanban boards/issue tracking.
 - [Heroku](https://id.heroku.com/) for project deployment to the world wide web.
-- [Python](https://docs.python.org/3/)
+- [Python3 ](https://docs.python.org/3/) with the following modules
+    - asgiref==3.5.0
+    - dj-database-url==0.5.0
+    - Django==3.2
+    - django-allauth==0.50.0
+    - gunicorn==20.1.0
+    - oauthlib==3.2.0
+    - psycopg2==2.9.3
+    - PyJWT==2.3.0
+    - python3-openid==3.2.0
+    - pytz==2022.1
+    - requests-oauthlib==1.3.1
+    - sqlparse==0.4.2
+    - whitenoise==6.0.0
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
 - [Bootstrap](https://getbootstrap.com/)
 - [JQuery](https://jquery.com/) 
 - [Django](https://www.djangoproject.com/)
+- [Django Templating](https://docs.djangoproject.com/en/4.0/ref/templates/language/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
