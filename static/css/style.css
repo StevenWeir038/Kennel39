@@ -1,5 +1,5 @@
 /* fonts */
-@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Cormorant:ital,wght@1,300&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Square+Peg&display=swap');
 
 /* general */
 
@@ -24,13 +24,54 @@
     --theme-five: 242, 44, 5;
 }
 
+/* html */
 html {
     scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 /* body */
 body {
     width: 100vw;
+    font-family: 'Montserrat', sans-serif, 'Caveat','Square Peg', cursive;
+}
+
+/* message alerts in header */
+.alert {
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 0;
+}
+
+/* text, header and card styling */
+
+.card {
+    width: 18rem;
+    height: 220px;
+    border: 3px solid black;
+}
+
+h1,
+.card-title {
+    color: rgba(var(--theme-three, 1));
+    
+}
+
+em>strong,
+#current-user,
+.card-subtitle {
+    color: rgba(var(--theme-five, 1));
+    font-family: 'Square Peg', cursive;
+    font-size: xx-large;
+}
+
+#service-types {
+    background: rgba(var(--theme-four, 1));
+    width: 100%;
 }
 
 /* footer */
@@ -75,6 +116,7 @@ footer {
 #view-booking-table {
     margin-top: 1em;
     text-align: center;
+    min-width: 90%;
 }
 
 #view-booking-table td {
@@ -111,8 +153,8 @@ footer {
     color: white;
 }
 
-.modal-content {
-    color: black;
+#help {
+    color: rgba(var(--theme-five, 1));
 }
 
 /* remove hover effects from title row in booking table */
@@ -121,6 +163,22 @@ footer {
     color: black;
     border-top: none;
     border-bottom: none;
+}
+
+/* cancel booking modal */
+.modal-content {
+    color: black;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+.modal-header {
+    background: rgba(var(--theme-four, 1));
+}
+
+.modal-body span {
+    color: rgba(var(--theme-five, 1));
+    font-weight: 500;
 }
 
 /* view booking datepicker */
@@ -169,7 +227,12 @@ footer {
     overflow: hidden;
 }
 
-/* forms */
+/* create and edit booking forms */
+#booking-form-container {
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
 #booking-form p {
     text-align: left;
 }
@@ -188,10 +251,6 @@ footer {
     width: 100%;
 }
 
-/* messages */
-ul.messages {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+input[type=text] {
+    color: rgba(var(--theme-five, 1));
 }
