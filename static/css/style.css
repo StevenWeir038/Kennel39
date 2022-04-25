@@ -253,3 +253,7 @@ footer {
 input[type=text] {
     color: rgba(var(--theme-five), 1);
 }
+
+#alert-button {
+    z-index: 1031;
+}
