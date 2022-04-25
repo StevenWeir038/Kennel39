@@ -8,18 +8,18 @@
     <div class="row d-inline p-2 bg-dark text-white rounded">
         <h2 class="display-1 text-white bg-dark font-weight-bold p-1"><strong>Kennel 39</strong></h2>
         <h4 class="text-white bg-dark p-1"><em>Superior Dog Grooming</em></h4>
-            <h6 class="text-white bg-dark p-1"><em>Est. 2022</em></h6>
-            <div class="col">
-                <!-- Code Call to Action(CTA) buttons, Our Services, Join Us, Book Now -->
-                {% if user.is_authenticated %}
-                <a class="btn" href="{% url 'services' %}" role="button">Our Services</a>
-                <a class="btn" href="{% url 'view_booking' %}" role="button">Book Now</a>
-                {% else %}
-                <a class="btn" href="{% url 'services' %}" role="button">Our Services</a>
-                <a class="btn" href="{% url 'account_signup' %}" role="button">Join Us</a>
-                <a class="btn" href="{% url 'account_login' %}" role="button">Members</a>
-                {% endif %}
-            </div>
+        <h6 class="text-white bg-dark p-1"><em>Est. 2022</em></h6>
+        <div class="col">
+            <!-- Call to Action (CTA) buttons -->
+            {% if user.is_authenticated %}
+            <a class="btn" href="{% url 'services' %}" role="button">Our Services</a>
+            <a class="btn" href="{% url 'view_booking' %}" role="button">Book Now</a>
+            {% else %}
+            <a class="btn" href="{% url 'services' %}" role="button">Our Services</a>
+            <a class="btn" href="{% url 'account_signup' %}" role="button">Join Us</a>
+            <a class="btn" href="{% url 'account_login' %}" role="button">Members</a>
+            {% endif %}
+        </div>
     </div>
 
 </section>
