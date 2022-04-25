@@ -281,6 +281,10 @@ The title and message body are personalised and the buttons have the same hover 
 
 ![cancel-booking-modal](docs/readme/features/15-features-cancel-booking-modal.png "cancel-booking-modal")
  
+#### Help using our site
+
+![help-modal](docs/readme/features/20-features-help-modal.png "help-modal")
+
  ### Customised alerts
 The Django framework has been used to apply messages throughout the site to give the user useful feedback.
 To do this a `messages.html` template was included in the base.html,
@@ -360,6 +364,7 @@ Refer to [TESTING.md](TESTING.md) for details on:
 - [PostgreSQL](https://www.postgresql.org/)
 - [Allauth](https://django-allauth.readthedocs.io/en/latest/)
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools/)
+- [Google Fonts](https://fonts.google.com/)
 - [W3C Markup Validator](https://validator.w3.org/) HTML linter
 - [Jigsaw](https://jigsaw.w3.org/css-validator/) CSS linter
 - [JSHint](https://jshint.com/) JS linter
