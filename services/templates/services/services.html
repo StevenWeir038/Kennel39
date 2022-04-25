@@ -4,82 +4,86 @@
 {% block content %}
 
 <section class="d-flex flex-column justify-content-between align-items-center text-center">
-    <div class="row">
-        <div class="col">
-            <h1>Our Services</h1>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Is your pooch having a <em><strong>ruff</strong></em> day?
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            Are you being <em><strong>hounded</strong></em> for a treat?
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            A trip to <em><strong>The Kennel</strong></em> will be <em><strong>paws-itively</strong></em> satisfying!
-        </div>
-    </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner height-640px">
-                    <div class="carousel-item active">
-                        <img src="{% static 'img/carousel-stbernard-large.png' %}" class="d-block"
-                            alt="St Bernard dog image">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{% static 'img/carousel-retriever-medium.png' %}" class="d-block"
-                            alt="Retriever dog image">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="{% static 'img/carousel-chihuahua-small.png' %}" class="d-block"
-                            alt="Chihuahua dog image">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+    <section class="min-vh-100">
+        <div class="row">
+            <div class="col">
+                <h1>Our Services</h1>
             </div>
         </div>
-    </div>
-    <div class="row align-items-center">
+        <div class="row">
+            <div class="col">
+                Is your pooch having a <em><strong>ruff</strong></em> day?
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                Are you being <em><strong>hounded</strong></em> for a treat?
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                A trip to <em><strong>The Kennel</strong></em> will be <em><strong>paws-itively</strong></em> satisfying!
+            </div>
+        </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner height-640px">
+                        <div class="carousel-item active">
+                            <img src="{% static 'img/carousel-stbernard-large.png' %}" class="d-block"
+                                alt="St Bernard dog image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'img/carousel-retriever-medium.png' %}" class="d-block"
+                                alt="Retriever dog image">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="{% static 'img/carousel-chihuahua-small.png' %}" class="d-block"
+                                alt="Chihuahua dog image">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="service-types" class="row">
         {% for service in services %}
-        <div class="col-12 col-xl-4 mb-4">
-            <div class="card" style="width: 18rem; height: 200px">
+        <div class="d-flex justify-content-center align-self-center col-xl-4 my-4 p-2">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title"><i class="fa-solid fa-paw"></i></h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ service.service_name }} Service</h6>
+                    <h6 class="card-subtitle mb-2">{{ service.service_name }} Service</h6>
                     <p class="card-text">{{ service.service_desc }}</p>
                 </div>
             </div>
         </div>
         {% endfor %}
-    </div>
-    {% if user.is_authenticated %}
-    <a class="btn" href="{% url 'view_booking' %}" role="button">Book Now</a>
+    </section>
+    <div class="row mt-4">
+        {% if user.is_authenticated %}
+        <div class="col">
+            <a class="btn" href="{% url 'view_booking' %}" role="button">Book Now</a>
+        </div>
     {% else %}
-    <div class="row">
         <div class="col">
             <a class="btn" href="{% url 'account_signup' %}" role="button">Join Us</a>
         </div>
