@@ -12,24 +12,59 @@
                     data-bs-target="#help-modal"><i class="fas fa-question-circle"></i></span></p>
 
             <!-- Include a modal with instructions on how to use the site and link to help favicon -->
-            <div class="modal fade" id="help-modal" tabindex="-1"
-            aria-labelledby="help-modal" aria-hidden="true">
-            
-            <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-scrollable modal-dialog-centered" data-bs-backdrop="static" data-bs-keyboard="false"
-                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        ...
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <div class="modal fade" id="help-modal" tabindex="-1" aria-labelledby="help-modal" aria-hidden="true">
+
+                <div class="modal-dialog modal-lg modal-fullscreen-sm-down modal-dialog-scrollable modal-dialog-centered"
+                    data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="staticBackdropLabel">How to use our site</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h4>Booking Times</h4>
+                            <p>We work on weekdays only.</p>
+                            <p>Appointments are available on the hour from 8am to 4pm.</p>
+                            <p>We are a small business so can only take one client at a time!</p>
+                            <hr>
+                            <h4>Daily Appointments View</h4>
+                            <p>Use the calendar to view our existing appointments for a given day.</p>
+                            <p>To help with regular grooming sessions for your dog we can accept bookings up to
+                                12 months in advance!</p>
+                            <hr>
+                            <h4>Show My Appointments</h4>
+                            <p>Need to check your scheduled bookings at a glance? No problem!</p>
+                            <p>Toggle between seeing all bookings or just your own using the
+                                <span>Show All</span> and <span>My Bookings</span> buttons.</p>
+                            <hr>
+                            <h4>Make an Appointment</h4>
+                            <p>Click the <span>Book Now</span> button and complete our easy to use form.</p>
+                            <p>When you confirm your information, a message will appear on the top of the screen to tell
+                                you if your booking was successful
+                                or if it was already taken. Try for a different time.</p>
+                            <hr>
+                            <h4>Change an Appointment</h4>
+                            <p>Click the <span>Edit</span> link beside your booking record and complete our easy to use
+                                form.</p>
+                            <p>When you confirm your information, a message will appear on the top of the screen to tell
+                                you if your booking was successful
+                                or if it was already taken. Try for a different time.</p>
+                            <p>You can only change your own bookings otherwise as we work on a first come first
+                                served basis. You wouldn't want someone else changing your plans would you?</p>
+                            <hr>
+                            <h4>Cancel an Appointment</h4>
+                            <p>Click the <span>Cancel</span> link beside your booking record and complete our easy to
+                                use form.
+                            </p>
+                            <p>A box will appear containing your appointment details for you to review.</p>
+                            <p>Are you sure you want to cancel or did you select cancel by mistake?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
                     </div>
                 </div>
-            </div>
             </div>
 
             <a class="btn" href="{% url 'create_booking' %}" role="button">Book Now</a>
