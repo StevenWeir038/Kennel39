@@ -161,8 +161,26 @@ Keeping it simple, when the user selects `Book Appointment` they are directed to
 - Develop a means to display only appointments for a given day using a method like a date picker...
 - All logged in users are able to create, view, edit and delete other users appointments.  Restrict this to view only.  We only want them to see were slots are taken on a given time/day.
 - When performing a CRUD operation, give the user a chance to confirm if they want to proceed.
-- Staff access will need to see all booking for a given day.  BETTER TO DO THIS ON A VIEW OF ITS OWN. MORE WORK SETTING UP STAFF AREA/URLS/VIEWS ETC.
-- Write view logic to prevent created and updated bookings from clashing with existing.
+- At this stage Django template language is used to differentiate between superuser & staff acess and standard user access.
 
 ### Reflections
-This is were the project goes from closely following tutorials and putting my own take on it.
+This is were the project goes from closely following generic tutorials to becoming more unique.
+
+Table row elements were filtered using javascript to achieve filtering by user.
+
+Learn how to use querysets within Django.  Powerful and usable.
+
+Defensive programming.  Effectively best to make someone confirm an action.  Modals can be useful for this.
+
+![01](docs/readme/agile/week-7-kanban-use.png "01")
+
+## Sprint 8 - Takeoff & Punchlist
+- Prevent booking clashes
+- give user feedback when logging in / out
+- give user feedback when successfully/unsuccessfully creating and editing bookings
+- review responsiveness on multiple resolutions/browsers
+
+### Reflections
+More consideration should have been given to responsiveness *earlier* in the project.  It was developed optimally for 768px/tablet use.  Start smaller!
+
+![01](docs/readme/agile/week-8-kanban-use.png "01")
