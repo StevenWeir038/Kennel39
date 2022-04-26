@@ -156,31 +156,27 @@ Update - there was an unforseen deployment issue with [Heroku](https://status.he
 This was resolved by deploying to Heroku via the CLI in Gitpod.
 
 1. Login to heroku and enter your details.
-command: heroku login -i
+command: `heroku login -i`
 2. Get your app name from heroku.
-command: heroku apps
+command: `heroku apps`
 3. Set the heroku remote. (Replace <app_name> with your actual app name)
-command: heroku git:remote -a <app_name>
+command: `heroku git:remote -a <app_name>`
 4. Add, commit and push to github
-command: git add . && git commit -m "Deploy to Heroku via CLI"
+command: `git add . && git commit -m "Deploy to Heroku via CLI"`
 5. Push to both github and heroku
-command: git push origin main
-command: git push heroku main
+command: `git push`
+command: `git push heroku main`
 
-MFA/2FA enabled?
+If MFA/2FA is enabled:
 1. Click on Account Settings (under the avatar menu)
 2. Scroll down to the API Key section and click Reveal. Copy the key.
 3. Enter the command: heroku_config , and enter your api key you copied when prompted
 4. Complete the steps above, if you see an input box at the top middle of the editor...
- a. enter your heroku username
- b. enter the api key you just copied
+    - enter your heroku username
+    - enter the api key you just copied
 
 ## Features
-
-**SCREENSHOOTS AND BRIEF SYNOPSIS OF MAIN SITE FEATURES TO GO HERE**
-**Useful Hint**
-In *DevTools*, in the Elements tab, right click on the target element and select `Capture node screenshot`.
-Useful for creating image files for readme.
+The style of the site is intended to convey a cartoonish/minimalist quality using the colour schema with thicker border around elements and plenty of negative space.  It's an interpretation. 
 
 ### Landing page
 The user understands the site's purpose on arrival.
@@ -191,6 +187,8 @@ The user understands the site's purpose on arrival.
 The whole site uses a collapsable menu to save screen real estate on all resolutions.
 
 It occupies the whole screen to encourage the user to make a decision where to navigate to.
+
+The basic black against white contrast works well with the general site theme.
 
 Menu options also change depending on whether or not the user is logged in.
 
@@ -396,4 +394,4 @@ CodingEntrepreneurs](https://www.youtube.com/watch?v=icVke1tJ6aI)
 - [W3schools](https://www.w3schools.com/bootstrap/bootstrap_alerts.asp) for working with bootstrap.
 - [Alexander Rechsteiner](https://hackerthemes.com/bootstrap-cheatsheet/) for his useful Bootstrap revision sheet.
 - [Will McCutchen](https://strftime.org/) for his useful string from time cheatsheet.
-- Fellow students, David Bowers and Helena Johansson for their moral support.  They kept me going during periods of self doubt (which were many)
+- Fellow students, David Bowers and Helena Johansson for their moral support.  They kept me going during periods of self doubt.

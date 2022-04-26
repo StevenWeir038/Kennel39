@@ -18,19 +18,24 @@ This is well documented in the latter sections of [DEPLOYMENT.md](DEPLOYMENT.md)
 - reference the home app url in the main project url file
 
 *home/views.py*
-``` Python
+
+```python
 def index(request):
     """
     Index view
     """
     return render(request, 'home/index.html')
 ```
+
 *home/urls.py*
-``` Python
+
+```python
 path('', views.index, name='index'),
 ```
+
 *main/urls.py*
-``` Python
+
+```python
 path('', include('home.urls'), name='home_index'),
 ```
 
@@ -42,34 +47,40 @@ These are component files that get inserted to `base.html` using Django Template
 
 
 *static/css/style.css*
-``` css
-- body {
+
+```css
+body {
     background-color: greenyellow;
 }
 ```
 
 *referenced in templates/includes/head.html*
-``` html
+
+```html
 <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
 ```
 
 *injected into base.html using*
-``` Python
-    {% include 'includes/head.html' %}
+
+```python
+{% include 'includes/head.html' %}
 ```
 
 
 *static/js/script.js*
-``` Javascript
+
+```javascript
 console.log("Homepage")
 ```
 
 *referenced into templates/includes/scripts.html*
-``` html
+
+```html
 <script src="{% static 'js/script.js' %}"></script>
 ```
 
 *injected to base.html using*
+
 ```html
 {% include 'includes/scripts.html' %}
 ```
@@ -84,7 +95,8 @@ The test is successful as the `body` has a greenyellow background colour and `Ho
 In the plate above you'll also notice a favicon present.  The test was successful as you can see it.
 
 *templates/includes/head.html*
-``` html
+
+```html
 <link rel="icon" href="{% static 'img/dog-favicon.png' %}" type="image/x-icon" sizes="32x32">
 ```
 
@@ -113,7 +125,8 @@ These are generic for the project.  No social content exists as the business doe
 Extend `base.html` content to any view by using `{% extends 'base.html' %}` at the top of each file.  Best to test this on the site landing page as this is the first one that is created.
 
 *home/templates/home/index.html*
-``` html
+
+```html
 {% extends 'base.html' %}
 {% load static %}
 
@@ -126,12 +139,13 @@ Note, the `home` app urls are already linked up to `main` urls as checked in **#
 
 
 *templates/base.html*
-``` html
-    <p>base.html</p>  <!-- remove after demo for TESTING.md -->
 
-    {% block content %}
-    <!-- content goes here -->
-    {% endblock %}
+```html
+<p>base.html</p>  <!-- remove after demo for TESTING.md -->
+
+{% block content %}
+<!-- content goes here -->
+{% endblock %}
 ```
 
 The base.html text originates from the `base.html` file.
@@ -139,15 +153,15 @@ The h1 heading containing text *Homepage* only exists in `index.html`.
 
 ![check-base-injecting-to-index-view](docs/readme/testing/06-check-base-injecting-to-index-view.png "check-base-injecting-to-index-view")
 
-**8 Correct `settings.py` and `.env` file setup.**
+**8. Correct `settings.py` and `.env` file setup.**
 After resolving [issue #25](https://github.com/StevenWeir038/Kennel39/projects/2#card-78901276), I found I lost my database connection when working in the development environment.  Great learning exercise on setting up [environment variables](https://github.com/StevenWeir038/Kennel39/commit/a55b3abca2dbb5fe24304ec0273901f3c7c34ccd) correctly.
 
-**9 Check `allauth` working with nav links.**
+**9. Check `allauth` working with nav links.**
 Allauth did the hard work for signup/login/logout.  Just had to configure `navbar.html` with Django templates to check authentication. 
 
 A test account was created to check it worked.
 
-``` html
+```html
 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
     <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -193,7 +207,7 @@ A test account was created to check it worked.
 
 ![reg-users-site-admin-page](docs/readme/testing/11-reg-users-site-admin-page.png "reg-users-site-admin-page")
 
-**10 Check 1st model has successfully migrated. (same checks to be applied to all subsequent models after creation or update)**
+**10. Check 1st model has successfully migrated. (same checks to be applied to all subsequent models after creation or update)**
 
 In CLI, type `python3 manage.py makemigrations --dry-run` to view unexecuted effect. This tells Django to create instructions that build a new database table in the `home` app.
 
@@ -213,7 +227,7 @@ It is now possible to create profiles programatically though I wanted to test wi
 
 To do so the model must be registered within the apps `admin` file.
 
-``` python
+```python
 from django.contrib import admin
 
 from .models import Profile  # from current directory model file import Profile model
@@ -248,18 +262,18 @@ To fix this oversite I deleted the postgres table from the CLI by typing:
 
 Thanks to [Tutorials Point](https://www.tutorialspoint.com/python_data_access/python_postgresql_drop_table.htm) for the guidance.
 
-**11 Extend allauth signup to include request for phone and address fields set up in Profile table. (This table has a one to one link to default allauth User)**
+**11. Extend allauth signup to include request for phone and address fields set up in Profile table. (This table has a one to one link to default allauth User)**
 
 Still to resolve issue [#28](https://github.com/StevenWeir038/Kennel39/issues/28) 
 
-**#12 Booking Model update**
+**#12. Booking Model update**
 
 As mentioned in the AGILE file the original `booking` model was too simple.  Appointments needed to:
 
 -  be restricted to 8am-5pm business hours, not in the middle of the night!
 -  be standardised to specific time and duration.  Ie. 45 minutes from 8am to 4pm.  9 hour day with 15 minute interlude between appointments.
 
-``` python
+```python
 class Booking(models.Model):
     """
     Booking model
@@ -279,7 +293,7 @@ class Booking(models.Model):
 
 Be subclassing a list within the booking model I was able to use a time format for the appointments though this doesn't allow the `timedelta` method to be used to calcuate duration. I'll be wary of this approach in future projects.
 
-**13 Registration Errno 111**
+**13. Registration Errno 111**
 I encountered this late into the project.  A new account was registered but an error was thrown as an email couldn't be sent.
 After reviewing Django [Allauth docs](https://django-allauth.readthedocs.io/en/latest/configuration.html), the solution was to disable `email verification`.
 
@@ -289,7 +303,7 @@ After reviewing Django [Allauth docs](https://django-allauth.readthedocs.io/en/l
 
 ![django-admin-check](docs/readme/testing/17-django-admin-check.png "django-admin-check")
 
-``` python
+```python
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 ```
 
@@ -389,15 +403,13 @@ A major drawback of exploratory testing was having to repeat it when new code wa
 
 In one example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.  (Accidently commented out `form.instance.user = user`) when debugging.
 
-**TODO**
-Time to attempt at least a few basic tests for the site.
+To date **no** automated tests had been written for the site.
 
-After writing a few tests it is useful to install the `coverage` module.  This shows what percentage of the code has been tested.
+After writing a few tests it will be useful to install the `coverage` module.  This shows what percentage of the code has been tested.
 
 Type `pip3 install coverage`.
 
 To see how much has be tested in the booking app for instance, type `coverage run --source=bookings manage.py test` into the cli.
-**/TODO**
 
 ## Validation
 
@@ -457,7 +469,7 @@ Tool was useful for removing lines > 79 characters, particulary when working wit
 
 ## Other browsers
 
-No discernible issues using other popular browsers including [Opera](https://www.opera.com/?utm_campaign=%2300%20-%20WW%20-%20Search%20-%20EN%20-%20Branded&gclid=EAIaIQobChMIs5HQmcmv9wIVjd_tCh0bWgsAEAAYASAAEgJTLPD_BwE) and [MS Edge](https://www.microsoft.com/en-us/edge).
+No discernible issues using other popular browsers at higher resolutions including [Opera](https://www.opera.com/?utm_campaign=%2300%20-%20WW%20-%20Search%20-%20EN%20-%20Branded&gclid=EAIaIQobChMIs5HQmcmv9wIVjd_tCh0bWgsAEAAYASAAEgJTLPD_BwE) and [MS Edge](https://www.microsoft.com/en-us/edge).
 
 
 ## Unresolved Issues
@@ -474,6 +486,5 @@ No discernible issues using other popular browsers including [Opera](https://www
 
 8. Issue #32 - Content cut off when viewing on a small mobile device
 9. Issue #33 Appointment now available message when editing an appointment and not changing any details.
-
 
 Return to [README.md](README.md)

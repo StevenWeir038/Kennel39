@@ -179,6 +179,7 @@ Defensive programming.  Effectively best to make someone confirm an action.  Mod
 - give user feedback when logging in / out
 - give user feedback when successfully/unsuccessfully creating and editing bookings
 - review responsiveness on multiple resolutions/browsers
+- include a help modal to advise the user how to use the site
 
 ### Reflections
 More consideration should have been given to responsiveness *earlier* in the project.  It was developed optimally for 768px/tablet use.  Start smaller!
