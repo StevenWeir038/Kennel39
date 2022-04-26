@@ -78,9 +78,10 @@ def edit_booking(request, booking_id):
             num_same_bookings = Booking.objects.filter(
                 date=req_date, start_time=req_time).count()
             if num_same_bookings >= num_staff:
-                messages.error(request, 'No appointment is available on '
-                               f'{msg_req_date} at {msg_req_time}.')
-                return redirect('view_booking')
+                messages.warning(
+                    request, 'No appointment is available or '
+                    'this is your booking.')
+                return redirect('edit_booking', booking_id)
             else:
                 form.save()
                 messages.success(request, f'Your appointment for '
