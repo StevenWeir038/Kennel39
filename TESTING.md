@@ -389,6 +389,7 @@ A major drawback of exploratory testing was having to repeat it when new code wa
 
 In one example, I was unable to create a booking after trying to update the view to prevent clashes with existing appointments.  (Accidently commented out `form.instance.user = user`) when debugging.
 
+**TODO**
 Time to attempt at least a few basic tests for the site.
 
 After writing a few tests it is useful to install the `coverage` module.  This shows what percentage of the code has been tested.
@@ -396,10 +397,9 @@ After writing a few tests it is useful to install the `coverage` module.  This s
 Type `pip3 install coverage`.
 
 To see how much has be tested in the booking app for instance, type `coverage run --source=bookings manage.py test` into the cli.
-
+**/TODO**
 
 ## Validation
-
 
 ### HTML Validation
 [W3C Markup Validator](https://validator.w3.org/)
@@ -462,14 +462,18 @@ No discernible issues using other popular browsers including [Opera](https://www
 
 ## Unresolved Issues
 
-1. HTML5 date input does not disable for weekends.  A Javascript solution is needed to prevent an appointment being created/edited for a Saturday or Sunday when the business is closed.
+1. Issue #34 - HTML5 date input does not disable for weekends.  A Javascript solution is needed to prevent an appointment being created/edited for a Saturday or Sunday when the business is closed.
 
 2. Issue #28 - Extend allauth signup to include request for phone and address fields set up in Profile table. (This table has a one to one link to default allauth User.  This solution is a prerequsite to #8, #9, #10, #11
 
-3. User Story - #8 As a logged in user I can view a page so that I can see my personal account details by individual field 
-4. User story - #9 As a logged in user I can click a button so that I can change my personal account details by individual field
-5. User Story - #10 As a logged in user I can click a button so that I can delete my account
-6. User Story - #11 As a logged in user I can request an email so that I can reset my account password if I have forgotten it
+3. User Story - #8 As a logged in user I can view a page so that I can see my personal account details by individual field.
+4. User story - #9 As a logged in user I can click a button so that I can change my personal account details by individual field.
+5. User Story - #10 As a logged in user I can click a button so that I can delete my account.
+6. User Story - #11 As a logged in user I can request an email so that I can reset my account password if I have forgotten it.
 7. User Story - #15 As a logged in user I can request an email so that be reminded of an appointment.  COULD HAVE item.
+
+8. Issue #32 - Content cut off when viewing on a small mobile device
+9. Issue #33 Appointment now available message when editing an appointment and not changing any details.
+
 
 Return to [README.md](README.md)
