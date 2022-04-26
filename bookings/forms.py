@@ -16,7 +16,7 @@ class BookingForm(forms.ModelForm):
         widgets = {
             'date': DateInput()
         }
-    
+
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['date'].widget.attrs.update({

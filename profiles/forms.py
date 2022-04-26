@@ -1,5 +1,6 @@
 from allauth.account.forms import SignupForm
 
+
 class MyCustomSignupForm(SignupForm):
     def __init__(self, *args, **kwargs):
         super(MyCustomSignupForm, self).__init__(*args, **kwargs)

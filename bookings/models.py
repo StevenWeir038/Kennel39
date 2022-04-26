@@ -26,7 +26,9 @@ class Booking(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     pet_name = models.CharField(max_length=15, null=False, blank=False)
     date = models.DateField(null=False, blank=False)
-    start_time = models.TimeField(choices=AppointmentTime.choices, null=False, blank=False, default=AppointmentTime.AM_0800)
+    start_time = models.TimeField(
+        choices=AppointmentTime.choices, null=False,
+        blank=False, default=AppointmentTime.AM_0800)
     service_type = models.ForeignKey(Service, on_delete=models.CASCADE)
 
     class Meta:
