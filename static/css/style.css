@@ -31,8 +31,7 @@ html {
 
 /* body */
 body {
-    width: 100vw;
-    font-family: 'Montserrat', sans-serif, 'Caveat','Square Peg', cursive;
+    font-family: 'Montserrat', sans-serif, 'Caveat', 'Square Peg', cursive;
 }
 
 /* message alerts in header */
@@ -66,7 +65,6 @@ em>strong,
 
 #service-types {
     background: rgba(var(--theme-four), 1);
-    width: 100%;
 }
 
 /* footer */
@@ -104,7 +102,7 @@ footer {
 .btn:hover {
     background: rgba(var(--theme-five), 1);
     border: 3px solid rgba(var(--theme-two), 1);
-    color: white;
+    color: black;
 }
 
 /* booking table */
@@ -128,8 +126,6 @@ footer {
 
 #view-booking-table tr:hover {
     background-color: rgba(var(--theme-five), 1);
-    /* border-top: 1px solid rgba(var(--theme-two), 1);
-    border-bottom: 1px solid rgba(var(--theme-two), 1); */
     color: white;
 }
 
@@ -216,9 +212,9 @@ footer {
     color: white;
 }
 
-/* carousel images */
+/* carousel */
 .carousel-item {
-    height: 630px;
+    height: 635px;
     overflow: hidden;
 }
 
@@ -242,6 +238,7 @@ footer {
     width: 150px;
 }
 
+#booking-form a,
 #booking-form button {
     width: 100%;
 }
@@ -250,6 +247,15 @@ input[type=text] {
     color: rgba(var(--theme-five), 1);
 }
 
+/* set alert buttons above narbar element in header */
 #alert-button {
     z-index: 1031;
+}
+
+
+/* media queries */
+@media screen and (max-width: 767px) {
+    .services-carousel {
+        display: none !important;
+    }
 }

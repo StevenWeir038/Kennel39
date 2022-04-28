@@ -15,11 +15,9 @@
         <!-- Navigation -->
         {% include 'includes/navbar.html' %}
     </header>
-    <main>
-        {% block content %}
-        <!-- Content -->
-        {% endblock %}
-    </main>
+    {% block content %}
+    <!-- Content -->
+    {% endblock %}
     <!-- Footer -->
     {% block footer %}
     {% include 'includes/footer.html' %}
