@@ -65,8 +65,6 @@ def edit_booking(request, booking_id):
     """
     user = get_object_or_404(User, username=request.user)
     booking = get_object_or_404(Booking, id=booking_id)
-    if booking.user != user:
-        return redirect('view_booking')
     if request.method == 'POST':
         form = BookingForm(request.POST, instance=booking)
         if form.is_valid():
