@@ -484,7 +484,4 @@ No discernible issues using other popular browsers at higher resolutions includi
 6. User Story - #11 As a logged in user I can request an email so that I can reset my account password if I have forgotten it.
 7. User Story - #15 As a logged in user I can request an email so that be reminded of an appointment.  COULD HAVE item.
 
-8. Issue #32 - Content cut off when viewing on a small mobile device
-9. Issue #33 Appointment now available message when editing an appointment and not changing any details.
-
 Return to [README.md](README.md)
