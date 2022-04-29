@@ -70,10 +70,6 @@ em>strong,
 /* footer */
 footer {
     height: 100px;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-    margin-top: 10em;
     text-align: center;
     background-color: white;
 }
@@ -91,7 +87,6 @@ footer {
 
 .footer-content a:hover {
     color: rgba(var(--theme-five), 1);
-    font-size: large;
 }
 
 /* general buttons */
@@ -109,11 +104,6 @@ footer {
 }
 
 /* booking table */
-#view-booking-table {
-    margin-top: 1em;
-    margin-bottom: 5em;
-}
-
 #view-booking-table tbody tr:hover {
     background-color: rgba(var(--theme-five), 1);
 }
@@ -125,7 +115,9 @@ footer {
 }
 
 #view-booking-table td a:hover {
-    /* color: white; */
+    background-color: rgba(var(--theme-two), 1);
+    border-radius: 3px;
+    padding: 3px 0;
 }
 
 #view-booking-table td button a {
@@ -170,14 +162,6 @@ footer {
     background-color: rgba(var(--theme-one), 1);
 }
 
-.ui-datepicker-title {
-    color: white;
-}
-
-.ui-datepicker-calendar {
-    color: white;
-}
-
 .ui-widget-content .ui-state-default {
     border: 1px;
     text-align: center;
@@ -191,14 +175,12 @@ footer {
     border: 1px solid rgba(var(--theme-four), 1);
     text-align: center;
     background: rgba(var(--theme-five), 1);
-    color: white;
 }
 
 .ui-widget-content .ui-state-active {
     border: 1px solid black;
     background: rgba(var(--theme-one), 1);
     font-weight: bold;
-    color: white;
 }
 
 /* carousel */
@@ -254,55 +236,70 @@ input[type=text] {
 Credit to Codepen https://codepen.io/team/css-tricks/pen/wXgJww?editors=1100 */
 @media screen and (max-width: 767px) {
 
-		/* Force table to not be like tables anymore */
-		table, thead, tbody, th, td, tr {
-			display: block;
-		}
+    table {
+        margin-top: 2em;
+    }
 
-		/* Hide table headers (but not display: none;, for accessibility) */
-		thead tr {
-			position: absolute;
-			top: -9999px;
-			left: -9999px;
-		}
-
+    /* Force table to not be like tables anymore */
+    table,
+    thead,
+    tbody,
+    th,
+    td,
     tr {
-      margin: 0 0 1rem 0;
+        display: block;
     }
-      
+
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
     tr:nth-child(odd) {
-      background: #ccc;
+        background: #ccc;
     }
-    
-		td {
-			/* Behave  like a "row" */
-			border: none;
-			border-bottom: 1px solid #eee;
-			position: relative;
-			padding-left: 50%;
-            text-align: right;
-		}
 
-		td:before {
-			/* Now like a table header */
-			position: absolute;
-			/* Top/left values mimic padding */
-			top: 0;
-			left: 6px;
-			width: 45%;
-			padding-right: 10px;
-			white-space: nowrap;
-            text-align: right;
-		}
+    td {
+        /* Behave  like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
 
-		/* Label the data */
-		td:nth-of-type(1):before { content: "Client: "; }
-		td:nth-of-type(2):before { content: "Pet's Name: "; }
-		td:nth-of-type(3):before { content: "Date: "; }
-		td:nth-of-type(4):before { content: "Time: "; }
-		td:nth-of-type(5):before { content: "Service Type: "; }
-        /* td:nth-of-type(6):before { content: " "; }
-		td:nth-of-type(7):before { content: " "; } */
-        /* td:nth-of-type(6):before { content: "Edit Booking: "; }
-		td:nth-of-type(7):before { content: "Cancel Booking: "; } */
-	}
+    td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 0;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: right;
+    }
+
+    /* Label the data */
+    td:nth-of-type(1):before {
+        content: "Client: ";
+    }
+
+    td:nth-of-type(2):before {
+        content: "Pet's Name: ";
+    }
+
+    td:nth-of-type(3):before {
+        content: "Date: ";
+    }
+
+    td:nth-of-type(4):before {
+        content: "Time: ";
+    }
+
+    td:nth-of-type(5):before {
+        content: "Service Type: ";
+    }
+}
