@@ -15,7 +15,6 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
@@ -89,25 +88,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'main.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-# if os.environ.get("DEVELOPMENT"):
-# Testing database
-
-#   print("database = db.sqlite3")
-#   DATABASES = {
-#       'default': {
-#           'ENGINE': 'django.db.backends.sqlite3',
-#           'NAME': BASE_DIR / 'db.sqlite3',
-#       }
-#   }
-# else:
-# Heroku database
-#   print("database = PostgreSQL via Heroku")
-#   DATABASES = {
-#       'default': dj_database_url.parse(os.environ.get("DATABASE_URL")),
-#       }
 
 # Heroku database
 print("database = PostgreSQL via Heroku")
