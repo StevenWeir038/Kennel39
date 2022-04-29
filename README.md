@@ -196,14 +196,14 @@ Menu options also change depending on whether or not the user is logged in.
 
 ![dynamic-menu-options-2](docs/readme/features/02-features-dynamic-menu-options-2.png "dynamic-menu-options-2")
 
-### Fixed footer
-Links are always available at the bottom of the page for all viewscreen sizes.
+### Footer
+Social media links and developers identity are available at the bottom of the page for all viewscreen sizes.
 
 It has been intentionally omitted from the landing page for styling purposes.
 
-To assist user, link elements change style when hovering.
+To assist user, link elements change colour when hovering.
 
-![fixed-footer](docs/readme/features/03-features-fixed-footer.png "fixed-footer")
+![footer](docs/readme/features/03-features-footer.png "footer")
 
 ### CTA buttons on landing page
 If user is logged in, an additional `Book Now` button becomes available.  This is a short cut to the *view booking* template.
@@ -219,7 +219,11 @@ To enhance user experience, buttons change style when hovering.
 ### Services page
 Contains a brief synopsis of the services offered, drawn from the backend Services table.
 
-A carousel element with 3 images has been included to make the site feel more dynamic.
+A carousel element with 3 images has been included to make the site feel more dynamic (on higher resolutions only).
+
+Service section stacks on lower resolutions.
+
+Depending on user authentication CTA buttons change at the bottom of the page for easier navigation.
 
 ![services](docs/readme/features/06-features-services.png "services")
 
@@ -300,7 +304,13 @@ To do this a `messages.html` template was included in the base.html,
 
 ![confirm-booking-msg](docs/readme/features/18-features-confirm-booking-msg.png "confirm-booking-msg")
 
-#### Preventing a booking clash (with time formatting)
+![change-booking-msg](docs/readme/features/21-features-change-booking-msg.png "change-booking-msg")
+
+#### Preventing a booking clash
+
+If unsuccessful, the page redirects back to edit booking to try again.
+
+If successful, the page redirects back to view bookings.
 
 ![prevent-booking-clash-msg](docs/readme/features/19-features-prevent-booking-clash-msg.png "prevent-booking-clash-msg")
 
@@ -379,6 +389,7 @@ Refer to [TESTING.md](TESTING.md) for details on:
 - Landing page image from [Wallpaper Access](https://wallpaperaccess.com/blue-dog#google_vignette)
 - For dog breed [images](https://www.purina.co.nz/find-a-pet/dog-breeds) used in the carousel element.
 - Datepicker customisation from [Jquery](https://jqueryui.com/datepicker/)
+- Responsive table design on mobiles from [Codepen](https://codepen.io/team/css-tricks/pen/wXgJww?editors=1100)
 
 ### People
 
