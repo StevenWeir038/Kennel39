@@ -182,6 +182,7 @@ Defensive programming.  Effectively best to make someone confirm an action.  Mod
 - include a help modal to advise the user how to use the site
 
 ### Reflections
-More consideration should have been given to responsiveness *earlier* in the project.  It was developed optimally for 768px/tablet use.  Start smaller!
+More consideration should have been given to responsiveness *earlier* in the project.  It was developed optimally for 768px/tablet use.  Start small!
+Making the table in view booking was a challenge. Not rendered perfect but stacked appearance displays all data without the need for horizontal scrolling.
 
 ![01](docs/readme/agile/week-8-kanban-use.png "01")
