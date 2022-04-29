@@ -43,7 +43,7 @@ def create_booking(request):
                 messages.error(
                     request, 'No appointment is available on '
                     f'{msg_req_date} at {msg_req_time}.')
-                return redirect('view_booking')
+                return redirect('create_booking')
             else:
                 form.instance.user = user
                 form.save()
