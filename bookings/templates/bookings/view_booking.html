@@ -70,76 +70,82 @@
             <button id="refresh-table" class="btn" role="button">Show all</button>
             <button id="table-filter-user" class="btn" role="button">My Bookings</button>
             <!-- Booking table -->
-            <table id="view-booking-table">
-                <th>User</th>
-                <th>Pet's Name</th>
-                <th>Date</th>
-                <th>Time</th>
-                <th>Service Type</th>
+            <table id="view-booking-table" class="table">
+                <thead>
+                    <tr>
+                        <th>User</th>
+                        <th>Pet's Name</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Service Type</th>
+                    </tr>
+                </thead>
                 {% for booking in bookings %}
-                <tr class="booking-row">
-                    <!--if superuser or staff user show all booking fields -->
-                    {% if request.user.is_superuser or request.user.is_staff %}
-                    <td>{{ booking.user }}</td>
-                    {% else %}
-                    <!-- if standard user is authenticated show their username but anonymize other usernames names -->
-                    {% if booking.user == request.user %}
-                    <td>{{ booking.user }}</td>
-                    {% else %}
-                    <td>*****</td>
-                    {% endif %}
-                    {% endif %}
-                    <!-- always show these fields -->
-                    <td>{{ booking.pet_name }}</td>
-                    <td>{{ booking.date }}</td>
-                    <td>{{ booking.start_time }}</td>
-                    <td>{{ booking.service_type }}</td>
-                    <!--apply an edit & cancel link to each row if superuser staff user the user.
-                     or if current standard user created the record-->
-                    {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %}
-                    <td>
-                        <a href="{% url 'edit_booking' booking.id %}">Edit</a>
-                    </td>
-                    <td>
-                        <a data-bs-toggle="modal" data-bs-target="#modal-cancel-{{ forloop.counter }}">
-                            Cancel
-                        </a>
-                        <!-- modal cancellation confirmation -->
-                        <div class="modal fade" id="modal-cancel-{{ forloop.counter }}" tabindex="-1"
-                            aria-labelledby="modal-cancel-label-{{ forloop.counter }}" aria-hidden="true">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="modal-cancel-label-{{ forloop.counter }}">
-                                            Cancel Booking for {{ booking.pet_name }}?
-                                        </h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                    </div>
-                                    <div class="modal-body">
-                                        Are you sure you want to cancel the booking for
-                                        <span>{{ booking.pet_name }}</span> on {{ booking.date }} at
-                                        {{ booking.start_time }}?
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn" data-bs-dismiss="modal">No</button>
-                                        <button type="button" class="btn"><a
-                                                href="{% url 'cancel_booking' booking.id %}">Yes</a></button>
+                <tbody>
+                    <tr class="booking-row">
+                        <!--if superuser or staff user show all booking fields -->
+                        {% if request.user.is_superuser or request.user.is_staff %}
+                        <td>{{ booking.user }}</td>
+                        {% else %}
+                        <!-- if standard user is authenticated show their username but anonymize other usernames names -->
+                        {% if booking.user == request.user %}
+                        <td>{{ booking.user }}</td>
+                        {% else %}
+                        <td>*****</td>
+                        {% endif %}
+                        {% endif %}
+                        <!-- always show these fields -->
+                        <td>{{ booking.pet_name }}</td>
+                        <td>{{ booking.date }}</td>
+                        <td>{{ booking.start_time }}</td>
+                        <td>{{ booking.service_type }}</td>
+                        <!--apply an edit & cancel link to each row if superuser staff user the user.
+                        or if current standard user created the record-->
+                        {% if request.user.is_superuser or request.user.is_staff or booking.user == request.user %}
+                        <td>
+                            <a href="{% url 'edit_booking' booking.id %}">Edit</a>
+                        </td>
+                        <td>
+                            <a data-bs-toggle="modal" data-bs-target="#modal-cancel-{{ forloop.counter }}">
+                                Cancel
+                            </a>
+                            <!-- modal cancellation confirmation -->
+                            <div class="modal fade" id="modal-cancel-{{ forloop.counter }}" tabindex="-1"
+                                aria-labelledby="modal-cancel-label-{{ forloop.counter }}" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modal-cancel-label-{{ forloop.counter }}">
+                                                Cancel Booking for {{ booking.pet_name }}?
+                                            </h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            Are you sure you want to cancel the booking for
+                                            <span>{{ booking.pet_name }}</span> on {{ booking.date }} at
+                                            {{ booking.start_time }}?
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn" data-bs-dismiss="modal">No</button>
+                                            <button type="button" class="btn"><a
+                                                    href="{% url 'cancel_booking' booking.id %}">Yes</a></button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </td>
-                    {% else %}
-                    <td></td>
-                    <td></td>
-                    {% endif %}
-                </tr>
-                {% empty %}
-                <tr>
-                    <td>There are no booked appointments</td>
-                </tr>
-                {% endfor %}
+                        </td>
+                        {% else %}
+                        <td></td>
+                        <td></td>
+                        {% endif %}
+                    </tr>
+                    {% empty %}
+                    <tr>
+                        <td>There are no booked appointments</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
             </table>
         </div>
     </div>

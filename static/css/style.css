@@ -108,23 +108,16 @@ footer {
 /* booking table */
 #view-booking-table {
     margin-top: 1em;
-    text-align: center;
-    min-width: 90%;
 }
 
 #view-booking-table td {
-    border-top: 1px solid black;
+    /* border-top: 1px solid black;
     border-bottom: 1px solid black;
     padding: 0.5em 0.25em;
-    text-align: left;
-
+    text-align: left; */
 }
 
-#view-booking-table tr:nth-child(even) {
-    background-color: rgba(var(--theme-three), 1);
-}
-
-#view-booking-table tr:hover {
+#view-booking-table tbody tr:hover {
     background-color: rgba(var(--theme-five), 1);
     color: white;
 }
@@ -136,12 +129,12 @@ footer {
 }
 
 #view-booking-table td a:hover {
-    color: white;
+    /* color: white; */
 }
 
 #view-booking-table td button a {
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 #help {
@@ -252,10 +245,68 @@ input[type=text] {
     z-index: 1031;
 }
 
-
 /* media queries */
+/* hide carousel on resolutions smaller than a tablet */
 @media screen and (max-width: 767px) {
     .services-carousel {
         display: none !important;
     }
 }
+
+/* media queries */
+/* reduce table footprint on resolutions smaller than a tablet -
+Credit to Codepen https://codepen.io/team/css-tricks/pen/wXgJww?editors=1100 */
+@media screen and (max-width: 767px) {
+
+		/* Force table to not be like tables anymore */
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+    tr {
+      margin: 0 0 1rem 0;
+    }
+      
+    tr:nth-child(odd) {
+      background: #ccc;
+    }
+    
+		td {
+			/* Behave  like a "row" */
+			border: none;
+			border-bottom: 1px solid #eee;
+			position: relative;
+			padding-left: 50%;
+            text-align: right;
+		}
+
+		td:before {
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 0;
+			left: 6px;
+			width: 45%;
+			padding-right: 10px;
+			white-space: nowrap;
+            text-align: right;
+		}
+
+		/* Label the data */
+		td:nth-of-type(1):before { content: "Client: "; }
+		td:nth-of-type(2):before { content: "Pet's Name: "; }
+		td:nth-of-type(3):before { content: "Date: "; }
+		td:nth-of-type(4):before { content: "Time: "; }
+		td:nth-of-type(5):before { content: "Service Type: "; }
+        /* td:nth-of-type(6):before { content: " "; }
+		td:nth-of-type(7):before { content: " "; } */
+        /* td:nth-of-type(6):before { content: "Edit Booking: "; }
+		td:nth-of-type(7):before { content: "Cancel Booking: "; } */
+	}
